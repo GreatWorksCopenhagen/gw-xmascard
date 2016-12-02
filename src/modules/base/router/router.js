@@ -29,11 +29,9 @@ export default class Router {
 		} else {
 			this.page.base('');
 		}
-		// this.page('/', function(page){
-		// 	page.type = 'base';
-		// 	page.name = 'home';
-		// 	m.pagehandler.changePage(page)
-		// });
+		this.page('/', function(page){
+			console.log('helloe');
+		});
 		// instantiate pages.
 		this.page();
 	}

@@ -10,12 +10,9 @@ import * as utilities from 'modules/base/utils/utils';
 import Gsap from 'gsap';
 import GsapScrollTo from 'lib/bower/gsap@1.18.2/src/uncompressed/plugins/ScrollToPlugin.js';
 
-import Carousel from 'modules/carousel/carousel';
+// import Carousel from 'modules/carousel/carousel';
 export const m = {};
 export const utils = utilities;
-
-// local/session storage (mostly used for caching of dynamically loaded pages.)
-// m.storage = store;
 
 //define generic stuff here.
 m.emitter = new Emitter();
