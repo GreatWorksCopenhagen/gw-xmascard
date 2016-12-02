@@ -11,6 +11,9 @@ import Gsap from 'gsap';
 import GsapScrollTo from 'lib/bower/gsap@1.18.2/src/uncompressed/plugins/ScrollToPlugin.js';
 
 // import Carousel from 'modules/carousel/carousel';
+import YoutubeHandler from 'modules/youtubeHandler/youtubeHandler';
+import Player from 'modules/player/player';
+import Data from 'data/data';
 export const m = {};
 export const utils = utilities;
 
@@ -19,15 +22,24 @@ m.emitter = new Emitter();
 m.picture = new Picture();
 m.responsive = new Responsive();
 m.TweenMax = Gsap.TweenMax;
+m.data = new Data();
 
 // // define when to do stuff on url change.
 m.router = new Router();
 //
 // // inView for generic elements used mostly for animations.
+m.youtubeHandler = new YoutubeHandler();
+m.player = new Player();
+
+
+
+
+
 m.inViewPort = new InViewPort({
 	offsetBottom: -80,
 	offsetTop: -80
 });
+
 // // inView for pictures defining when to load images.
 // m.pictureInViewPort = new InViewPort({
 // 	el: '.picture',

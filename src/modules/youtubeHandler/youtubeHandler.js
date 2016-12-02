@@ -1,0 +1,148 @@
+/**
+ * Class: YoutubeHandler
+ * Description: Her goes description
+ */
+import {
+	m,
+	utils
+} from '../../js/main';
+export default class YoutubeHandler {
+	/**
+	 * @param {number} param this is param.
+	 * @return {number} this is return.
+	 */
+	constructor(config) { // put in defaults here
+		//defaults
+		this.config = $.extend({
+			el: '.videoPlayer'
+		}, config);
+		this.$el = $(this.config.el);
+        this.currentPlayListIndex = 0;
+        this.currentPlayList = null;
+		this.init();
+	}
+	init() {
+		this.bindEvents();
+		this.importApi();
+	}
+	bindEvents() {
+		var self = this;
+		// bind your events here.
+		window.onYouTubeIframeAPIReady = function() {
+			self.playerEl = new YT.Player('player', {
+				height: '100',
+				width: '100',
+				playerVars: {
+					listType: 'playlist',
+					list: m.data[self.currentPlayListIndex].playlist
+				},
+				events: {
+					'onReady': function(e){
+                        self.onPlayerReady(e, self);
+                    },
+					'onStateChange': function(e){
+                        self.onPlayerStateChange(e, self);
+                    }
+				}
+			});
+		}
+		$(window).keydown(function(e) {
+            // spacebar
+			if (e.which === 32) {
+                e.preventDefault();
+				if (self.player) {
+                    self.loadNextPlayList();
+				}
+			}
+            // arrowRight
+			if (e.which === 39) {
+                e.preventDefault();
+				if (self.player) {
+					self.playNextSong();
+				}
+			}
+            // arrowLeft
+			if (e.which === 37) {
+                e.preventDefault();
+				if (self.player) {
+					self.playPreviousSong();
+				}
+			}
+		});
+	}
+	importApi() {
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	}
+	onPlayerReady(event, scope) {
+        this.player = event.target;
+		event.target.playVideo();
+        this.currentPlayList = this.player.getPlaylist();
+	}
+	onPlayerStateChange(event, self) {
+        if(event.data == 1){
+            var songIndexInPlaylist = this.getPlayList().indexOf(this.player.getVideoData()['video_id']),
+                    playListLength = this.getPlayList().length - 1;
+            self.currentSong = self.player.getVideoData();
+            var songObject = $.extend(self.currentSong, m.data[self.currentPlayListIndex]);
+            $.extend(songObject, {songIndex:songIndexInPlaylist+1, playlistLength: playListLength+1});
+            m.emitter.emit('playerChange', songObject);
+        }
+	}
+    loadNextPlayList(){
+        this.currentPlayListIndex++;
+        var next = this.getPlayListById(this.currentPlayListIndex);
+        this.loadPlayList(next);
+    }
+    loadPreviousPlayList(){
+        this.currentPlayListIndex--;
+        var next = this.getPlayListById(this.currentPlayListIndex);
+        this.loadPlayList(next);
+    }
+	loadPlayList(id) {
+        this.player.loadPlaylist({list: id});
+
+	}
+    getPlayList(){
+        return this.player.getPlaylist();
+    }
+    playNextSong(){
+        if(this.isSongValid('next')){
+            this.player.nextVideo();
+        } else{
+            this.loadNextPlayList();
+        }
+    }
+    playPreviousSong(){
+        if(this.isSongValid('prev')){
+            this.player.previousVideo();
+        } else{
+            this.loadPreviousPlayList();
+        }
+    }
+    getPlayListById(id){
+        if(id >= m.data.length){
+            this.currentPlayListIndex = 0;
+        } else if(id <=0){
+            this.currentPlayListIndex = m.data.length-1;
+        }
+        id = this.currentPlayListIndex;
+        return m.data[id].playlist;
+    }
+    isSongValid(direction){
+        var songIndexInPlaylist = this.getPlayList().indexOf(this.player.getVideoData()['video_id']),
+                playListLength = this.getPlayList().length - 1;
+            if(direction == 'next'){
+                songIndexInPlaylist++;
+            } else if(direction == 'prev'){
+                songIndexInPlaylist--;
+            }
+            if(songIndexInPlaylist>=0 && songIndexInPlaylist<=playListLength){
+                return true;
+            } else {
+                return false;
+            }
+    }
+}

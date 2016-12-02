@@ -1262,9 +1262,4 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border: 1px solid red;
 }
 
-/* line 5, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/videoPlayer/_videoPlayer.scss */
-.plyr__controls {
-  display: none;
-}
-
 /*# sourceMappingURL=main.css.map */
