@@ -1,0 +1,19 @@
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ * Add or remove as many breakpoints as you like.
+ */
+body:before {
+  content: "small";
+  display: none; /* Prevent from displaying. */
+}
+@media (min-width: 769px) {
+  body:before {
+    content: "medium";
+  }
+}
+@media (min-width: 1280px) {
+  body:before {
+    content: "large";
+  }
+}

@@ -1,0 +1,19 @@
+.picture {
+    line-height: 0;
+    @include translateZ();
+    display: block;
+    min-height: calc(100vw / 1.777);
+    .picture__image {
+        min-width: 100%;
+        max-width: 100%;
+        opacity: 0;
+        transition: opacity 250ms linear;
+        // margin-bottom: -4px;
+    }
+    &.picture--loaded {
+        min-height: 0;
+        .picture__image {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+{
+  "name": "es6-jspm-gulp-boilerplate",
+  "version": "0.3.0",
+  "description": "BoilerPlate",
+  "main": "dist/index.html",
+  "homepage": "",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "author": {
+    "name": "Rasmus Elken",
+    "email": "",
+    "url": ""
+  },
+  "license": "Unlicense",
+  "scripts": {
+    "test": "karma start",
+    "test:watch": "karma start --no-single-run",
+    "build": "gulp build",
+    "docs": "npm run sassdocs && npm run jsdocs",
+    "start": "gulp",
+    "buildjs": "jspm bundle-sfx js/main dist/js/main.js --minify",
+    "jsdocs": "esdoc -c .esdoc.json",
+    "sassdocs": "sassdoc src/scss"
+  },
+  "keywords": [
+    "es6",
+    "jspm",
+    "gulp",
+    "babel",
+    "systemjs",
+    "modular",
+    "assemble.io"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "test",
+    "baseURL": "/src/",
+    "packages": "src/lib"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "del": "^1.2.0",
+    "esdoc": "^0.2.1",
+    "eslint": "^1.2.0",
+    "eslint-config-standard": "^4.1.0",
+    "eslint-plugin-standard": "^1.2.0",
+    "glob": "^6.0.4",
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-eslint": "^1.0.0",
+    "gulp-extname": "^0.2.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-hb": "^2.6.5",
+    "gulp-iconfont": "^5.0.1",
+    "gulp-iconfont-css": "^2.0.0",
+    "gulp-iconify": "^0.4.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-linker": "^0.1.7",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-prompt": "^0.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "gulp-scss-lint": "^0.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-template": "^3.1.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "i": "^0.3.3",
+    "imagemin-pngquant": "^4.1.0",
+    "jspm": "^0.16.19",
+    "jspm-bower-endpoint": "^0.3.2",
+    "karma": "^0.12.36",
+    "karma-chai": "^0.1.0",
+    "karma-chai-as-promised": "^0.1.2",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jspm": "^1.1.5",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-sinon-chai": "^1.0.0",
+    "mocha": "^2.2.5",
+    "npm": "^3.5.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.0",
+    "sassdoc": "^2.1.15"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src",
+      "doc": "docs",
+      "packages": "src/lib",
+      "test": "test"
+    },
+    "dependencies": {
+      "eventEmitter": "bower:eventEmitter@^4.3.0",
+      "gsap": "bower:gsap@^1.18.2",
+      "jquery": "bower:jquery@^2.2.0",
+      "modernizr": "bower:modernizr@^3.2.0",
+      "picturefill": "npm:picturefill@^3.0.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "maintainers": [
+    {
+      "name": "Rasmus Elken",
+      "email": "rasmus.elken@digitaslbi.com"
+    }
+  ],
+  "dependencies": {
+    "assemble": "^0.6.0-beta.5",
+    "fs": "0.0.1-security",
+    "gulp-htmlmin": "^2.0.0",
+    "path-exists": "^2.1.0"
+  }
+}

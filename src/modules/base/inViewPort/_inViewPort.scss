@@ -1,0 +1,38 @@
+.inViewPort{
+  @include notIe9 {
+    // @include opacity(0);
+  }
+  // @include transition(opacity 300ms ease-in-out 100ms);
+  // your styles here
+  @include notIe9 {
+    .touch & {
+    //   @include opacity(1);
+    }
+  }
+
+  &.inViewPort--wasInView{
+    @include notIe9 {
+    //   @include opacity(1);
+    }
+  }
+  &.inViewPort--isInView{
+    // when elements are currently in view
+  }
+
+    +.inViewPort{
+        $delay: 100ms;
+        @include transition-delay($delay);
+        +.inViewPort{
+            @include transition-delay(2*$delay);
+            +.inViewPort{
+                @include transition-delay(3*$delay);
+                +.inViewPort{
+                    @include transition-delay(4*$delay);
+                    +.inViewPort{
+                        @include transition-delay(5*$delay);
+                    }
+                }
+            }
+        }
+    }
+}

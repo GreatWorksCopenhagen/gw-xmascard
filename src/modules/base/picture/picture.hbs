@@ -1,0 +1,8 @@
+<picture class="picture">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{imagePath this "large"}} 1400w, {{imagePath this "large"}} 2x" media="(min-width: 1025px)">
+    <source srcset="{{imagePath this "medium"}} 1024w, {{imagePath this "large"}} 2x" media="(min-width: 768px)">
+    <source srcset="{{imagePath this "small"}} 768w, {{imagePath this "medium"}} 2x" media="(min-width: 0px)">
+    <!--[if IE 9]></video><![endif]-->
+    <span class="picture__image" data-srcset="{{imagePath this "small"}} 768w, {{imagePath this "medium"}} 2x" alt="image"></span>
+</picture>

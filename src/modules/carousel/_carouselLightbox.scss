@@ -1,0 +1,18 @@
+.carouselLightbox {
+  // your styles here
+  display: inline-block;
+  .carouselLightbox__trigger {
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  .carouselLightbox__trigger-icon {
+    // margin-left:$spacing-small;
+    margin-right: 10px;
+    @include rtlRoot {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+    font-size: .75em;
+    vertical-align: middle;
+  }
+}
