@@ -64,7 +64,7 @@ export default class YoutubeHandler {
         this.currentPlayList = this.player.getPlaylist();
 	}
 	onPlayerStateChange(event, self) {
-        if(event.data == 1){
+        if(event.data == -1){
             var songIndexInPlaylist = this.getPlayList().indexOf(this.player.getVideoData()['video_id']),
                     playListLength = this.getPlayList().length - 1;
             self.currentSong = self.player.getVideoData();
@@ -91,6 +91,17 @@ export default class YoutubeHandler {
     getPlayList(){
         return this.player.getPlaylist();
     }
+	playSongInPlaylist(index){
+		this.player.playVideoAt(index)
+	}
+	togglePlay(){
+		if(this.player.getPlayerState()==1){
+			this.player.pauseVideo();
+		} else if(this.player.getPlayerState()==2){
+			this.player.playVideo();
+		}
+		this.player
+	}
     playNextSong(){
         if(this.isSongValid('next')){
             this.player.nextVideo();
