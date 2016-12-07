@@ -1,4 +1,4 @@
-# Quorvus collection website built on following:
+# Boilerplate website built on following:
 
 ## ES6 + JSPM + Gulp Boilerplate
 
