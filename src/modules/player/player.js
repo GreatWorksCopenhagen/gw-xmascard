@@ -14,11 +14,12 @@ export default class Player {
         el:'.player'
     },config);
     this.$el = $(this.config.el);
-    this.$persons = this.$el.find('.persons');
-    this.$song = this.$el.find('.song-title');
-    this.$playlistTitle = this.$el.find('.playlist-title');
-    this.$songIndex = this.$el.find('.song-index');
-    this.$playlistLenght = this.$el.find('.playlist-length');
+    this.$cover = this.$el.find('.player__playlist-cover-img');
+    this.$persons = this.$el.find('.player__author');
+    this.$song = this.$el.find('.player__song-title');
+    this.$playlistTitle = this.$el.find('.player__playlist-title');
+    this.$songIndex = this.$el.find('.player__song-index');
+    this.$playlistLenght = this.$el.find('.player__playlist-length');
     this.init();
 
   }
@@ -37,5 +38,6 @@ export default class Player {
       this.$playlistTitle.text(data.playlistTitle);
       this.$songIndex.text(data.songIndex);
       this.$playlistLenght.text(data.playlistLength);
+      this.$cover.attr('src', data.cover);
   }
 }

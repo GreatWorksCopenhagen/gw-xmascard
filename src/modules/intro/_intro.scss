@@ -1,3 +1,9 @@
 .intro{
-  // your styles here
+  position: absolute;
+  height:100%;
+  width:100%;
+  padding: 100px;
+  background-color: red;
+  cursor:pointer;
+  z-index: 100;
 }

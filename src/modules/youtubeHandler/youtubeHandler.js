@@ -30,8 +30,8 @@ export default class YoutubeHandler {
 		// bind your events here.
 		window.onYouTubeIframeAPIReady = function() {
 			self.playerEl = new YT.Player('player', {
-				height: '100',
-				width: '100',
+				height: '512',
+				width: '512',
 				playerVars: {
 					listType: 'playlist',
 					list: m.data[self.currentPlayListIndex].playlist
@@ -78,7 +78,7 @@ export default class YoutubeHandler {
 	}
 	onPlayerReady(event, scope) {
         this.player = event.target;
-		event.target.playVideo();
+		// event.target.playVideo();
         this.currentPlayList = this.player.getPlaylist();
 	}
 	onPlayerStateChange(event, self) {

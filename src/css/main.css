@@ -447,6 +447,16 @@ th {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_grid.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 4, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_grid.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/icons/dist/scss/icons.fallback.scss */
 .icon {
   background-repeat: no-repeat;
@@ -1260,6 +1270,29 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 .slick-dots li.slick-active button {
   background-color: red;
   border: 1px solid red;
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  background-color: red;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__playlist {
+  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

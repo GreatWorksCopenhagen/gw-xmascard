@@ -11,9 +11,14 @@ import Gsap from 'gsap';
 import GsapScrollTo from 'lib/bower/gsap@1.18.2/src/uncompressed/plugins/ScrollToPlugin.js';
 
 // import Carousel from 'modules/carousel/carousel';
+import Data from 'data/data';
 import YoutubeHandler from 'modules/youtubeHandler/youtubeHandler';
 import Player from 'modules/player/player';
-import Data from 'data/data';
+import Intro from 'modules/intro/intro';
+
+
+
+
 export const m = {};
 export const utils = utilities;
 
@@ -30,6 +35,7 @@ m.router = new Router();
 // // inView for generic elements used mostly for animations.
 m.youtubeHandler = new YoutubeHandler();
 m.player = new Player();
+m.intro = new Intro();
 
 
 
