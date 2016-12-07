@@ -30,9 +30,23 @@ export default class Router {
 			this.page.base('');
 		}
 		this.page('/', function(page){
-			console.log('helloe');
+			m.pageHandler.showPage('albums');
+		});
+		this.page('/albums', function(page){
+			m.pageHandler.showPage('albums');
+
+		});
+		this.page('/player', function(page){
+			m.pageHandler.showPage('player');
 		});
 		// instantiate pages.
 		this.page();
+	}
+	gotoPage(page){
+		if(page=='albums'){
+			this.page('/albums');
+		} else if(page=='player'){
+			this.page('/player');
+		}
 	}
 }

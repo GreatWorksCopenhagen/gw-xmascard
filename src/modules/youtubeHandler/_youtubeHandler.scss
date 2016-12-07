@@ -1,4 +1,7 @@
 .youtubeHandler{
   // your styles here
-  display: none;
+  // display: none;
+  position: absolute;
+  right:0;
+  z-index: 101;
 }

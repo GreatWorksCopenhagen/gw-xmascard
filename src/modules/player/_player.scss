@@ -2,7 +2,7 @@
     position: absolute;
     width:100%;
     height:100%;
-    @media #{$above-small}{
+    @media #{$small}{
         .player__left{
             width: 30%;
             height:100%;

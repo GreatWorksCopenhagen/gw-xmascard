@@ -14,20 +14,24 @@ export default class Carousel {
 	 */
 	constructor(config) { // put in defaults here
 		//defaults
+		var config = config ? config : {};
 		this.config = $.extend({
-			el: config.el || $('.carousel'),
-			dots: true,
+			el: config.el || '.carousel',
+			// dots: false,
 			cssEase: 'ease-in-out',
 			useCSS: true,
 			useTransform: true,
-			adaptiveHeight: true,
-			autoplay: true,
-			autoplaySpeed: 8000
+			autoplay: false,
+			speed: 300,
+			// lazyLoad: 'ondemand',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			centerMode: true,
+			centerPadding: '20%'
 		}, config);
-
+		// console.log(this.config);
+		//
 		this.$el = $(this.config.el);
-		this.$imgs = this.$el.find('img');
-		
 		this.init();
 	}
 	init() {
@@ -36,10 +40,5 @@ export default class Carousel {
 	}
 	bindEvents() {
 		var self = this;
-		m.emitter.on('picture/update', function(img) {
-			// $(window).trigger('resize');
-			//update slider height on imageload.
-		});
-		// bind your events here.
 	}
 }

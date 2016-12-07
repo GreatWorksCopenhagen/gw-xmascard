@@ -30,8 +30,8 @@ export default class YoutubeHandler {
 		// bind your events here.
 		window.onYouTubeIframeAPIReady = function() {
 			self.playerEl = new YT.Player('player', {
-				height: '512',
-				width: '512',
+				height: '200',
+				width: '200',
 				playerVars: {
 					listType: 'playlist',
 					list: m.data[self.currentPlayListIndex].playlist
@@ -46,29 +46,13 @@ export default class YoutubeHandler {
 				}
 			});
 		}
-		$(window).keydown(function(e) {
-            // spacebar
-			if (e.which === 32) {
-                e.preventDefault();
-				if (self.player) {
-                    self.loadNextPlayList();
-				}
-			}
-            // arrowRight
-			if (e.which === 39) {
-                e.preventDefault();
-				if (self.player) {
-					self.playNextSong();
-				}
-			}
-            // arrowLeft
-			if (e.which === 37) {
-                e.preventDefault();
-				if (self.player) {
-					self.playPreviousSong();
-				}
-			}
-		});
+	}
+	playPlaylistByIndex(index){
+		this.currentPlayListIndex = index;
+		var playlistID = m.data[index].playlist;
+		console.log(index);
+		console.log(playlistID);
+		this.playerLoadPlayList(playlistID);
 	}
 	importApi() {
 		var tag = document.createElement('script');
@@ -93,17 +77,16 @@ export default class YoutubeHandler {
 	}
     loadNextPlayList(){
         this.currentPlayListIndex++;
-        var next = this.getPlayListById(this.currentPlayListIndex);
-        this.loadPlayList(next);
+        var next = this.getPlayListByIndex(this.currentPlayListIndex);
+        this.playerLoadPlayList(next);
     }
     loadPreviousPlayList(){
         this.currentPlayListIndex--;
-        var next = this.getPlayListById(this.currentPlayListIndex);
-        this.loadPlayList(next);
+        var next = this.getPlayListByIndex(this.currentPlayListIndex);
+        this.playerLoadPlayList(next);
     }
-	loadPlayList(id) {
+	playerLoadPlayList(id) {
         this.player.loadPlaylist({list: id});
-
 	}
     getPlayList(){
         return this.player.getPlaylist();
@@ -122,7 +105,7 @@ export default class YoutubeHandler {
             this.loadPreviousPlayList();
         }
     }
-    getPlayListById(id){
+    getPlayListByIndex(id){
         if(id >= m.data.length){
             this.currentPlayListIndex = 0;
         } else if(id <=0){

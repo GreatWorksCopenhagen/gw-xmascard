@@ -434,6 +434,9 @@ th {
   padding: 0;
 }
 
+/*!
+ *  @author rasmuselken <re@greatworks.dk>
+ */
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -455,6 +458,11 @@ html {
 /* line 4, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_grid.scss */
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+img {
+  max-width: 100%;
 }
 
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/icons/dist/scss/icons.fallback.scss */
@@ -710,6 +718,31 @@ html {
 /* line 161, /Users/rasmuselken/web-projects/gw-xmascard/src/icons/dist/scss/_icons-font.scss */
 .icon-youtube:before {
   content: "";
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+/* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .albumViewer__carousel {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .albumViewer__album {
+  padding: 50px;
+  cursor: pointer;
+}
+
+/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .albumViewer__album img {
+  max-width: 100%;
 }
 
 /* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
@@ -1290,9 +1323,34 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   height: 100%;
 }
 
-/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+@media only screen and (min-width: 769px) {
+  /* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__left {
+    width: 30%;
+    height: 100%;
+    -ms-flex-line-pack: blue;
+        align-content: blue;
+  }
+}
+
+/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist {
   background-color: red;
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/playerView/_playerView.scss */
+.playerView {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */
+.youtubeHandler {
+  position: absolute;
+  right: 0;
+  z-index: 101;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -25,7 +25,7 @@ export default class Data {
               playlistTitle: 'Bos playlist',
               playlist: 'PLq_oRfIJoxLfCFniKFJL3RRsQVwsC4IXY',
               cover:'/assets/images/covers/bo.jpg'
-          }
+          },
           {
               names: 'Frederic',
               playlistTitle: 'Tijuana Xmas',

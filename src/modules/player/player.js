@@ -31,6 +31,40 @@ export default class Player {
       m.emitter.on('playerChange', function(data){
         self.updatePlayer(data);
       });
+      $(window).keydown(function(e) {
+          // uparrow
+          if (e.which === 38) {
+              e.preventDefault();
+              self.playPreviousSong();
+          }
+          //downarrow
+          if (e.which === 40) {
+              e.preventDefault();
+              self.playNextSong();
+          }
+          // arrowRight
+          if (e.which === 39) {
+              e.preventDefault();
+              self.loadNextPlayList();
+          }
+          // arrowLeft
+          if (e.which === 37) {
+              e.preventDefault();
+              self.loadPreviousPlayList();
+          }
+      });
+  }
+  playPreviousSong(){
+       m.youtubeHandler.playPreviousSong();
+  }
+  playNextSong(){
+       m.youtubeHandler.playNextSong();
+  }
+  loadNextPlayList(){
+      m.youtubeHandler.loadNextPlayList();
+  }
+  loadPreviousPlayList(){
+      m.youtubeHandler.loadPreviousPlayList();
   }
   updatePlayer(data){
       this.$persons.text(data.names);
