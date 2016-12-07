@@ -26,7 +26,6 @@ export default class AlbumViewer {
           click: function(e){
               var playlistIndex = $(this).data('playlist-index');
               m.router.gotoPage('player');
-              console.log(playlistIndex);
               m.youtubeHandler.playPlaylistByIndex(playlistIndex);
           }
       }, '.albumViewer__album')

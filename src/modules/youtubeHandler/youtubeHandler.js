@@ -50,8 +50,6 @@ export default class YoutubeHandler {
 	playPlaylistByIndex(index){
 		this.currentPlayListIndex = index;
 		var playlistID = m.data[index].playlist;
-		console.log(index);
-		console.log(playlistID);
 		this.playerLoadPlayList(playlistID);
 	}
 	importApi() {
@@ -73,6 +71,8 @@ export default class YoutubeHandler {
             var songObject = $.extend(self.currentSong, m.data[self.currentPlayListIndex]);
             $.extend(songObject, {songIndex:songIndexInPlaylist+1, playlistLength: playListLength+1});
             m.emitter.emit('playerChange', songObject);
+        } else if(event.data === 0) {
+			this.playNextSong();
         }
 	}
     loadNextPlayList(){
@@ -82,8 +82,8 @@ export default class YoutubeHandler {
     }
     loadPreviousPlayList(){
         this.currentPlayListIndex--;
-        var next = this.getPlayListByIndex(this.currentPlayListIndex);
-        this.playerLoadPlayList(next);
+        var prev = this.getPlayListByIndex(this.currentPlayListIndex);
+        this.playerLoadPlayList(prev);
     }
 	playerLoadPlayList(id) {
         this.player.loadPlaylist({list: id});
@@ -106,9 +106,9 @@ export default class YoutubeHandler {
         }
     }
     getPlayListByIndex(id){
-        if(id >= m.data.length){
+        if(id > m.data.length-1){
             this.currentPlayListIndex = 0;
-        } else if(id <=0){
+        } else if(id <0){
             this.currentPlayListIndex = m.data.length-1;
         }
         id = this.currentPlayListIndex;

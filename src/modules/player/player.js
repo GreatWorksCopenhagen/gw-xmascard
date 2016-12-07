@@ -17,6 +17,7 @@ export default class Player {
     this.$cover = this.$el.find('.player__playlist-cover-img');
     this.$persons = this.$el.find('.player__author');
     this.$song = this.$el.find('.player__song-title');
+    this.$artist = this.$el.find('.player__song-artist');
     this.$playlistTitle = this.$el.find('.player__playlist-title');
     this.$songIndex = this.$el.find('.player__song-index');
     this.$playlistLenght = this.$el.find('.player__playlist-length');
@@ -68,7 +69,8 @@ export default class Player {
   }
   updatePlayer(data){
       this.$persons.text(data.names);
-      this.$song.text(data.title);
+      this.$artist.text(data.tracks[data.songIndex-1].artist);
+      this.$song.text(data.tracks[data.songIndex-1].title);
       this.$playlistTitle.text(data.playlistTitle);
       this.$songIndex.text(data.songIndex);
       this.$playlistLenght.text(data.playlistLength);
