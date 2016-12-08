@@ -24,11 +24,11 @@ export default class Router {
 	}
 	defineRoutes() {
 		var self = this;
-		if(utils.isFrontend){
+		// if(utils.isFrontend){
 			this.page.base('/pages');
-		} else {
-			this.page.base('');
-		}
+		// } else {
+		// 	this.page.base('');
+		// }
 		this.page('/', function(page){
 			m.pageHandler.showPage('albums');
 		});

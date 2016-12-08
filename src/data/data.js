@@ -5,7 +5,7 @@ export default class Data {
 			names: 'Louise og Rasmus',
 			playlistTitle: 'Have a Danish top-pop X-mas',
 			playlist: 'PLq_oRfIJoxLek4Ul4SFMXx8hPmDvbeQTk',
-			cover: '/assets/images/covers/louiserasmus.jpg',
+			cover: '../assets/images/covers/louiserasmus.jpg',
 			tracks: [{
 				title: 'Vi Ønsker Jer Alle En Glædelig Jul',
 				artist: 'Tommy Seebach & Annette Heick'
@@ -41,7 +41,7 @@ export default class Data {
 			names: 'Pia, Christian and Christian',
 			playlistTitle: 'Merry Christmas from The Moms And Dads',
 			playlist: 'PLq_oRfIJoxLfCFniKFJL3RRsQVwsC4IXY',
-			cover: '/assets/images/covers/partners.jpg',
+			cover: '../assets/images/covers/partners.jpg',
 			tracks: [{
 				title: 'I saw Mommy Kissing Santa Claus',
 				artist: 'The Jackson 5'
@@ -95,7 +95,7 @@ export default class Data {
 			names: 'Josefine og Esben',
 			playlistTitle: 'Josefine og Esbens playlist',
 			playlist: 'PLq_oRfIJoxLfCFniKFJL3RRsQVwsC4IXY',
-			cover: '/assets/images/covers/joseesben.jpg',
+			cover: '../assets/images/covers/joseesben.jpg',
 			tracks: [{
 
 			}]
@@ -103,7 +103,7 @@ export default class Data {
 			names: 'Bo',
 			playlistTitle: 'Bos playlist',
 			playlist: 'PLq_oRfIJoxLc3UJ4q0bdfMYvOvDjaGM0p',
-			cover: '/assets/images/covers/bo.jpg',
+			cover: '../assets/images/covers/bo.jpg',
 			tracks: [{
 				title: 'Sleigh Ride',
 				artist: 'Boney James'
@@ -139,7 +139,7 @@ export default class Data {
 			names: 'Frederic',
 			playlistTitle: 'Tijuana Xmas',
 			playlist: 'PLq_oRfIJoxLdTLNA75vHQT9THdKd2bvO9',
-			cover: '/assets/images/covers/fred.jpg',
+			cover: '../assets/images/covers/fred.jpg',
 			tracks: [{
 				title: 'Edition spéciale Russie',
 				artist: 'What the cut'
@@ -175,7 +175,7 @@ export default class Data {
 			names: 'Tarik',
 			playlistTitle: 'Weird Xmas',
 			playlist: 'PLq_oRfIJoxLdLUAGv0OfVukxLgBM3AbKj',
-			cover: '/assets/images/covers/tarik.jpg',
+			cover: '../assets/images/covers/tarik.jpg',
 			tracks: [{
 				title: 'Scary F**ked Up Christmas',
 				artist: 'Garfunkel and Oates (Featuring Doug Benson)'
@@ -208,7 +208,7 @@ export default class Data {
 			names: 'Jonas',
 			playlistTitle: 'All I want for Christmas',
 			playlist: 'PLq_oRfIJoxLe1dUku-fu3PL3uqwoXdGw0',
-			cover: '/assets/images/covers/jonas.jpg',
+			cover: '../assets/images/covers/jonas.jpg',
 			tracks: [{
 				title: 'Christmas Is',
 				artist: 'Run-D.M.C'
@@ -244,7 +244,7 @@ export default class Data {
 			names: 'Dani',
 			playlistTitle: 'Dani’s Christmas Cooking Playlist',
 			playlist: 'PLq_oRfIJoxLeuwB6nIyQTKun1_65PibL8',
-			cover: '/assets/images/covers/dani.jpg',
+			cover: '../assets/images/covers/dani.jpg',
 			tracks: [{
 				title: 'A marchmallow world',
 				artist: 'Dean Martin and Frank Sinatra'
@@ -274,7 +274,7 @@ export default class Data {
 			names: 'Ann Sofi and Paul',
 			playlistTitle: 'Christmas oldies / a very vinyl Christmas / Vintage Christmas',
 			playlist: 'PLq_oRfIJoxLfI9043reFSM7tD2Hbc6hi5',
-			cover: '/assets/images/covers/paulAnnsofi.jpg',
+			cover: '../assets/images/covers/paulAnnsofi.jpg',
 			tracks: [{
 				title: 'Lonesome Christmas',
 				artist: 'Lowell Fulson'
