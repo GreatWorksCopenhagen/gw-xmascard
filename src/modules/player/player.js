@@ -17,7 +17,7 @@ export default class Player {
 			el: '.player'
 		}, config);
 		this.$el = $(this.config.el);
-        this.$togglePlay = this.$el.find('.player__controls-pauseplay');
+        this.$togglePlay = this.$el.find('.player__toggleplay');
 		this.$cover = this.$el.find('.player__playlist-cover-img');
 		this.$persons = this.$el.find('.player__author');
 		this.$song = this.$el.find('.player__song-title');
@@ -38,12 +38,23 @@ export default class Player {
 		m.emitter.on('playerChange', function(data) {
 			self.updatePlayer(data);
 		});
+		m.emitter.on('playerPause', function(data) {
+			self.setPlaybutton('paused');
+		});
+		m.emitter.on('playerPlay', function(data) {
+			self.setPlaybutton('playing');
+		});
         this.$togglePlay.on({
             click: function(e){
-                m.youtubeHandler.togglePlay();
+                var status = m.youtubeHandler.togglePlay();
             }
         })
 		$(window).keydown(function(e) {
+			//space
+			if (e.which === 32) {
+				e.preventDefault();
+				m.youtubeHandler.togglePlay();
+			}
 			// uparrow
 			if (e.which === 38) {
 				e.preventDefault();
@@ -65,6 +76,14 @@ export default class Player {
 				self.loadPreviousPlayList();
 			}
 		});
+	}
+	setPlaybutton(state){
+		if(state == 'playing'){
+			this.$togglePlay.find('i').addClass('pause-icon').removeClass('play-icon');
+		}
+		if(state=='paused'){
+			this.$togglePlay.find('i').removeClass('pause-icon').addClass('play-icon');
+		}
 	}
 	playPreviousSong() {
 		m.youtubeHandler.playPreviousSong();

@@ -10,10 +10,12 @@
             height: 100%;
             border-right: 1px solid $color-grey;
             overflow: hidden;
-            .player__left-scroll{
+            position:relative;
+
+            .player__left-scroll {
                 overflow: auto;
-                height:100%;
-                width:calc(100% + 15px);
+                height: 100%;
+                width: calc(100% + 15px);
                 -webkit-overflow-scrolling: touch;
             }
         }
@@ -23,54 +25,72 @@
             height: 100%;
         }
     }
-    .player__song-info{
-        padding:30px;
+
+    .player__toggleplay {
+        position: relative;
+        left: calc(100% - 80px);
+        margin-top: -30px;
+        cursor: pointer;
     }
-    .player_progress{
-        height:1px;
-        margin:0;
-        width:100%;
-        background-color:$color-grey;
+
+    .player__song-info {
+        padding:5px 30px 30px 29px;
     }
+
+    .player_progress {
+        height: 1px;
+        margin: 0;
+        width: 100%;
+        background-color: $color-grey;
+    }
+
     .player__playlist,
     .player__playlist-song {
         list-style: none;
         margin: 0;
         padding: 0;
     }
-    .player__playlist{
-        padding:30px;
+
+    .player__playlist {
+        // padding: 30px;
     }
+    .player__playlist-song {
+        padding: 10px 30px 10px 30px;
+        color: $color-red;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-grey;
+        }
+
+        &.player__playlist-song--playing {
+            color: $color-black;
+            background-color: $color-grey;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
     .player__playlist-title {
         @extend .font-bold;
         text-transform: uppercase;
     }
+
     .player__author {
         @extend .font-regular;
         font-size: 14px;
         color: $color-red;
     }
 
-    .player__playlist-song{
-        margin-top: 20px;
-        color:$color-red;
-        &.player__playlist-song--playing{
-            color:$color-black;
-        }
-        &:first-child{
-            margin-top: 0;
-        }
-    }
-
     // .player__playlist-songtitle, .player__playlist-songartist{
     //     color:$color-red;
     // }
-    .player__playlist-songtitle{
+    .player__playlist-songtitle {
         @extend .font-semibold;
     }
-    .player__playlist-songartist{
 
-    }
+    .player__playlist-songartist {}
 
     .player__controls {
         position: absolute;
