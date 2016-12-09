@@ -26,7 +26,7 @@ export default class Player {
 		this.$songIndex = this.$el.find('.player__song-index');
 		this.$playlistLenght = this.$el.find('.player__playlist-length');
 		this.$playlist = this.$el.find('.player__playlist');
-		this.songTemplate = '<li class="player__playlist-song"><span class="player__playlist-songartist">#songartist</span><span class="player__playlist-songtitle">#songtitle</span></li>';
+		this.songTemplate = '<li class="player__playlist-song"><div class="player__playlist-songtitle">#songtitle</div><div class="player__playlist-songartist">#songartist</div></li>';
 		this.init();
 
 	}
@@ -94,6 +94,10 @@ export default class Player {
 		this.$cover.attr('src', data.cover);
 		this.renderSongs(data.tracks);
         this.bindDynamicEvents();
+		this.setActiveSong(data.songIndex);
+	}
+	setActiveSong(index){
+		this.$playlist.find('.player__playlist-song').eq(index-1).addClass('player__playlist-song--playing')
 	}
 	renderSongs(songs) {
 		var i = 0,

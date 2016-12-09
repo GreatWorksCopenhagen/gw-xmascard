@@ -40,10 +40,10 @@ m.pageHandler = new PageHandler();
 m.router = new Router();
 
 
-m.inViewPort = new InViewPort({
-	offsetBottom: -80,
-	offsetTop: -80
-});
+// m.inViewPort = new InViewPort({
+// 	offsetBottom: -80,
+// 	offsetTop: -80
+// });
 
 
 // // inView for pictures defining when to load images.

@@ -3,26 +3,66 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: orange;
-
+    @extend .gradient-1;
+    // display: table;
     .albumViewer__carousel {
         width: 100%;
-        height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .albumViewer__album {
         padding: 15px;
-        @media #{$small} {
-            padding: 50px;
-        }
         cursor: pointer;
-
-        img {
-            max-width: 100%;
-            max-height: 80vh;
-        -webkit-box-shadow: 0 0 42px 0 rgba(115,115,115,1);
-        -moz-box-shadow: 0 0 42px 0 rgba(115,115,115,1);
-        box-shadow: 0 0 42px 0 rgba(115,115,115,1);
+        transition: margin-top 600ms $easing-smooth;
+        text-align: center;
+    }
+    .albumViewer__album-inner{
+        display: inline-block;
+        &:hover{
+            .albumViewer__album-cover-vinyl-img {
+                margin-left: 15%;
+            }
         }
+    }
+    .albumViewer__album-cover{
+        position: relative;
+    }
+    .albumViewer__album-cover-img {
+        max-width: 100%;
+        max-height:400px;
+        -webkit-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
+        -moz-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
+        margin: 0 auto;
+        z-index: 1;
+    }
+    .albumViewer__album-cover-vinyl-img {
+        max-width: 100%;
+        max-height:400px;
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        transition: margin-left 150ms $easing-smooth;
+    }
+    .albumViewer__album-copy{
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: opacity 1000ms $easing-smooth;
+        opacity: 0;
+    }
+    .slick-current{
+        &.albumViewer__album{
+            // margin-top:50px;
+            // transform: scale(1.1);
+            .albumViewer__album-copy{
+                opacity: 1;
+            }
+        }
+
     }
 }

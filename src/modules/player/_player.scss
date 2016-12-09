@@ -1,26 +1,80 @@
-.player{
+.player {
     position: absolute;
-    width:100%;
-    height:100%;
-    display:flex;
-    @media #{$small}{
-        .player__left{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    @media #{$small} {
+        .player__left {
             width: 30%;
-            height:100%;
-            background-color: blue;
+            min-width: 300px;
+            height: 100%;
+            border-right: 1px solid $color-grey;
+            overflow: hidden;
+            .player__left-scroll{
+                overflow: auto;
+                height:100%;
+                width:calc(100% + 15px);
+                -webkit-overflow-scrolling: touch;
+            }
         }
-        .player__right{
+
+        .player__right {
             width: 70%;
-            height:100%;
-            background-color: yellow;
+            height: 100%;
         }
-     }
-  .player__playlist{
-      background-color: red;
-  }
-  .player__controls{
-      position: absolute;
-      right: 50px;
-      bottom:50px;
-  }
+    }
+    .player__song-info{
+        padding:30px;
+    }
+    .player_progress{
+        height:1px;
+        margin:0;
+        width:100%;
+        background-color:$color-grey;
+    }
+    .player__playlist,
+    .player__playlist-song {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .player__playlist{
+        padding:30px;
+    }
+    .player__playlist-title {
+        @extend .font-bold;
+        text-transform: uppercase;
+    }
+    .player__author {
+        @extend .font-regular;
+        font-size: 14px;
+        color: $color-red;
+    }
+
+    .player__playlist-song{
+        margin-top: 20px;
+        color:$color-red;
+        &.player__playlist-song--playing{
+            color:$color-black;
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+
+    // .player__playlist-songtitle, .player__playlist-songartist{
+    //     color:$color-red;
+    // }
+    .player__playlist-songtitle{
+        @extend .font-semibold;
+    }
+    .player__playlist-songartist{
+
+    }
+
+    .player__controls {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
 }

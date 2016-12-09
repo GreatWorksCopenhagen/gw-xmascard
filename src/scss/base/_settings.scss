@@ -20,3 +20,17 @@ $large: 'only screen and (min-width:#{$large-screen})' !default;
 
 $landscape: 'only screen and (orientation: landscape)' !default;
 $portrait: 'only screen and (orientation: portrait)' !default;
+
+
+$color-red: #e85757;
+$color-black: #1b1b1b;
+$color-white: #FFFFFF;
+$color-grey: #e8e8e8;
+
+.gradient-1{
+    background: #f1f1f1;
+    background: -moz-radial-gradient(center, ellipse cover, #f1f1f1 0%, #ffffff 45%);
+    background: -webkit-radial-gradient(center, ellipse cover, #f1f1f1 0%,#ffffff 45%);
+    background: radial-gradient(ellipse at center, #f1f1f1 0%,#ffffff 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#f1f1f1', endColorstr='#ffffff',GradientType=1 );
+}

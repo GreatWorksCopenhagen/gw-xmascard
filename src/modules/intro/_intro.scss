@@ -2,8 +2,13 @@
   position: absolute;
   height:100%;
   width:100%;
-  padding: 100px;
-  background-color: red;
   cursor:pointer;
   z-index: 100;
+  text-align: center;
+  display: table;
+  @extend .gradient-1;
+  .intro__inner{
+      display: table-cell;
+      vertical-align: middle;
+  }
 }

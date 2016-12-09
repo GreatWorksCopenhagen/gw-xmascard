@@ -1,3 +1,17 @@
 img{
     max-width:100%;
 }
+
+.button-round{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: $color-red;
+}
+
+.button{
+    border: 1px solid $color-red;
+    padding: 25px 75px;
+    color: $color-red;
+    @extend .font-regular;
+}
