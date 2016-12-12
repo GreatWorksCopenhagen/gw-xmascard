@@ -29,6 +29,7 @@ System.config({
     "pixi.js": "npm:pixi.js@3.0.6",
     "scrollmagic": "bower:scrollmagic@2.0.5",
     "svg-injector": "bower:svg-injector@1.1.3",
+    "three.js": "github:mrdoob/three.js@master",
     "typeahead": "github:twitter/typeahead.js@0.11.1",
     "vivus": "npm:vivus@0.3.0",
     "bower:pagepiling.js@1.5.1": {
