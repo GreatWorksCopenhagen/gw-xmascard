@@ -25,13 +25,15 @@ export default class AlbumViewer {
       this.$el.on({
           click: function(e){
               var playlistIndex = $(this).data('playlist-index');
-              m.router.gotoPage('player');
-              m.youtubeHandler.playPlaylistByIndex(playlistIndex);
+              m.router.gotoUrl('/player/'+playlistIndex);
           }
       }, '.albumViewer__album')
-    // bind your events here.
   }
   initCarousel(){
       this.carousel = new Carousel();
+  }
+  updateCarousel(){
+      $(window).trigger('resize');
+    //   this.carousel.$el.slick('reinit');
   }
 }

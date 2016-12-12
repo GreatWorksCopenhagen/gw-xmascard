@@ -39,6 +39,7 @@ export default class YoutubeHandler {
 				events: {
 					'onReady': function(e){
                         self.onPlayerReady(e, self);
+						m.emitter.emit('playerReady');
                     },
 					'onStateChange': function(e){
                         self.onPlayerStateChange(e, self);
@@ -81,16 +82,26 @@ export default class YoutubeHandler {
 	}
     loadNextPlayList(){
         this.currentPlayListIndex++;
-        var next = this.getPlayListByIndex(this.currentPlayListIndex);
-        this.playerLoadPlayList(next);
+        var next = this.getSafePlaylist(this.currentPlayListIndex);
+		m.router.gotoUrl('/player/'+next);
+        // this.playerLoadPlayList(next);
     }
     loadPreviousPlayList(){
         this.currentPlayListIndex--;
-        var prev = this.getPlayListByIndex(this.currentPlayListIndex);
-        this.playerLoadPlayList(prev);
+		var prev = this.getSafePlaylist(this.currentPlayListIndex);
+		m.router.gotoUrl('/player/'+prev);
+        // var prev = this.getPlayListByIndex(this.currentPlayListIndex);
+        // this.playerLoadPlayList(prev);
     }
 	playerLoadPlayList(id) {
-        this.player.loadPlaylist({list: id});
+		var self = this;
+		if(this.player){
+			this.player.loadPlaylist({list: id});
+		} else {
+			m.emitter.on('playerReady', function(){
+				self.player.loadPlaylist({list: id});
+			});
+		}
 	}
     getPlayList(){
         return this.player.getPlaylist();
@@ -130,6 +141,14 @@ export default class YoutubeHandler {
         id = this.currentPlayListIndex;
         return m.data[id].playlist;
     }
+	getSafePlaylist(id){
+		if(id > m.data.length-1){
+            this.currentPlayListIndex = 0;
+        } else if(id <0){
+            this.currentPlayListIndex = m.data.length-1;
+        }
+		return this.currentPlayListIndex;
+	}
     isSongValid(direction){
         var songIndexInPlaylist = this.getPlayList().indexOf(this.player.getVideoData()['video_id']),
                 playListLength = this.getPlayList().length - 1;

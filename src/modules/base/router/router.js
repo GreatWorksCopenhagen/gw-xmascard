@@ -34,10 +34,19 @@ export default class Router {
 		});
 		this.page('/albums', function(page){
 			m.pageHandler.showPage('albums');
-
 		});
 		this.page('/player', function(page){
 			m.pageHandler.showPage('player');
+			setTimeout(function(){
+				m.intro.animateOut();
+			},700);
+
+		});
+		this.page('/player/:id', function(page){
+			m.pageHandler.showPage('player', page.params.id);
+			setTimeout(function(){
+				m.intro.animateOut();
+			},700);;
 		});
 		// instantiate pages.
 		this.page();
@@ -48,5 +57,8 @@ export default class Router {
 		} else if(page=='player'){
 			this.page('/player');
 		}
+	}
+	gotoUrl(url){
+		this.page(url);
 	}
 }

@@ -23,13 +23,17 @@ export default class PageHandler {
   }
   bindEvents() {
   }
-  showPage(page){
+  showPage(page, id){
       if(page == 'albums'){
           this.$albumsPage.show();
           this.$playerPage.hide();
+          m.albumViewer.updateCarousel();
       } else if(page == 'player'){
           this.$albumsPage.hide();
           this.$playerPage.show();
+          if(id){
+              m.youtubeHandler.playPlaylistByIndex(id);
+          }
       }
   }
 }
