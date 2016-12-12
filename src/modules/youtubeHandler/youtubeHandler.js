@@ -30,8 +30,8 @@ export default class YoutubeHandler {
 		// bind your events here.
 		window.onYouTubeIframeAPIReady = function() {
 			self.playerEl = new YT.Player('player', {
-				height: '200',
-				width: '200',
+				height: '1',
+				width: '1',
 				playerVars: {
 					listType: 'playlist',
 					list: m.data[self.currentPlayListIndex].playlist
@@ -64,16 +64,20 @@ export default class YoutubeHandler {
         this.currentPlayList = this.player.getPlaylist();
 	}
 	onPlayerStateChange(event, self) {
-        if(event.data == 1){
+        if(event.data == -1){ // unstarted
             var songIndexInPlaylist = this.getPlayList().indexOf(this.player.getVideoData()['video_id']),
                     playListLength = this.getPlayList().length - 1;
             self.currentSong = self.player.getVideoData();
             var songObject = $.extend(self.currentSong, m.data[self.currentPlayListIndex]);
             $.extend(songObject, {songIndex:songIndexInPlaylist+1, playlistLength: playListLength+1});
             m.emitter.emit('playerChange', songObject);
-        } else if(event.data === 0) {
+        } else if(event.data === 0) { // ended
 			this.playNextSong();
-        }
+        } else if(event.data === 2){ // paused
+			m.emitter.emit('playerPause');
+		} else if(event.data === 1){ // playing
+			m.emitter.emit('playerPlay');
+		}
 	}
     loadNextPlayList(){
         this.currentPlayListIndex++;
@@ -91,6 +95,18 @@ export default class YoutubeHandler {
     getPlayList(){
         return this.player.getPlaylist();
     }
+	playSongInPlaylist(index){
+		this.player.playVideoAt(index)
+	}
+	togglePlay(){
+		if(this.player.getPlayerState()==1){
+			this.player.pauseVideo();
+			return 'paused';
+		} else if(this.player.getPlayerState()==2){
+			this.player.playVideo();
+			return 'playing';
+		}
+	}
     playNextSong(){
         if(this.isSongValid('next')){
             this.player.nextVideo();
