@@ -7,6 +7,59 @@
 	{{> head }}
 </head>
 	<body>
+		<!-- Snow shader -->
+		<style media="screen">
+			.snow {
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  margin: 0;
+			  padding: 0;
+			  z-index: 2000;
+			  height:100%;
+			  width:100%;
+			  background: none;
+			}
+			.dg.ac{
+				z-index: 2001;
+			}
+		</style>
+		<script type="x-shader/x-vertex" id="snow_vs">
+			uniform float radiusX;
+			uniform float radiusZ;
+			uniform float size;
+			uniform float scale;
+			uniform float height;
+			uniform float elapsedTime;
+			uniform float speedH;
+			uniform float speedV;
+
+			void main() {
+				vec3 pos = position;
+				pos.x += cos((elapsedTime + position.z) * 0.25 * speedH) * radiusX;
+				pos.y = mod(pos.y - elapsedTime * speedV, height);
+				pos.z += sin((elapsedTime + position.x) * 0.25 * speedH) * radiusZ;
+
+				vec4 mvPosition = modelViewMatrix * vec4( pos, 1.0 );
+
+				gl_PointSize = size * ( scale / length( mvPosition.xyz ) );
+
+				gl_Position = projectionMatrix * mvPosition;
+			}
+		</script>
+		<script type="x-shader/x-fragment" id="snow_fs">
+			uniform vec3 color;
+			uniform float opacity;
+			uniform sampler2D texture;
+
+			void main() {
+				vec4 texColor = texture2D( texture, gl_PointCoord );
+				gl_FragColor = texColor * vec4( color, opacity );
+			}
+		</script>
+		<div id="snow"></div>
+		<!-- End Snow shader -->
+
 		<!--[if lt IE 9]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->

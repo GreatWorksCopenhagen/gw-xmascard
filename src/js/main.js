@@ -1,12 +1,10 @@
-// import * as jQuery from 'jquery'
+ // import * as jQuery from 'jquery'
 import Router from 'modules/base/router/router';
 import Picture from 'modules/base/picture/picture';
 import PointerEventsPolyfill from 'js/vendors/pointer_events_polyfill';
 import Emitter from 'modules/base/emitter/emitter';
 import Responsive from 'modules/base/responsive/responsive';
 import InViewPort from 'modules/base/inViewPort/inViewPort';
-
-import Threejs from 'three.js';
 
 // import Storage from 'js/vendors/store2';
 import * as utilities from 'modules/base/utils/utils';
