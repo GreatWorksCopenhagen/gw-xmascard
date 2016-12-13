@@ -10,7 +10,7 @@
             height: 100%;
             border-right: 1px solid $color-grey;
             overflow: hidden;
-            position:relative;
+            position: relative;
 
             .player__left-scroll {
                 overflow: auto;
@@ -34,7 +34,7 @@
     }
 
     .player__song-info {
-        padding:5px 30px 30px 29px;
+        padding: 5px 30px 30px 29px;
     }
 
     .player_progress {
@@ -52,13 +52,15 @@
     }
 
     .player__playlist {
-        // padding: 30px;
+        padding-bottom: 60px;
     }
+
     .player__playlist-song {
-        padding: 10px 30px 10px 30px;
+        padding: 10px 30px;
         color: $color-red;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             background-color: $color-grey;
         }
 
@@ -82,7 +84,6 @@
         font-size: 14px;
         color: $color-red;
     }
-
     // .player__playlist-songtitle, .player__playlist-songartist{
     //     color:$color-red;
     // }
@@ -96,5 +97,17 @@
         position: absolute;
         right: 50px;
         bottom: 50px;
+    }
+
+    .player__utils {
+        position: fixed;
+        bottom: 0;
+        padding: 20px 30px;
+        background-color: $color-white;
+        border-top: 1px solid $color-grey;
+        width:100%;
+        @media #{$small} {
+            width: calc(30% - 1px);
+        }
     }
 }
