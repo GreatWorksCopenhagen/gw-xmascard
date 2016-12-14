@@ -1473,9 +1473,10 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   z-index: 100;
   text-align: center;
   display: table;
+  top: 0;
 }
 
-/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner {
   display: table-cell;
   vertical-align: middle;
@@ -1913,12 +1914,31 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   }
 }
 
+/* WebGL Snow */
+/* line 2, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2000;
+  height: 100%;
+  width: 100%;
+  background: none;
+}
+
+/* Dat GUI for tests */
+/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
+.dg.ac {
+  z-index: 2001;
+}
+
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */
 .youtubeHandler {
   position: absolute;
   right: 0;
   z-index: 101;
 }
-
 
 /*# sourceMappingURL=main.css.map */

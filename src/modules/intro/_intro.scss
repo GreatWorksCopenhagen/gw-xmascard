@@ -1,14 +1,16 @@
-.intro{
-  position: absolute;
-  height:100%;
-  width:100%;
-  cursor:pointer;
-  z-index: 100;
-  text-align: center;
-  display: table;
-  @extend .gradient-1;
-  .intro__inner{
-      display: table-cell;
-      vertical-align: middle;
-  }
+.intro {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 100;
+    text-align: center;
+    display: table;
+    top: 0;
+    @extend .gradient-1;
+
+    .intro__inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
 }
