@@ -31,9 +31,9 @@ gulp.task('html', function() {
   // Generic build of all pages.
   assemble.src(paths.assemble+'/pages/*.hbs', {layout: 'default'})
     .pipe(extname())
-    .pipe(assemble.dest('./src/pages/'))
-    .pipe(replace('dir="ltr"', 'dir="rtl"'))
-    .pipe(gulp.dest(global.paths.src+'/pages-rtl/'));
+    .pipe(assemble.dest('./src/'));
+    // .pipe(replace('dir="ltr"', 'dir="rtl"'))
+    // .pipe(gulp.dest(global.paths.src+'/pages-rtl/'));
 
 // // make pages overview in index
 //     gulp.src(paths.src + '/index.html')

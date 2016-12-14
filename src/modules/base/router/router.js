@@ -25,9 +25,9 @@ export default class Router {
 	defineRoutes() {
 		var self = this;
 		// if(utils.isFrontend){
-			this.page.base('/pages');
+			// this.page.base('/pages');
 		// } else {
-		// 	this.page.base('');
+			this.page.base('');
 		// }
 		this.page('/', function(page){
 			m.pageHandler.showPage('albums');
@@ -36,7 +36,7 @@ export default class Router {
 			m.pageHandler.showPage('albums');
 		});
 		this.page('/player', function(page){
-			m.pageHandler.showPage('player');
+			m.pageHandler.showPage('player', 1);
 			setTimeout(function(){
 				m.intro.animateOut();
 			},700);

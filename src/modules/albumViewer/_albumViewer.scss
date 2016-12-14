@@ -30,7 +30,7 @@
     }
     .albumViewer__album-cover-img {
         max-width: 100%;
-        max-height:400px;
+        max-height:60vh;
         -webkit-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         -moz-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
@@ -39,7 +39,7 @@
     }
     .albumViewer__album-cover-vinyl-img {
         max-width: 100%;
-        max-height:400px;
+        max-height:60vh;
         position: absolute;
         top:0;
         left:50%;

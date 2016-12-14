@@ -20,7 +20,7 @@ global.paths = {
   // HTML sources.
   'html': [baseUrl+'/assemble/**/*.hbs', './src/modules/**/*.hbs'],
   // HTML sources.
-  'htmldist': baseUrl+'/pages/**/*.html',
+  'htmldist': baseUrl+'/index.html',
   'htmlrtldist': baseUrl+'/pages-rtl/**/*.html',
   //pages
   'pages': baseUrl+'/pages',

@@ -16,10 +16,15 @@ import Intro from 'modules/intro/intro';
 import AlbumViewer from 'modules/albumViewer/albumViewer';
 import PageHandler from 'modules/pageHandler/pageHandler';
 import Player from 'modules/player/player';
+import PreloadImages from 'modules/preloadImages/preloadImages';
+
 
 
 export const m = {};
 export const utils = utilities;
+
+
+
 
 //define generic stuff here.
 m.emitter = new Emitter();
@@ -27,6 +32,7 @@ m.picture = new Picture();
 m.responsive = new Responsive();
 m.TweenMax = Gsap.TweenMax;
 m.data = new Data();
+// m.preloadImages = new PreloadImages();
 
 // // define when to do stuff on url change.
 //

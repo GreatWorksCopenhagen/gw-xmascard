@@ -14,19 +14,24 @@ export default class Player {
 	constructor(config) { // put in defaults here
 		//defaults
 		this.config = $.extend({
-			el: '.player'
+			el: '.player',
+			minPinRotation: 21,
+			maxPinRotation: 44
 		}, config);
 		this.$el = $(this.config.el);
+		this.$playerLeft = this.$el.find('.player__left');
         this.$togglePlay = this.$el.find('.player__toggleplay');
 		this.$cover = this.$el.find('.player__playlist-cover-img');
 		this.$persons = this.$el.find('.player__author');
 		this.$song = this.$el.find('.player__song-title');
 		this.$artist = this.$el.find('.player__song-artist');
+		this.$albumcover = this.$el.find('.player__base-album-img');
 		this.$playlistTitle = this.$el.find('.player__playlist-title');
 		this.$songIndex = this.$el.find('.player__song-index');
 		this.$playlistLenght = this.$el.find('.player__playlist-length');
 		this.$playlist = this.$el.find('.player__playlist');
 		this.songTemplate = '<li class="player__playlist-song"><div class="player__playlist-songtitle">#songtitle</div><div class="player__playlist-songartist">#songartist</div></li>';
+		this.$playerPin = this.$el.find('.player__base-pin-img');
 		this.init();
 
 	}
@@ -39,9 +44,11 @@ export default class Player {
 			self.updatePlayer(data);
 		});
 		m.emitter.on('playerPause', function(data) {
+			self.$el.removeClass('player--playing');
 			self.setPlaybutton('paused');
 		});
 		m.emitter.on('playerPlay', function(data) {
+			self.$el.addClass('player--playing');
 			self.setPlaybutton('playing');
 		});
         this.$togglePlay.on({
@@ -97,23 +104,32 @@ export default class Player {
     togglePlay(){
         m.youtubeHandler.togglePlay();
     }
+	// animatePlayList(){
+	// 	var $songs = this.$playlist.find('.player__playlist-song');
+	// 	m.TweenMax.staggerTo($songs, 1, {x:'110%', ease:Power2.easeOut});
+	// }
 	loadNextPlayList() {
 		m.youtubeHandler.loadNextPlayList();
+		// this.animatePlayList();
 	}
 	loadPreviousPlayList() {
 		m.youtubeHandler.loadPreviousPlayList();
+		// this.animatePlayList();
 	}
 	updatePlayer(data) {
-		this.$persons.text(data.names);
-		this.$artist.text(data.tracks[data.songIndex - 1].artist);
-		this.$song.text(data.tracks[data.songIndex - 1].title);
-		this.$playlistTitle.text(data.playlistTitle);
-		this.$songIndex.text(data.songIndex);
-		this.$playlistLenght.text(data.playlistLength);
-		this.$cover.attr('src', data.cover);
-		this.renderSongs(data.tracks);
-        this.bindDynamicEvents();
-		this.setActiveSong(data.songIndex);
+		var self = this;
+		self.$persons.text(data.names);
+		self.$artist.text(data.tracks[data.songIndex - 1].artist);
+		self.$song.text(data.tracks[data.songIndex - 1].title);
+		self.$playlistTitle.text(data.playlistTitle);
+		self.$songIndex.text(data.songIndex);
+		self.$playlistLenght.text(data.playlistLength);
+		self.$cover.attr('src', data.cover);
+		self.$albumcover.attr('src', data.cover);
+		self.renderSongs(data.tracks);
+        self.bindDynamicEvents();
+		self.setActiveSong(data.songIndex);
+		self.setPin(data.songIndex / data.playlistLength);
 	}
 	setActiveSong(index){
 		this.$playlist.find('.player__playlist-song').eq(index-1).addClass('player__playlist-song--playing')
@@ -127,9 +143,21 @@ export default class Player {
 		}
         this.$playlist.html(appendString)
 	}
+	setPin(songIndexPercent){
+		var degVal = ((this.config.maxPinRotation-this.config.minPinRotation) * songIndexPercent)+this.config.minPinRotation;
+		var transformString =  'translate(194%, -55%) rotate('+degVal+'deg)';
+		this.setTransform(this.$playerPin, transformString);
+	}
+	setTransform($el, transform){
+		$el[0].style.transform = transform;
+		$el[0].style.webkitTransform = transform;
+		$el[0].style.mozTransform = transform;
+		$el[0].style.oTransform = transform;
+		$el[0].style.webkitTransform = transform;
+	}
     bindDynamicEvents(){
         var self = this;
-        this.$playlist.on({
+        this.$playlist.off().on({
             click: function(e){
                 var songIndex = $(this).index();
                 self.playSongInPlaylist(songIndex);
