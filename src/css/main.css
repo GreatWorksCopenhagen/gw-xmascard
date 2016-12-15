@@ -438,7 +438,7 @@ th {
 /*!
  *  @author rasmuselken <re@greatworks.dk>
  */
-/* line 30, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_settings.scss */
+/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_settings.scss */
 .gradient-1, .albumViewer, .intro {
   background: #f1f1f1;
   background: -webkit-radial-gradient(center, ellipse cover, #f1f1f1 0%, #ffffff 45%);
@@ -481,7 +481,7 @@ html {
 }
 
 /* line 7, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
-.font-semibold, .player .player__playlist-songtitle {
+.font-semibold, .intro .intro__inner .intro__arrow-instructions, .player .player__playlist-songtitle {
   font-weight: 600;
 }
 
@@ -520,14 +520,22 @@ h1 {
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 body {
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 5, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 img {
   max-width: 100%;
 }
 
-/* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round {
   width: 50px;
   height: 50px;
@@ -537,7 +545,7 @@ img {
   position: relative;
 }
 
-/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round i {
   position: absolute;
   top: 50%;
@@ -546,14 +554,23 @@ img {
           transform: translate(-50%, -50%);
 }
 
-/* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button {
+  cursor: pointer;
   border: 1px solid #e85757;
-  padding: 25px 75px;
+  padding: 20px 75px;
   color: #e85757;
+  border-radius: 40px;
+  display: inline-block;
 }
 
-/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button:hover {
+  border-color: #1b1b1b;
+  color: #1b1b1b;
+}
+
+/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .play-icon {
   width: 12px;
   height: 16px;
@@ -563,7 +580,7 @@ img {
   display: block;
 }
 
-/* line 40, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .pause-icon {
   width: 12px;
   height: 16px;
@@ -831,9 +848,20 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-image: url("/assets/images/covers/coversback.jpg");
+  background-size: cover;
 }
 
-/* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .albumViewer__logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  opacity: 0.6;
+}
+
+/* line 18, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__carousel {
   width: 100%;
   top: 50%;
@@ -841,31 +869,44 @@ img {
           transform: translateY(-50%);
 }
 
-/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album {
   padding: 25px;
   cursor: pointer;
-  -webkit-transition: margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
-          transition: margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
+          transition: transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
   text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 32, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-current.albumViewer__album {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
+  opacity: 1;
+}
+
+/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner {
   display: inline-block;
 }
 
-/* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 44, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner:hover .albumViewer__album-cover-vinyl-img {
   margin-left: 15%;
 }
 
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 49, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover {
   position: relative;
 }
 
-/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-img {
   max-width: 100%;
   max-height: 60vh;
@@ -874,7 +915,7 @@ img {
   z-index: 1;
 }
 
-/* line 40, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 61, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-vinyl-img {
   max-width: 100%;
   max-height: 60vh;
@@ -888,7 +929,7 @@ img {
           transition: margin-left 150ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-/* line 50, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 71, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-copy {
   text-align: center;
   max-width: 400px;
@@ -897,11 +938,6 @@ img {
   -webkit-transition: opacity 1000ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
           transition: opacity 1000ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
   opacity: 0;
-}
-
-/* line 62, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-.albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
-  opacity: 1;
 }
 
 /* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
@@ -1469,17 +1505,68 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   position: absolute;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   z-index: 100;
   text-align: center;
   display: table;
   top: 0;
+  overflow: auto;
+  background-image: url("/assets/images/intro/introback.jpg");
+  background-size: cover;
 }
 
-/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner {
   display: table-cell;
   vertical-align: middle;
+  padding: 50px;
+}
+
+/* line 18, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner .intro__logo {
+  max-width: 100px;
+  margin-bottom: 40px;
+}
+
+/* line 25, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner p {
+  margin-top: 15px;
+}
+
+/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner .intro__arrows {
+  max-width: 200px;
+  display: none;
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+  .intro .intro__inner .intro__arrows {
+    display: block;
+  }
+}
+
+/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner .intro__arrow-instructions {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+  .intro .intro__inner .intro__arrow-instructions {
+    display: block;
+  }
+}
+
+/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner > * {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* line 49, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+.intro .intro__inner .button {
+  margin-top: 60px;
 }
 
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
@@ -1493,9 +1580,10 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
           transform: translate3d(0, 0, 0);
   -webkit-transition: -webkit-transform 800ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
           transition: transform 800ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
+  overflow: hidden;
 }
 
-/* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .albumViewer,
 .pageHandler .playerView {
   position: absolute;
@@ -1503,33 +1591,42 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100%;
   height: 100%;
   opacity: 1;
-  -webkit-transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
-          transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
+  -webkit-transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
+          transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
   z-index: 1;
   box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.75);
 }
 
-/* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .playerView {
   left: 50%;
   z-index: 0;
 }
 
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
-.pageHandler.pageHandler--show-albums {
+/* line 30, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+.pageHandler.pageHandler--show-albums .playerView {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  left: -50%;
+}
+
+/* line 34, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+.pageHandler.pageHandler--show-albums .albumViewer {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-/* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
-.pageHandler.pageHandler--show-player {
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+.pageHandler.pageHandler--show-player .playerView {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  left: 0;
 }
 
-/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
-.pageHandler.pageHandler--show-player .playerView {
-  left: 100%;
+/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+.pageHandler.pageHandler--show-player .albumViewer {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
 }
 
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
@@ -1546,12 +1643,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 /* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__left-scroll {
   overflow: auto;
-  height: 100%;
+  height: 100vh;
   -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+  /* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left {
     width: 30%;
     min-width: 300px;
@@ -1560,34 +1657,34 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
     overflow: hidden;
     position: relative;
   }
-  /* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+  /* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left .player__left-scroll {
     overflow: auto;
     height: 100%;
     width: calc(100% + 15px);
     -webkit-overflow-scrolling: touch;
   }
-  /* line 30, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+  /* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__right {
     width: 70%;
     height: 100%;
   }
 }
 
-/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__toggleplay {
   position: relative;
   left: calc(100% - 80px);
-  margin-top: -30px;
+  margin-top: -33px;
   cursor: pointer;
 }
 
-/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 44, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__song-info {
   padding: 5px 30px 30px 29px;
 }
 
-/* line 47, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 48, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player_progress {
   height: 1px;
   margin: 0;
@@ -1595,7 +1692,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-color: #e8e8e8;
 }
 
-/* line 67, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 68, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist,
 .player .player__playlist-song {
   list-style: none;
@@ -1603,184 +1700,183 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   padding: 0;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(1) {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(2) {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(3) {
   -webkit-animation-delay: 3000ms;
           animation-delay: 3000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(4) {
   -webkit-animation-delay: 4000ms;
           animation-delay: 4000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(5) {
   -webkit-animation-delay: 5000ms;
           animation-delay: 5000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(6) {
   -webkit-animation-delay: 6000ms;
           animation-delay: 6000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(7) {
   -webkit-animation-delay: 7000ms;
           animation-delay: 7000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(8) {
   -webkit-animation-delay: 8000ms;
           animation-delay: 8000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(9) {
   -webkit-animation-delay: 9000ms;
           animation-delay: 9000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(10) {
   -webkit-animation-delay: 10000ms;
           animation-delay: 10000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(11) {
   -webkit-animation-delay: 11000ms;
           animation-delay: 11000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(12) {
   -webkit-animation-delay: 12000ms;
           animation-delay: 12000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(13) {
   -webkit-animation-delay: 13000ms;
           animation-delay: 13000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(14) {
   -webkit-animation-delay: 14000ms;
           animation-delay: 14000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(15) {
   -webkit-animation-delay: 15000ms;
           animation-delay: 15000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(16) {
   -webkit-animation-delay: 16000ms;
           animation-delay: 16000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(17) {
   -webkit-animation-delay: 17000ms;
           animation-delay: 17000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(18) {
   -webkit-animation-delay: 18000ms;
           animation-delay: 18000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(19) {
   -webkit-animation-delay: 19000ms;
           animation-delay: 19000ms;
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(20) {
   -webkit-animation-delay: 20000ms;
           animation-delay: 20000ms;
 }
 
-/* line 82, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 83, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist {
   padding-bottom: 60px;
 }
 
-/* line 86, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 87, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song {
   padding: 10px 30px;
   color: #e85757;
   cursor: pointer;
 }
 
-/* line 91, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 92, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:hover {
-  background-color: #e8e8e8;
+  background-color: #f8f8f8;
 }
 
-/* line 95, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 96, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song.player__playlist-song--playing {
   color: #1b1b1b;
-  background-color: #e8e8e8;
+  background-color: #f8f8f8;
 }
 
-/* line 100, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 101, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:first-child {
   margin-top: 0;
 }
 
-/* line 105, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 106, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-title {
   text-transform: uppercase;
 }
 
-/* line 110, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 111, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__author {
   font-size: 14px;
   color: #e85757;
 }
 
-/* line 124, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 125, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__controls {
   position: absolute;
   right: 50px;
   bottom: 50px;
 }
 
-/* line 130, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils {
-  position: fixed;
-  bottom: 0;
-  padding: 20px 30px;
+  position: absolute;
+  top: calc(100% - 60px);
   background-color: #FFFFFF;
   border-top: 1px solid #e8e8e8;
   width: 100%;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 130, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+  /* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__utils {
     min-width: 300px;
     width: calc(30% - 1px);
@@ -1788,6 +1884,38 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* line 143, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__utils > * {
+  padding: 20px 30px;
+  display: inline-block;
+}
+
+/* line 147, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__utils > *:hover:hover {
+  background-color: #f8f8f8;
+}
+
+/* line 153, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__back-btn {
+  width: calc(100% - 67px);
+  border-right: 1px solid #e8e8e8;
+}
+
+/* line 156, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__back-btn .player__back-btn-logo {
+  margin-right: 10px;
+}
+
+/* line 160, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__share-btn {
+  margin-left: -4px;
+}
+
+/* line 162, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+.player .player__share-btn img {
+  height: 16px;
+}
+
+/* line 167, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__recordplayer {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -1796,33 +1924,33 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-size: cover;
 }
 
-/* line 150, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 174, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-/* line 156, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 180, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-album-img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-91.6%, -44.9%);
-          transform: translate(-91.6%, -44.9%);
+  -webkit-transform: translate3d(-91.6%, -44.9%, 0);
+          transform: translate3d(-91.6%, -44.9%, 0);
   z-index: 1;
   width: 18.6vh;
   max-width: 18.6%;
   border-radius: 50%;
 }
 
-/* line 169, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 193, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player.player--playing .player__base-album-img {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 
-/* line 174, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 198, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-center-img {
   position: absolute;
   top: 50%;
@@ -1834,7 +1962,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 6.6%;
 }
 
-/* line 184, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 208, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-vinyl-img {
   position: absolute;
   top: 50%;
@@ -1846,7 +1974,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 60.6%;
 }
 
-/* line 194, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 218, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-holder-img {
   position: absolute;
   top: 50%;
@@ -1858,7 +1986,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 16.1%;
 }
 
-/* line 204, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 228, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-img {
   position: absolute;
   top: 50%;
@@ -1874,7 +2002,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
           transition: transform 2500ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-/* line 216, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 240, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-back-img {
   position: absolute;
   top: 50%;
@@ -1884,7 +2012,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100vh;
 }
 
-/* line 225, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 249, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .rotate-album, .player .player__base-album-img {
   -webkit-animation: rotatingAlbum 2s linear infinite;
           animation: rotatingAlbum 2s linear infinite;
@@ -1926,10 +2054,11 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   height: 100%;
   width: 100%;
   background: none;
+  pointer-events: none;
 }
 
 /* Dat GUI for tests */
-/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 .dg.ac {
   z-index: 2001;
 }

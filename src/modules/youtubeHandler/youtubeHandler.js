@@ -72,6 +72,7 @@ export default class YoutubeHandler {
             var songObject = $.extend(self.currentSong, m.data[self.currentPlayListIndex]);
             $.extend(songObject, {songIndex:songIndexInPlaylist+1, playlistLength: playListLength+1});
             m.emitter.emit('playerChange', songObject);
+			m.emitter.emit('playerPause');
         } else if(event.data === 0) { // ended
 			this.playNextSong();
         } else if(event.data === 2){ // paused
@@ -100,6 +101,7 @@ export default class YoutubeHandler {
 		} else {
 			m.emitter.on('playerReady', function(){
 				self.player.loadPlaylist({list: id});
+
 			});
 		}
 	}
@@ -114,6 +116,9 @@ export default class YoutubeHandler {
 			this.player.pauseVideo();
 			return 'paused';
 		} else if(this.player.getPlayerState()==2){
+			this.player.playVideo();
+			return 'playing';
+		} else {
 			this.player.playVideo();
 			return 'playing';
 		}

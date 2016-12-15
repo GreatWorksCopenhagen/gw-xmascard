@@ -17,6 +17,7 @@ export default class Intro {
 			el: '.intro'
 		}, config);
 		this.$el = $(this.config.el);
+		this.$button = this.$el.find('.button');
 		this.init();
 
 	}
@@ -25,7 +26,11 @@ export default class Intro {
 	}
 	bindEvents() {
         var self = this;
-		this.$el.on({
+		// m.emitter.on('scroll', function(){
+		// 	console.log('scroll');
+		// 	self.animateOut();
+		// })
+		this.$button.on({
             click: function(){
                 self.animateOut();
             }

@@ -180,8 +180,8 @@ export default class Webgl {
 			//cameraY = ( cameraRadius * ( mouseY - halfHeight ) / halfHeight ) / 10;
 		}, false );
 
-		document.addEventListener( 'mousewheel', this.onMouseWheel, false );
-		document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
+		// document.addEventListener( 'mousewheel', this.onMouseWheel, false );
+		// document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
 
     this.animate();
 

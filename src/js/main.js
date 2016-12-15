@@ -25,6 +25,7 @@ import Webgl from 'modules/webgl/webgl';
 
 export const m = {};
 export const utils = utilities;
+m.utils = utils;
 
 
 
@@ -40,7 +41,8 @@ m.data = new Data();
 // // define when to do stuff on url change.
 //
 
-m.webgl = new Webgl();
+
+// m.webgl = new Webgl();
 
 // // inView for generic elements used mostly for animations.
 m.youtubeHandler = new YoutubeHandler();

@@ -204,6 +204,9 @@ export function enableScroll() {
 export function scrollTop() {
 	return document.body.scrollTop || document.documentElement.scrollTop;
 }
+export function isIos(){
+	return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
 
 // notify modules that scroll or resize has happened (this way we only have one scroll/resize event listener)
 $win.on({

@@ -1,7 +1,12 @@
 body{
     overflow: hidden;
+    width:100%;
+    height:100%;
 }
-
+a{
+    text-decoration: none;
+    color:inherit;
+}
 img {
     max-width: 100%;
 }
@@ -21,10 +26,17 @@ img {
 }
 
 .button {
+    cursor: pointer;
     border: 1px solid $color-red;
-    padding: 25px 75px;
+    padding: 20px 75px;
     color: $color-red;
+    border-radius: 40px;
+    display: inline-block;
     @extend .font-regular;
+    &:hover{
+        border-color:$color-black;
+        color: $color-black;
+    }
 }
 
 
