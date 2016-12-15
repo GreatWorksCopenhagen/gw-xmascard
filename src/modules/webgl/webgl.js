@@ -86,7 +86,7 @@ export default class Webgl {
   			height = particleSystemHeight,
   			depth = 100,
   			parameters = {
-  				color: 0xFF0000,
+  				color: 0x505050,
   				height: particleSystemHeight,
   				radiusX: 2.5,
   				radiusZ: 2.5,
@@ -168,6 +168,7 @@ export default class Webgl {
   bindEvents() {
 
     // bind your events here.
+		/*
 		document.addEventListener( 'mousemove', function( e ) {
 			var mouseX = e.clientX,
 				mouseY = e.clientY,
@@ -182,6 +183,10 @@ export default class Webgl {
 
 		document.addEventListener( 'mousewheel', this.onMouseWheel, false );
 		document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
+		*/
+
+		// Handle window resize
+		this.handleWindowResize();
 
     this.animate();
 
@@ -199,9 +204,16 @@ export default class Webgl {
 	rand( v ) {
 		return (v * (Math.random() - 0.5));
 	}
+	handleWindowResize() {
+
+	  renderer.setSize(window.innerWidth, window.innerHeight);
+	  camera.aspect = window.innerWidth / window.innerHeight;
+	  camera.updateProjectionMatrix();
+
+	}
 	animate() {
 
-    requestAnimationFrame(this.animate.bind(this));
+    requestAnimationFrame( this.animate.bind(this) );
 
 		var delta = clock.getDelta(),
 			elapsedTime = clock.getElapsedTime();

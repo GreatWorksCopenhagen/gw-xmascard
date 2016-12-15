@@ -1,5 +1,5 @@
 /* WebGL Snow */
-.snow {
+#snow {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +9,7 @@
   height:100%;
   width:100%;
   background: none;
+  pointer-events: none;
 }
 /* Dat GUI for tests */
 .dg.ac{
