@@ -27,7 +27,17 @@ export default class Carousel {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			centerMode: true,
-			centerPadding: '20%'
+			centerPadding: '20%',
+			responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+					  centerPadding: '10%'
+			      }
+			  }
+		  ]
+
+
 		}, config);
 		// console.log(this.config);
 		//

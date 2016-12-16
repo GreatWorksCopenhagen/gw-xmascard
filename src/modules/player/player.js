@@ -20,18 +20,21 @@ export default class Player {
 		}, config);
 		this.$el = $(this.config.el);
 		this.$playerLeft = this.$el.find('.player__left');
-        this.$togglePlay = this.$el.find('.player__toggleplay');
+		this.$togglePlay = this.$el.find('.player__toggleplay');
 		this.$cover = this.$el.find('.player__playlist-cover-img');
 		this.$persons = this.$el.find('.player__author');
 		this.$song = this.$el.find('.player__song-title');
 		this.$artist = this.$el.find('.player__song-artist');
 		this.$albumcover = this.$el.find('.player__base-album-img');
+		this.$progressBar = this.$el.find('.player_progress');
+		this.$progressBarIndicator = this.$el.find('.player_progress-indicator');
 		this.$playlistTitle = this.$el.find('.player__playlist-title');
 		this.$songIndex = this.$el.find('.player__song-index');
 		this.$playlistLenght = this.$el.find('.player__playlist-length');
 		this.$playlist = this.$el.find('.player__playlist');
 		this.songTemplate = '<li class="player__playlist-song"><div class="player__playlist-songtitle">#songtitle</div><div class="player__playlist-songartist">#songartist</div></li>';
 		this.$playerPin = this.$el.find('.player__base-pin-img');
+		this.playerActive = false;
 		this.init();
 
 	}
@@ -51,44 +54,53 @@ export default class Player {
 			self.$el.addClass('player--playing');
 			self.setPlaybutton('playing');
 		});
-        this.$togglePlay.on({
-            click: function(e){
-                var status = m.youtubeHandler.togglePlay();
-            }
-        })
-		$(window).keydown(function(e) {
-			//space
-			if (e.which === 32) {
-				e.preventDefault();
-				m.youtubeHandler.togglePlay();
+		m.emitter.on('youtubeProgressUpdate', function(progress) {
+			self.updateProgressBar(progress);
+		})
+		this.$togglePlay.on({
+			click: function(e) {
+				var status = m.youtubeHandler.togglePlay();
 			}
-			// uparrow
-			if (e.which === 38) {
-				e.preventDefault();
-				self.playPreviousSong();
-			}
-			//downarrow
-			if (e.which === 40) {
-				e.preventDefault();
-				self.playNextSong();
-			}
-			// arrowRight
-			if (e.which === 39) {
-				e.preventDefault();
-				self.loadNextPlayList();
-			}
-			// arrowLeft
-			if (e.which === 37) {
-				e.preventDefault();
-				self.loadPreviousPlayList();
+		})
+
+		m.emitter.on('keyEvent', function(key) {
+			if (self.playerActive) {
+				switch (key) {
+					case 'space':
+						m.youtubeHandler.togglePlay();
+						break;
+					case 'up':
+						self.playPreviousSong();
+						break;
+					case 'down':
+						self.playNextSong();
+						break;
+					case 'right':
+						self.loadNextPlayList();
+						break;
+					case 'left':
+						self.loadPreviousPlayList();
+						break;
+					default:
+				}
 			}
 		});
 	}
-	setPlaybutton(state){
-		if(state == 'playing'){
+	setActive(activate) {
+		if (activate) {
+			this.playerActive = true;
+		} else {
+			this.playerActive = false;
+		}
+	}
+	updateProgressBar(progress) {
+		this.$progressBarIndicator.css('width', parseInt(progress) + "%");
+	}
+	setPlaybutton(state) {
+		if (state == 'playing') {
 			this.$togglePlay.find('i').addClass('pause-icon').removeClass('play-icon');
 		}
-		if(state=='paused'){
+		if (state == 'paused') {
 			this.$togglePlay.find('i').removeClass('pause-icon').addClass('play-icon');
 		}
 	}
@@ -98,16 +110,16 @@ export default class Player {
 	playNextSong() {
 		m.youtubeHandler.playNextSong();
 	}
-    playSongInPlaylist(index){
-        m.youtubeHandler.playSongInPlaylist(index);
-    }
-    togglePlay(){
-        m.youtubeHandler.togglePlay();
-    }
-	// animatePlayList(){
-	// 	var $songs = this.$playlist.find('.player__playlist-song');
-	// 	m.TweenMax.staggerTo($songs, 1, {x:'110%', ease:Power2.easeOut});
-	// }
+	playSongInPlaylist(index) {
+		m.youtubeHandler.playSongInPlaylist(index);
+	}
+	togglePlay() {
+			m.youtubeHandler.togglePlay();
+		}
+		// animatePlayList(){
+		// 	var $songs = this.$playlist.find('.player__playlist-song');
+		// 	m.TweenMax.staggerTo($songs, 1, {x:'110%', ease:Power2.easeOut});
+		// }
 	loadNextPlayList() {
 		m.youtubeHandler.loadNextPlayList();
 		// this.animatePlayList();
@@ -127,41 +139,41 @@ export default class Player {
 		self.$cover.attr('src', data.cover);
 		self.$albumcover.attr('src', data.cover);
 		self.renderSongs(data.tracks);
-        self.bindDynamicEvents();
+		self.bindDynamicEvents();
 		self.setActiveSong(data.songIndex);
 		self.setPin(data.songIndex / data.playlistLength);
 	}
-	setActiveSong(index){
-		this.$playlist.find('.player__playlist-song').eq(index-1).addClass('player__playlist-song--playing')
+	setActiveSong(index) {
+		this.$playlist.find('.player__playlist-song').eq(index - 1).addClass('player__playlist-song--playing')
 	}
 	renderSongs(songs) {
 		var i = 0,
 			appendString = "";
 		while (songs[i]) {
-			appendString += this.songTemplate.replace('#songtitle', songs[i].title).replace('#songartist',songs[i].artist);
+			appendString += this.songTemplate.replace('#songtitle', songs[i].title).replace('#songartist', songs[i].artist);
 			i++;
 		}
-        this.$playlist.html(appendString)
+		this.$playlist.html(appendString)
 	}
-	setPin(songIndexPercent){
-		var degVal = ((this.config.maxPinRotation-this.config.minPinRotation) * songIndexPercent)+this.config.minPinRotation;
-		var transformString =  'translate(194%, -55%) rotate('+degVal+'deg)';
+	setPin(songIndexPercent) {
+		var degVal = ((this.config.maxPinRotation - this.config.minPinRotation) * songIndexPercent) + this.config.minPinRotation;
+		var transformString = 'translate(194%, -55%) rotate(' + degVal + 'deg)';
 		this.setTransform(this.$playerPin, transformString);
 	}
-	setTransform($el, transform){
+	setTransform($el, transform) {
 		$el[0].style.transform = transform;
 		$el[0].style.webkitTransform = transform;
 		$el[0].style.mozTransform = transform;
 		$el[0].style.oTransform = transform;
 		$el[0].style.webkitTransform = transform;
 	}
-    bindDynamicEvents(){
-        var self = this;
-        this.$playlist.off().on({
-            click: function(e){
-                var songIndex = $(this).index();
-                self.playSongInPlaylist(songIndex);
-            }
-        }, '.player__playlist-song');
-    }
+	bindDynamicEvents() {
+		var self = this;
+		this.$playlist.off().on({
+			click: function(e) {
+				var songIndex = $(this).index();
+				self.playSongInPlaylist(songIndex);
+			}
+		}, '.player__playlist-song');
+	}
 }

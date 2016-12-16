@@ -93,11 +93,45 @@ export default class Data {
 			}]
 		}, {
 			names: 'Josefine og Esben',
-			playlistTitle: 'Josefine og Esbens playlist',
-			playlist: 'PLq_oRfIJoxLfCFniKFJL3RRsQVwsC4IXY',
+			playlistTitle: 'All i want for christmas',
+			playlist: 'PLq_oRfIJoxLcO9lr8YpBPQUhZRJaSEdQR',
 			cover: '/assets/images/covers/joseesben.jpg',
 			tracks: [{
-
+				title: 'Man with the Bag',
+				artist: 'Jessie J'
+			}, {
+				title: 'The Christmas Song',
+				artist: 'Christina Aguilera'
+			}, {
+				title: 'Have Yourself A Merry Little Christmas',
+				artist: 'Sam Smith'
+			}, {
+				title: 'Wonderful Christmas Time',
+				artist: 'Demi Lovato'
+			}, {
+				title: 'Santa Claus Is Coming To Town',
+				artist: 'Justin Bieber'
+			}, {
+				title: '8 Days Of Christmas',
+				artist: 'Destiny\'s Child'
+			}, {
+				title: 'One More Sleep',
+				artist: 'Leona Lewis'
+			}, {
+				title: 'I saw Mommy kissing Santa Claus',
+				artist: 'Jessica Simpson'
+			}, {
+				title: 'Christmas Lights',
+				artist: 'Coldplay'
+			}, {
+				title: 'This Christmas',
+				artist: 'Chris Brown'
+			}, {
+				title: 'Santa Tell Me',
+				artist: 'Ariana Grande'
+			}, {
+				title: 'All I Want For Christmas Is You',
+				artist: 'Justin Bieber'
 			}]
 		}, {
 			names: 'Bo',

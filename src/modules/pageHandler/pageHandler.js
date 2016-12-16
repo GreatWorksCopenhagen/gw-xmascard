@@ -32,10 +32,15 @@ export default class PageHandler {
 			if (page == 'albums') {
 				//   this.$albumsPage.show();
 				//   this.$playerPage.hide();
+				m.player.setActive(false);
+				m.albumViewer.setActive(true);
 				self.$el.removeClass('pageHandler--show-player');
 				self.$el.addClass('pageHandler--show-albums');
 				m.albumViewer.updateCarousel();
+				m.youtubeHandler.pausePlay();
 			} else if (page == 'player') {
+				m.player.setActive(true);
+				m.albumViewer.setActive(false);
 				//   this.$albumsPage.hide();
 				//   this.$playerPage.show();
 				self.$el.removeClass('pageHandler--show-albums');

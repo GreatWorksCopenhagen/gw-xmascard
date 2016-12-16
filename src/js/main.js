@@ -54,6 +54,39 @@ m.pageHandler = new PageHandler();
 m.router = new Router();
 
 
+$(window).keydown(function(e) {
+    //enter
+    if (e.which === 13) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'enter');
+    }
+    //space
+    if (e.which === 32) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'space');
+    }
+    // uparrow
+    if (e.which === 38) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'up');
+    }
+    //downarrow
+    if (e.which === 40) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'down');
+    }
+    // arrowRight
+    if (e.which === 39) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'right');
+    }
+    // arrowLeft
+    if (e.which === 37) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'left');
+    }
+});
+
 // m.inViewPort = new InViewPort({
 // 	offsetBottom: -80,
 // 	offsetTop: -80
