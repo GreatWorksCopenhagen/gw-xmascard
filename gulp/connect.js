@@ -7,7 +7,7 @@ var browserSync = require('browser-sync').create(),
 	fs = require("fs");
 
 // The default file if the file/path is not found
-var defaultFile = "/pages/index.html"
+var defaultFile = "/index.html"
 	// I had to resolve to the previous folder, because this task lives inside a ./tasks folder
 	// If that's not your case, just use `__dirname`
 var folder = path.resolve(__dirname, "./src/");

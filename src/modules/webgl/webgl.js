@@ -181,12 +181,17 @@ export default class Webgl {
 			//cameraY = ( cameraRadius * ( mouseY - halfHeight ) / halfHeight ) / 10;
 		}, false );
 
+<<<<<<< HEAD
 		document.addEventListener( 'mousewheel', this.onMouseWheel, false );
 		document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
 		*/
 
 		// Handle window resize
 		this.handleWindowResize();
+=======
+		// document.addEventListener( 'mousewheel', this.onMouseWheel, false );
+		// document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
+>>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
 
     this.animate();
 

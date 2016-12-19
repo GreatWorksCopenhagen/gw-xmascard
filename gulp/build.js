@@ -53,19 +53,20 @@ gulp.task('buildjs', function () {
 // Build HTML for distribution.
 gulp.task('buildhtml', function () {
   // left to right;
+  console.log(global.paths.htmldist);
   gulp.src(global.paths.htmldist)
-    .pipe(replace('<script src="../lib/system.js"></script>', ''))
+    .pipe(replace('<script src="/lib/system.js"></script>', ''))
 
-    .pipe(replace('../config.js', global.filenames.distJs))
-    .pipe(replace("<script>System.import('../js/main')</script>", ''))
-    .pipe(gulp.dest(global.paths.dist+'/pages/'));
+    .pipe(replace('/config.js', global.filenames.distJs))
+    .pipe(replace("<script>System.import('/js/main')</script>", ''))
+    .pipe(gulp.dest(global.paths.dist));
 
   // right to left;
-    gulp.src(global.paths.htmlrtldist)
-    .pipe(replace('../lib/system.js', ''))
-    .pipe(replace('../config.js', global.filenames.distJs))
-    .pipe(replace("<script>System.import('../js/main')</script>", ''))
-    .pipe(gulp.dest(global.paths.dist+'/pages-rtl/'));
+    // gulp.src(global.paths.htmlrtldist)
+    // .pipe(replace('../lib/system.js', ''))
+    // .pipe(replace('../config.js', global.filenames.distJs))
+    // .pipe(replace("<script>System.import('../js/main')</script>", ''))
+    // .pipe(gulp.dest(global.paths.dist+'/pages-rtl/'));
 });
 
 // Build images for distribution.
@@ -94,6 +95,6 @@ gulp.task('copyassets', function () {
   gulp.src(global.paths.assets+'/**/**.*')
     .pipe(gulp.dest(global.paths.dist+'/assets/'));
 
-  gulp.src('./src/index.html')
-    .pipe(gulp.dest(global.paths.dist+'/'));
+  // gulp.src('./src/index.html')
+  //   .pipe(gulp.dest(global.paths.dist+'/'));
 });
