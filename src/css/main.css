@@ -481,7 +481,7 @@ html {
 }
 
 /* line 7, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
-.font-semibold, .intro .intro__inner .intro__arrow-instructions, .player .player__playlist-songtitle {
+.font-semibold, .player .player__playlist-songtitle {
   font-weight: 600;
 }
 
@@ -515,6 +515,8 @@ body {
 h1, .header-1 {
   font-size: 20px;
   color: #e85757;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width: 769px) {
@@ -543,17 +545,18 @@ img {
 }
 
 /* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
-.button-round {
+.button-round, .button-round-border, .albumViewer .slick-prev, .albumViewer .slick-next {
   width: 50px;
   height: 50px;
   display: block;
   background-color: #e85757;
   border-radius: 50%;
   position: relative;
+  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.3);
 }
 
-/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
-.button-round i {
+/* line 21, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button-round i, .button-round-border i, .albumViewer .slick-prev i, .albumViewer .slick-next i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -561,23 +564,59 @@ img {
           transform: translate(-50%, -50%);
 }
 
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 27, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button-round.button-round-wide, .button-round-wide.button-round-border, .albumViewer .button-round-wide.slick-prev, .albumViewer .button-round-wide.slick-next {
+  width: auto;
+}
+
+/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button-round-border, .albumViewer .slick-prev, .albumViewer .slick-next {
+  color: #1b1b1b;
+  border: 1px solid #dadada;
+  background-color: #FFFFFF;
+  -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+  background: #ffffff;
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f4f3f7 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f4f3f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f3f7',GradientType=0 );
+}
+
+/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button-round-border:after, .albumViewer .slick-prev:after, .albumViewer .slick-next:after {
+  -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+}
+
+/* line 46, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+.button-round-border:hover, .albumViewer .slick-prev:hover, .albumViewer .slick-next:hover {
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 56, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button {
   cursor: pointer;
   border: 1px solid #e85757;
-  padding: 20px 75px;
+  padding: 20px 45px;
   color: #e85757;
   border-radius: 40px;
   display: inline-block;
 }
 
-/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+@media only screen and (min-width: 769px) {
+  /* line 56, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+  .button {
+    padding: 20px 75px;
+  }
+}
+
+/* line 67, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button:hover {
   border-color: #1b1b1b;
   color: #1b1b1b;
 }
 
-/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 74, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .play-icon {
   width: 12px;
   height: 16px;
@@ -587,7 +626,7 @@ img {
   display: block;
 }
 
-/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 83, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .pause-icon {
   width: 12px;
   height: 16px;
@@ -878,7 +917,7 @@ img {
 
 /* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album {
-  padding: 25px;
+  padding: 0 25px 25px 25px;
   margin-top: 115px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
@@ -895,45 +934,104 @@ img {
   }
 }
 
-/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-prev, .albumViewer .slick-next {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -80px;
+  left: 50%;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  .albumViewer .slick-prev, .albumViewer .slick-next {
+    opacity: 1;
+  }
+}
+
+/* line 47, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-prev:after, .albumViewer .slick-next:after {
+  font-size: 40px;
+  content: "";
+  display: block;
+  color: #1b1b1b;
+  width: 20px;
+  height: 20px;
+  z-index: 6;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 0.3em;
+}
+
+/* line 62, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-prev {
+  margin-left: -80px;
+}
+
+/* line 64, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-prev:after {
+  content: "‹";
+}
+
+/* line 68, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-next {
+  margin-left: 40px;
+}
+
+/* line 70, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.albumViewer .slick-next:after {
+  content: "›";
+}
+
+/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-/* line 39, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 78, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
   opacity: 1;
 }
 
-/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 84, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner {
   display: inline-block;
 }
 
-/* line 48, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 87, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner:hover .albumViewer__album-cover-vinyl-img {
   margin-left: 15%;
 }
 
-/* line 53, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 94, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+.touch .albumViewer .slick-current .albumViewer__album-cover-vinyl-img {
+  margin-left: 15%;
+}
+
+/* line 99, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover {
   position: relative;
 }
 
-/* line 56, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 102, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-img {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 40vh;
   box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   z-index: 1;
 }
 
-/* line 65, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 111, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-vinyl-img {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 40vh;
   position: absolute;
   top: 0;
   left: 50%;
@@ -944,7 +1042,7 @@ img {
           transition: margin-left 150ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-/* line 75, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 121, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-copy {
   text-align: center;
   max-width: 400px;
@@ -1427,44 +1525,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 173, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
-.slick-prev {
-  left: 10px;
-}
-
-/* line 174, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
-.slick-prev:hover {
-  -webkit-transform: translate(-10px, -50%);
-  -khtml-transform: translate(-10px, -50%);
-  transform: translate(-10px, -50%);
-}
-
-/* line 176, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
-[dir="rtl"] .slick-prev:hover {
-  -webkit-transform: translate(10px, -50%);
-  -khtml-transform: translate(10px, -50%);
-  transform: translate(10px, -50%);
-}
-
-/* line 183, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
-.slick-next {
-  right: 10px;
-}
-
-/* line 185, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
-.slick-next:hover {
-  -webkit-transform: translate(10px, -50%);
-  -khtml-transform: translate(10px, -50%);
-  transform: translate(10px, -50%);
-}
-
 /* Dots */
-/* line 192, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 176, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 196, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 180, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots {
   position: absolute;
   bottom: 0;
@@ -1476,7 +1543,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100%;
 }
 
-/* line 205, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 189, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li {
   padding: 10px;
   margin: 0;
@@ -1485,7 +1552,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   cursor: pointer;
 }
 
-/* line 211, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 195, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li button {
   display: block;
   outline: none;
@@ -1503,13 +1570,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border-radius: 50%;
 }
 
-/* line 225, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 209, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
   background-color: red;
 }
 
-/* line 230, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 214, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li.slick-active button {
   background-color: red;
   border: 1px solid red;
@@ -1527,61 +1594,6 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   overflow: auto;
   background-image: url("/assets/images/intro/introback.jpg");
   background-size: cover;
-}
-
-/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 50px;
-}
-
-/* line 18, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner .intro__logo {
-  max-width: 100px;
-  margin-bottom: 40px;
-}
-
-/* line 25, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner p {
-  margin-top: 15px;
-}
-
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner .intro__arrows {
-  max-width: 200px;
-  display: none;
-  margin-top: 50px;
-}
-
-@media only screen and (min-width: 769px) {
-  /* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-  .intro .intro__inner .intro__arrows {
-    display: block;
-  }
-}
-
-/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner .intro__arrow-instructions {
-  display: none;
-}
-
-@media only screen and (min-width: 769px) {
-  /* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-  .intro .intro__inner .intro__arrow-instructions {
-    display: block;
-  }
-}
-
-/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner > * {
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-/* line 49, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
-.intro .intro__inner .button {
-  margin-top: 60px;
 }
 
 /* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
@@ -1671,13 +1683,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 @media only screen and (min-width: 769px) {
   /* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left-scroll {
-    height: calc(100vh - 30vw - 120px);
+    height: calc(100vh - 300px - 120px);
     max-height: calc(100vh - 300px - 120px);
   }
   /* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left {
-    width: 30vw;
-    min-width: 300px;
+    width: 300px;
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -1685,7 +1696,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   /* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__right {
     display: block;
-    width: 70vw;
+    width: calc(100vw - 300px);
     height: 100%;
   }
 }

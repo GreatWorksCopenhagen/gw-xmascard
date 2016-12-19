@@ -46,7 +46,7 @@ export default class Router {
 			m.pageHandler.showPage('player', page.params.id);
 			setTimeout(function(){
 				m.intro.animateOut();
-			},700);;
+			},700);
 		});
 		// instantiate pages.
 		this.page();

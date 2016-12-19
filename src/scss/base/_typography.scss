@@ -31,6 +31,8 @@ h1, .header-1{
     @extend .font-light;
     font-size: 20px;
     color:$color-red;
+    margin-top: 10px;
+    margin-bottom: 5px;
     @media #{$small}{
         font-size: 36px;
      }

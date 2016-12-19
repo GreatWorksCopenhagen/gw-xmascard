@@ -73,7 +73,7 @@ export default class YoutubeHandler {
             var songObject = $.extend(self.currentSong, m.data[self.currentPlayListIndex]);
             $.extend(songObject, {songIndex:songIndexInPlaylist+1, playlistLength: playListLength+1});
             m.emitter.emit('playerChange', songObject);
-			m.emitter.emit('playerPause');
+			// m.emitter.emit('playerPause');
         } else if(event.data === 0) { // ended
 			self.stopProgressTimer();
 			this.playNextSong();

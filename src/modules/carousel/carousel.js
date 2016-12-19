@@ -17,29 +17,40 @@ export default class Carousel {
 		var config = config ? config : {};
 		this.config = $.extend({
 			el: config.el || '.carousel',
-			// dots: false,
+			dots: false,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			centerMode: true,
 			cssEase: 'ease-in-out',
 			useCSS: true,
 			useTransform: true,
 			autoplay: false,
-			speed: 300,
-			// lazyLoad: 'ondemand',
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			centerMode: true,
-			centerPadding: '20%',
-			responsive: [
-			    {
-			      breakpoint: 768,
-			      settings: {
-					  centerPadding: '10%'
-			      }
-			  }
-		  ]
-
-
+			responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						centerPadding: '0%'
+					}
+				}, {
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 1,
+						centerPadding: '15%'
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						centerPadding: '15%'
+					}
+				}
+				// You can unslick at a given breakpoint now by adding:
+				// settings: "unslick"
+				// instead of a settings object
+			]
 		}, config);
-		// console.log(this.config);
 		//
 		this.$el = $(this.config.el);
 		this.init();

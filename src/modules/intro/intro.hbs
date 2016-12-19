@@ -1,58 +1,100 @@
 <div class="intro">
     <style>
-    /*hardcoding this beacuse we want it to display correct instantly*/
-    .intro {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: 100;
-      text-align: center;
-      display: table;
-      top: 0;
-      overflow: auto;
-      background-image: url("/assets/images/intro/introback.jpg");
-      background-size: cover;
-    }
-    .intro .intro__inner {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 50px;
-    }
-    .intro .intro__inner .intro__logo {
-      max-width: 100px;
-      margin-bottom: 40px;
-    }
-    .intro .intro__inner p {
-      margin-top: 15px;
-    }
-    .intro .intro__inner .intro__arrows {
-      max-width: 200px;
-      display: none;
-      margin-top: 50px;
-    }
-    @media only screen and (min-width: 769px) {
-      .intro .intro__inner .intro__arrows {
-        display: block;
-      }
-    }
-    .intro .intro__inner .intro__arrow-instructions {
-      display: none;
-    }
-    @media only screen and (min-width: 769px) {
-      .intro .intro__inner .intro__arrow-instructions {
-        display: block;
-      }
-    }
-    .intro .intro__inner > * {
-      margin: 0 auto;
-      max-width: 600px;
-    }
-    .intro .intro__inner .button {
-      margin-top: 60px;
-    }
+        /*hardcoding this beacuse we want it to display correct instantly*/
+
+        .intro {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            text-align: center;
+            display: table;
+            top: 0;
+            overflow: auto;
+            background-image: url("/assets/images/intro/introback.jpg");
+            background-size: cover;
+        }
+
+        .intro .intro__inner {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 50px;
+        }
+
+        .intro .intro__inner .intro__logo {
+            max-width: 100px;
+            margin-bottom: 40px;
+        }
+
+        .intro .intro__inner p {
+            margin-top: 15px;
+        }
+
+        .intro .intro__inner .intro__arrows {
+            max-width: 200px;
+            display: none;
+            margin-top: 50px;
+        }
+
+        @media only screen and (min-width: 769px) {
+            .intro .intro__inner .intro__arrows {
+                display: block;
+            }
+        }
+
+        .intro .intro__inner .intro__arrow-instructions {
+            display: none;
+        }
+
+        @media only screen and (min-width: 769px) {
+            .intro .intro__inner .intro__arrow-instructions {
+                display: block;
+            }
+        }
+
+        .intro .intro__inner>* {
+            /*margin: 0 auto;
+      max-width: 600px;*/
+        }
+
+        .intro .intro__inner .button {
+            margin-top: 60px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .intro {
+            overflow: hidden;
+        }
+
+        video {
+            /*position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        min-width: 100vw;
+        min-height: 100vh;
+        width:100vw;
+        object-fit: cover;
+        z-index: -1;*/
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background: url("/assets/images/intro/risalamande_light-cover.jpg") no-repeat;
+            background-size: cover;
+            max-width: 160vh;
+        }
     </style>
     <div class="intro__inner">
-        <img class="intro__logo" src="/assets/images/logo.svg" alt="">
+        <!-- <img class="intro__logo" src="/assets/images/logo.svg" alt="">
         <h1>Wishing you a merry christmas!</h1>
         <p>We created albums in the spirit of christmas, sed ultricies urna. Integer a tortor mi. Vestibulum lobortis, ante vel tincidunt mollis, risus ex ornare arcu, sed vestibulum mauris mauris eu arcu.</p>
         <div class="intro__arrows">
@@ -61,7 +103,9 @@
         <p class="intro__arrow-instructions">
             Left/Right to navigate through albums. <br>
             Up/Down to navigate through songs.
-        </p>
+        </p> -->
+        <video src="/assets/images/intro/risalamande_light.mp4" autoplay poster="/assets/images/intro/risalamande_light-cover.jpg">
+        </video>
         <div class="button">Enter website</div>
     </div>
 </div>

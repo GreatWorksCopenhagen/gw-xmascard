@@ -38,17 +38,28 @@ export default class PageHandler {
 				self.$el.addClass('pageHandler--show-albums');
 				m.albumViewer.updateCarousel();
 				m.youtubeHandler.pausePlay();
+				$('meta[property=og\\:description]').attr('content', '');
 			} else if (page == 'player') {
 				m.player.setActive(true);
 				m.albumViewer.setActive(false);
 				//   this.$albumsPage.hide();
 				//   this.$playerPage.show();
-				self.$el.removeClass('pageHandler--show-albums');
-				self.$el.addClass('pageHandler--show-player');
+				m.emitter.on('playerLoadedImage', function(){
+					self.$el.removeClass('pageHandler--show-albums');
+					self.$el.addClass('pageHandler--show-player');
+				});
 				if (id) {
 					m.youtubeHandler.playPlaylistByIndex(id);
+					self.setShareTags(id);
 				}
 			}
 		}, 300);
+	}
+	setShareTags(id){
+		var data = m.data[id];
+		// console.log($('meta[property=og\\:image]'));
+		// console.log($('meta[property=og\\:description]'));
+		$('meta[property=og\\:image]').attr('content', window.location.host + data.cover);
+		$('meta[property=og\\:description]').attr('content', data.playlistTitle);
 	}
 }

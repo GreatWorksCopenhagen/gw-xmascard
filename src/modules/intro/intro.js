@@ -18,6 +18,7 @@ export default class Intro {
 		}, config);
 		this.$el = $(this.config.el);
 		this.$button = this.$el.find('.button');
+		this.video = this.$el.find('video')[0];
 		this.init();
 
 	}
@@ -40,5 +41,6 @@ export default class Intro {
         m.TweenMax.to(this.$el, 0.3, {
             y:"-100%", ease:Linear.easeNone
         });
+		this.video.pause();
     }
 }

@@ -21,13 +21,13 @@
     }
     @media #{$small} {
         .player__left-scroll {
-            height: calc(100vh - 30vw - 120px);
+            height: calc(100vh - 300px - 120px);
             max-height: calc(100vh - 300px - 120px);
         }
 
         .player__left {
-            width: 30vw;
-            min-width: 300px;
+            // width: 30vw;
+            width: 300px;
             height: 100%;
             overflow: hidden;
             position: relative;
@@ -35,7 +35,7 @@
 
         .player__right {
             display: block;
-            width: 70vw;
+            width: calc(100vw - 300px);
             height: 100%;
         }
     }

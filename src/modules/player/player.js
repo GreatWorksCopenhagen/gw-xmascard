@@ -34,6 +34,7 @@ export default class Player {
 		this.$playlist = this.$el.find('.player__playlist');
 		this.songTemplate = '<li class="player__playlist-song"><div class="player__playlist-songtitle">#songtitle</div><div class="player__playlist-songartist">#songartist</div></li>';
 		this.$playerPin = this.$el.find('.player__base-pin-img');
+		this.$shareBtn = this.$el.find('.player__share-btn');
 		this.playerActive = false;
 		this.init();
 
@@ -130,6 +131,11 @@ export default class Player {
 	}
 	updatePlayer(data) {
 		var self = this;
+		self.$cover.on({
+			load: function(){
+				m.emitter.emit('playerLoadedImage');
+			}
+		})
 		self.$persons.text(data.names);
 		self.$artist.text(data.tracks[data.songIndex - 1].artist);
 		self.$song.text(data.tracks[data.songIndex - 1].title);
@@ -142,6 +148,9 @@ export default class Player {
 		self.bindDynamicEvents();
 		self.setActiveSong(data.songIndex);
 		self.setPin(data.songIndex / data.playlistLength);
+		var encodedUrl = $('<div/>').text(window.location.href).html();
+		this.$shareBtn.attr('href', "https://www.facebook.com/sharer.php?u=" + window.location.href);
+
 	}
 	setActiveSong(index) {
 		this.$playlist.find('.player__playlist-song').eq(index - 1).addClass('player__playlist-song--playing')

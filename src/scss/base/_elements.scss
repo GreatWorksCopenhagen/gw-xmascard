@@ -17,18 +17,49 @@ img {
     background-color: $color-red;
     border-radius: 50%;
     position: relative;
+    box-shadow: 0 5px 10px -3px rgba(0,0,0,0.3);
     i{
         position: absolute;
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
     }
+    &.button-round-wide{
+        width: auto;
+    }
+}
+.button-round-border{
+    @extend .button-round;
+    color: $color-black;
+    border: 1px solid $color-dark-grey;
+    background-color: $color-white;
+    transition: all 200ms linear;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f4f3f7 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f4f3f7 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f4f3f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f3f7',GradientType=0 );
+
+    &:after{
+        transition: all 200ms linear;
+    }
+    &:hover{
+        box-shadow: 0 5px 15px -3px rgba(0,0,0,0.5);
+        // border-color: $color-red;
+        // background-color: $color-ligth-grey;
+        &:after{
+            // color:$color-red;
+        }
+    }
 }
 
 .button {
     cursor: pointer;
     border: 1px solid $color-red;
-    padding: 20px 75px;
+    padding: 20px 45px;
+    @media #{$small}{
+        padding: 20px 75px;
+     }
     color: $color-red;
     border-radius: 40px;
     display: inline-block;

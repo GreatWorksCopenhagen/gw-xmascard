@@ -11,43 +11,43 @@
     background-image: url('/assets/images/intro/introback.jpg');
     background-size: cover;
 
-    .intro__inner {
-        display: table-cell;
-        vertical-align: middle;
-        padding:50px;
-        .intro__logo{
-            max-width: 100px;
-            margin-bottom: 40px;
-        }
-        h1{
-            // margin-bottom: 15px;
-        }
-        p{
-            margin-top: 15px;
-        }
-        .intro__arrows{
-            max-width: 200px;
-            display: none;
-            @media #{$small}{
-                display: block;
-
-             }
-            margin-top:50px;
-        }
-        .intro__arrow-instructions{
-            display: none;
-            @media #{$small}{
-                display: block;
-
-             }
-            @extend .font-semibold;
-        }
-        >*{
-            margin:0 auto;
-            max-width: 600px;
-        }
-        .button{
-            margin-top: 60px;
-        }
-    }
+    // .intro__inner {
+    //     display: table-cell;
+    //     vertical-align: middle;
+    //     padding:50px;
+    //     .intro__logo{
+    //         max-width: 100px;
+    //         margin-bottom: 40px;
+    //     }
+    //     h1{
+    //         // margin-bottom: 15px;
+    //     }
+    //     p{
+    //         margin-top: 15px;
+    //     }
+    //     .intro__arrows{
+    //         max-width: 200px;
+    //         display: none;
+    //         @media #{$small}{
+    //             display: block;
+    //
+    //          }
+    //         margin-top:50px;
+    //     }
+    //     .intro__arrow-instructions{
+    //         display: none;
+    //         @media #{$small}{
+    //             display: block;
+    //
+    //          }
+    //         @extend .font-semibold;
+    //     }
+    //     >*{
+    //         margin:0 auto;
+    //         max-width: 600px;
+    //     }
+    //     .button{
+    //         margin-top: 60px;
+    //     }
+    // }
 }

@@ -22,7 +22,7 @@
     }
 
     .albumViewer__album {
-        padding: 25px;
+        padding: 0 25px 25px 25px;
         margin-top: 115px;
         @media #{$small}{
             margin-top: 75px;
@@ -31,6 +31,45 @@
         transition: transform 600ms $easing-smooth, margin-top 600ms $easing-smooth;
         text-align: center;
         transform: scale(1);
+    }
+    .slick-prev, .slick-next{
+        @extend .button-round-border;
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom:-80px;
+        left:50%;
+        opacity: 0;
+        // transition: opacity 150ms linear;
+        @media #{$small}{
+            opacity: 1;
+         }
+         &:after{
+             font-size: 40px;
+             content:"";
+             display: block;
+             color: $color-black;
+             width: 20px;
+             height: 20px;
+             z-index: 6;
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%);
+             line-height: 0.3em;
+         }
+    }
+    .slick-prev{
+        margin-left: -80px;
+         &:after{
+             content:"‹";
+        }
+    }
+    .slick-next{
+        margin-left: 40px;
+         &:after{
+             content:"›";
+        }
     }
     .slick-current{
         &.albumViewer__album{
@@ -50,12 +89,19 @@
             }
         }
     }
+    .touch &{
+        .slick-current{
+            .albumViewer__album-cover-vinyl-img {
+                margin-left: 15%;
+            }
+        }
+    }
     .albumViewer__album-cover{
         position: relative;
     }
     .albumViewer__album-cover-img {
         max-width: 100%;
-        max-height:50vh;
+        max-height:40vh;
         -webkit-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         -moz-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
@@ -64,7 +110,7 @@
     }
     .albumViewer__album-cover-vinyl-img {
         max-width: 100%;
-        max-height:50vh;
+        max-height:40vh;
         position: absolute;
         top:0;
         left:50%;
