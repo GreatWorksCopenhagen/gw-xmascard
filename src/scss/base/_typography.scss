@@ -27,8 +27,11 @@ body{
 }
 
 
-h1{
+h1, .header-1{
     @extend .font-light;
-    font-size: 36px;
+    font-size: 20px;
     color:$color-red;
+    @media #{$small}{
+        font-size: 36px;
+     }
 }

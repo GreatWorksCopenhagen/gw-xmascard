@@ -1,17 +1,49 @@
 /* WebGL Snow */
-#snow {
+#snow,#eightbits {
   position: fixed;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   z-index: 2000;
-  height:100%;
   width:100%;
+  height:100%;
   background: none;
   pointer-events: none;
 }
 /* Dat GUI for tests */
 .dg.ac{
 	z-index: 2001;
+}
+/* Santa button */
+#eightbitmodebutton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2001;
+  width:120px;
+  height:155px;
+  background: none;
+  display: table-cell;
+  text-align: center;
+}
+#eightbitmodebutton a {
+  font-size: 13px;
+  font-weight: bold;
+  color:#e85757;
+  background: transparent url('/assets/textures/santabutton-off.png') no-repeat center top;
+  width: 120px;
+  height: 155px;
+  display: block;
+}
+#eightbitmodebutton a:hover {
+  background: transparent url('/assets/textures/santabutton-on.gif') no-repeat center top;
+  width: 120px;
+  height: 155px;
+  display: block;
+}
+#activate-text {
+  padding-top:80px;
 }

@@ -19,6 +19,7 @@ export default class YoutubeHandler {
 		this.$el = $(this.config.el);
         this.currentPlayListIndex = 0;
         this.currentPlayList = null;
+		this.progressTimer = null;
 		this.init();
 	}
 	init() {
@@ -74,12 +75,27 @@ export default class YoutubeHandler {
             m.emitter.emit('playerChange', songObject);
 			m.emitter.emit('playerPause');
         } else if(event.data === 0) { // ended
+			self.stopProgressTimer();
 			this.playNextSong();
         } else if(event.data === 2){ // paused
+			self.stopProgressTimer();
 			m.emitter.emit('playerPause');
 		} else if(event.data === 1){ // playing
+			self.startProgressTimer();
 			m.emitter.emit('playerPlay');
 		}
+	}
+	startProgressTimer(){
+		var self = this;
+		var playerTotalTime = self.player.getDuration();
+		this.progressTimer = setInterval(function() {
+	        var playerCurrentTime = self.player.getCurrentTime();
+	        var playerTimeDifference = (playerCurrentTime / playerTotalTime) * 100;
+			m.emitter.emit('youtubeProgressUpdate', playerTimeDifference);
+      }, 1000);
+	}
+	stopProgressTimer(){
+		 clearTimeout(this.progressTimer);
 	}
     loadNextPlayList(){
         this.currentPlayListIndex++;
@@ -121,6 +137,11 @@ export default class YoutubeHandler {
 		} else {
 			this.player.playVideo();
 			return 'playing';
+		}
+	}
+	pausePlay(){
+		if(this.player){
+			this.player.pauseVideo();
 		}
 	}
     playNextSong(){

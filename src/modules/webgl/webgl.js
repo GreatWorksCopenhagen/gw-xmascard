@@ -8,22 +8,8 @@ import * as THREE from './three.min.js'
 import dat from './dat.gui.min.js'
 import Detector from './Detector.js'
 
-var renderer,
-	scene,
-	camera,
-	cameraRadius = 50.0,
-	cameraTarget,
-	cameraX = 0,
-	cameraY = 0,
-	cameraZ = cameraRadius,
-	particleSystem,
-	particleSystemHeight = 100.0,
-	clock,
-	controls,
-	parameters,
-	onParametersUpdate,
-  texture,
-  loader;
+// GLOBAL
+var EightBitMode = false;
 
 export default class Webgl {
   /**
@@ -33,10 +19,28 @@ export default class Webgl {
   constructor(config) { // put in defaults here
       //defaults
     this.config = $.extend({
-      el:'.webgl'
+      el:'#snow'
     },config);
 
     this.$el = $(this.config.el);
+
+		this.renderer,
+		this.scene,
+		this.camera,
+		this.cameraRadius = 50.0,
+		this.cameraTarget,
+		this.cameraX = 0,
+		this.cameraY = 0,
+		this.cameraZ = this.cameraRadius,
+		this.particleSystem,
+		this.particleSystemHeight = 100.0,
+		this.wind = 2.5,
+		this.clock,
+		this.controls,
+		this.parameters,
+		this.onParametersUpdate,
+  	this.texture,
+  	this.loader;
 
     this.init();
 
@@ -45,26 +49,24 @@ export default class Webgl {
 
     var self = this;
 
-    console.log('Snow initated');
 
-		renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
-		renderer.setSize( window.innerWidth, window.innerHeight );
-		renderer.setClearColor( 0x000000, 0 );
-    renderer.sortObjects = false;
+		this.renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
+		this.renderer.setSize( window.innerWidth, window.innerHeight );
+		this.renderer.setClearColor( 0x000000, 0 );
+    this.renderer.sortObjects = false;
 
-		scene = new THREE.Scene();
+		this.scene = new THREE.Scene();
 
-		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
-		cameraTarget = new THREE.Vector3( 0, 0, 0 );
+		this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+		this.cameraTarget = new THREE.Vector3( 0, 0, 0 );
 
-    loader = new THREE.TextureLoader();
-    loader.crossOrigin = '';
-    texture = loader.load(
+    this.loader = new THREE.TextureLoader();
+    this.loader.crossOrigin = '';
+    this.texture = this.loader.load(
       '../assets/textures/snowflake.png',
       // Resource is loaded
       function ( texture ) {
           // create the particles with the texture
-          console.log('Texture loaded');
           self.createParticles( texture );
       },
       // Download progress
@@ -73,26 +75,26 @@ export default class Webgl {
       },
       // Download errors
       function ( xhr ) {
-        console.log( 'An error happened' );
+        console.log( 'An error happened during the loading of the texture ' );
       }
     );
-
 
   }
   createParticles( tex ) {
 
-  		var numParticles = 200,
-  			width = 100,
-  			height = particleSystemHeight,
-  			depth = 100,
+  		var numParticles = 2000,
+  			width = 70,
+  			height = this.particleSystemHeight,
+  			depth = 80,
   			parameters = {
-  				color: 0x505050,
-  				height: particleSystemHeight,
-  				radiusX: 2.5,
+  				// color: 0xffffff,
+  				color: 0xffffff,
+  				height: this.particleSystemHeight,
+  				radiusX: this.wind,
   				radiusZ: 2.5,
   				size: 100,
   				scale: 4.0,
-  				opacity: 0.8,
+  				opacity: 1,
   				speedH: 1.0,
   				speedV: 1.0
   			},
@@ -118,57 +120,39 @@ export default class Webgl {
   				depthTest: false
   			});
 
+				// Less particules for mobile
+				if( this.isMobileDevice ) {
+					numParticles = 200;
+				}
+
     		for( var i = 0; i < numParticles; i++ ) {
     			var vertex = new THREE.Vector3(
     					this.rand( width ),
     					Math.random() * height,
-    					this.rand( depth )
-    				);
+							this.rand( depth )
+  				);
 
     			systemGeometry.vertices.push( vertex );
     		}
 
-    		particleSystem = new THREE.Points( systemGeometry, systemMaterial );
-    		particleSystem.position.y = -height/2;
+    		this.particleSystem = new THREE.Points( systemGeometry, systemMaterial );
+    		this.particleSystem.position.y = -height/2;
 
-    		scene.add( particleSystem );
+    		this.scene.add( this.particleSystem );
 
-    		clock = new THREE.Clock();
+    		this.clock = new THREE.Clock();
 
-        document.getElementById("snow").appendChild( renderer.domElement );
-
-    		onParametersUpdate = function( v ) {
-    			systemMaterial.uniforms.color.value.set( parameters.color );
-    			systemMaterial.uniforms.height.value = parameters.height;
-    			systemMaterial.uniforms.radiusX.value = parameters.radiusX;
-    			systemMaterial.uniforms.radiusZ.value = parameters.radiusZ;
-    			systemMaterial.uniforms.size.value = parameters.size;
-    			systemMaterial.uniforms.scale.value = parameters.scale;
-    			systemMaterial.uniforms.opacity.value = parameters.opacity;
-    			systemMaterial.uniforms.speedH.value = parameters.speedH;
-    			systemMaterial.uniforms.speedV.value = parameters.speedV;
-    		}
-
-    		controls = new dat.GUI();
-    		controls.close();
-
-    		controls.addColor( parameters, 'color' ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'height', 0, particleSystemHeight * 2.0 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'radiusX', 0, 10 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'radiusZ', 0, 10 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'size', 1, 400 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'scale', 1, 30 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'opacity', 0, 1 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'speedH', 0.1, 3 ).onChange( onParametersUpdate );
-    		controls.add( parameters, 'speedV', 0.1, 3 ).onChange( onParametersUpdate );
+        document.getElementById("snow").appendChild( this.renderer.domElement );
 
         this.bindEvents();
 
   }
+	// Events --------------------------------------------------------------------------
   bindEvents() {
 
     // bind your events here.
-		/*
+		var self = this;
+
 		document.addEventListener( 'mousemove', function( e ) {
 			var mouseX = e.clientX,
 				mouseY = e.clientY,
@@ -177,59 +161,145 @@ export default class Webgl {
 				height = window.innerHeight,
 				halfHeight = height >> 1;
 
-			cameraX = ( cameraRadius * ( mouseX - halfWidth ) / halfWidth ) / 5;
-			//cameraY = ( cameraRadius * ( mouseY - halfHeight ) / halfHeight ) / 10;
+			var targetX = self.cameraRadius * ( mouseX - halfWidth ) / halfWidth;
+			self.cameraX = targetX / 10;
+			//self.cameraY = self.cameraRadius * ( mouseY - halfHeight ) / halfHeight;
+
 		}, false );
 
-<<<<<<< HEAD
-		document.addEventListener( 'mousewheel', this.onMouseWheel, false );
-		document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
-		*/
 
-		// Handle window resize
+		// Activat e8 bit mode button
+		document.getElementById("eightbitmodebutton").addEventListener( 'click', self.activateEightBitMode, false );
+
+
+		// handle resize
 		this.handleWindowResize();
-=======
-		// document.addEventListener( 'mousewheel', this.onMouseWheel, false );
-		// document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
 
+		// Animate snow
     this.animate();
 
-
   }
-	onMouseWheel( e ) {
-		e.preventDefault();
+	activateEightBitMode() {
 
-		if( e.wheelDelta ) {
-			cameraZ += e.wheelDelta * 0.05;
-		} else if( e.detail ) {
-			cameraZ += e.detail * 0.5;
+		var self = this;
+
+		if( !EightBitMode ){
+			EightBitMode = true;
+			$('#activate-text').html("DEACTIVATE</br>X-MAS MODE");
+			this.createEightBitElements();
+		}else {
+			EightBitMode = false;
+			$('#activate-text').html("ACTIVATE</br>X-MAS MODE");
 		}
-	}
-	rand( v ) {
-		return (v * (Math.random() - 0.5));
+
 	}
 	handleWindowResize() {
 
-	  renderer.setSize(window.innerWidth, window.innerHeight);
-	  camera.aspect = window.innerWidth / window.innerHeight;
-	  camera.updateProjectionMatrix();
+	  this.renderer.setSize(window.innerWidth, window.innerHeight);
+	  this.camera.aspect = window.innerWidth / window.innerHeight;
+	  this.camera.updateProjectionMatrix();
 
 	}
 	animate() {
 
     requestAnimationFrame( this.animate.bind(this) );
 
-		var delta = clock.getDelta(),
-			elapsedTime = clock.getElapsedTime();
 
-		particleSystem.material.uniforms.elapsedTime.value = elapsedTime * 10;
+		if( EightBitMode ) {
 
-		camera.position.set( cameraX, cameraY, cameraZ );
-		camera.lookAt( cameraTarget );
+			var delta = this.clock.getDelta(), elapsedTime = this.clock.getElapsedTime();
 
-		renderer.clear();
-		renderer.render( scene, camera );
+			this.particleSystem.material.uniforms.elapsedTime.value = elapsedTime * 10;
+
+			this.camera.position.set( this.cameraX, this.cameraY, this.cameraZ );
+			this.camera.lookAt( this.cameraTarget );
+
+			this.renderer.clear();
+			this.renderer.render( this.scene, this.camera );
+
+		} else {
+			this.renderer.clear();
+		}
+
+	}
+	// Getters / Setters --------------------------------------------------------------------------
+	addWind() {
+
+		this.particleSystem.material.uniforms.radiusX.value = this.wind;
+
+		m.TweenMax.from(
+			this.particleSystem.material.uniforms.radiusX,
+			3,
+			{
+				value:30,
+				ease:Quad.easeOut
+			}
+		);
+
+	}
+	// Utils --------------------------------------------------------------------------
+	rand( v ) {
+		return (v * (Math.random() - 0.5));
+	}
+	// easy mobile device detection
+	isMobileDevice() {
+
+		if ( navigator === undefined || navigator.userAgent === undefined ) {
+
+			return true;
+
+		}
+
+		var s = navigator.userAgent;
+
+		if ( s.match( /iPhone/i )
+		     || s.match( /iPod/i )
+		     || s.match( /webOS/i )
+		     || s.match( /BlackBerry/i )
+		     || ( s.match( /Windows/i ) && s.match( /Phone/i ) )
+		     || ( s.match( /Android/i ) && s.match( /Mobile/i ) ) ) {
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+	// 8 Bit Mode --------------------------------------------------------------------------
+	createEightBitElements() {
+
+console.log('hello');
+
+		var part, container, numParts = 20;
+		var prefix = '/assets/textures/';
+		var bitmaps = [
+			{img:'moose.gif', w:64, h:64},
+			{img:'santa.gif', w:128, h:128}
+		]
+
+    var context = document.getElementById('eightbits').getContext('2d');
+
+		console.log(context);
+		var self = this;
+
+    	var imageObj = new Image();
+
+	    imageObj.onload = function() {
+	      context.drawImage(imageObj, 100,100);
+	    };
+	    imageObj.src = prefix + bitmaps[0].img;
+
+		m.TweenMax.to(
+			imageObj,
+			20,
+			{
+				x:0
+			}
+		);
+
+
+
 
 	}
 

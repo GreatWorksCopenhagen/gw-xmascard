@@ -438,11 +438,7 @@ th {
 /*!
  *  @author rasmuselken <re@greatworks.dk>
  */
-<<<<<<< HEAD
-/* line 30, /Users/fb/dev/gw-xmascard/src/scss/base/_settings.scss */
-=======
-/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_settings.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 32, /Users/fb/dev/gw-xmascard/src/scss/base/_settings.scss */
 .gradient-1, .albumViewer, .intro {
   background: #f1f1f1;
   background: -webkit-radial-gradient(center, ellipse cover, #f1f1f1 0%, #ffffff 45%);
@@ -475,7 +471,7 @@ html {
 }
 
 /* line 1, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
-.font-light, body, h1 {
+.font-light, body, h1, .header-1 {
   font-weight: 300;
 }
 
@@ -484,13 +480,8 @@ html {
   font-weight: 400;
 }
 
-<<<<<<< HEAD
 /* line 7, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
-.font-semibold, .player .player__playlist-songtitle {
-=======
-/* line 7, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .font-semibold, .intro .intro__inner .intro__arrow-instructions, .player .player__playlist-songtitle {
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
   font-weight: 600;
 }
 
@@ -521,38 +512,37 @@ body {
 }
 
 /* line 30, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
-h1 {
-  font-size: 36px;
+h1, .header-1 {
+  font-size: 20px;
   color: #e85757;
 }
 
-<<<<<<< HEAD
+@media only screen and (min-width: 769px) {
+  /* line 30, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+  h1, .header-1 {
+    font-size: 36px;
+  }
+}
+
 /* line 1, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 body {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 6, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 10, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 img {
   max-width: 100%;
 }
 
-<<<<<<< HEAD
-/* line 5, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 13, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .button-round {
   width: 50px;
   height: 50px;
@@ -562,11 +552,7 @@ img {
   position: relative;
 }
 
-<<<<<<< HEAD
-/* line 12, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 20, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .button-round i {
   position: absolute;
   top: 50%;
@@ -575,11 +561,7 @@ img {
           transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
-/* line 20, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 28, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .button {
   cursor: pointer;
   border: 1px solid #e85757;
@@ -589,17 +571,13 @@ img {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-/* line 28, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
+/* line 36, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .button:hover {
   border-color: #1b1b1b;
   color: #1b1b1b;
 }
 
-/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 43, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .play-icon {
   width: 12px;
   height: 16px;
@@ -609,11 +587,7 @@ img {
   display: block;
 }
 
-<<<<<<< HEAD
-/* line 37, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
-=======
-/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 52, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
 .pause-icon {
   width: 12px;
   height: 16px;
@@ -630,7 +604,7 @@ img {
   background-size: cover;
 }
 
-/* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 11, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__logo {
   position: absolute;
   top: 20px;
@@ -639,11 +613,7 @@ img {
   opacity: 0.6;
 }
 
-<<<<<<< HEAD
-/* line 8, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 18, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 18, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__carousel {
   width: 100%;
   top: 50%;
@@ -651,13 +621,10 @@ img {
           transform: translateY(-50%);
 }
 
-<<<<<<< HEAD
-/* line 14, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 24, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album {
   padding: 25px;
+  margin-top: 115px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
           transition: transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), margin-top 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
@@ -666,65 +633,52 @@ img {
           transform: scale(1);
 }
 
-/* line 32, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+@media only screen and (min-width: 769px) {
+  /* line 24, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  .albumViewer .albumViewer__album {
+    margin-top: 75px;
+  }
+}
+
+/* line 36, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-/* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 39, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
   opacity: 1;
 }
 
-<<<<<<< HEAD
-/* line 20, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 45, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-/* line 23, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 44, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 48, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner:hover .albumViewer__album-cover-vinyl-img {
   margin-left: 15%;
 }
 
-<<<<<<< HEAD
-/* line 28, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 49, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 53, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover {
   position: relative;
 }
 
-<<<<<<< HEAD
-/* line 31, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 56, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-img {
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 50vh;
   box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   z-index: 1;
 }
 
-<<<<<<< HEAD
-/* line 40, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 61, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 65, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-vinyl-img {
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 50vh;
   position: absolute;
   top: 0;
   left: 50%;
@@ -735,11 +689,7 @@ img {
           transition: margin-left 150ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-<<<<<<< HEAD
-/* line 50, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-=======
-/* line 71, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 75, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-copy {
   text-align: center;
   max-width: 400px;
@@ -750,16 +700,7 @@ img {
   opacity: 0;
 }
 
-<<<<<<< HEAD
-/* line 62, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
-.albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
-  opacity: 1;
-}
-
 /* line 22, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
-=======
-/* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
 .inViewPort + .inViewPort {
   -webkit-transition-delay: 100ms;
   -khtml-transition-delay: 100ms;
@@ -1333,29 +1274,25 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-/* line 10, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
-=======
-/* line 14, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 14, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner {
   display: table-cell;
   vertical-align: middle;
   padding: 50px;
 }
 
-/* line 18, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 18, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner .intro__logo {
   max-width: 100px;
   margin-bottom: 40px;
 }
 
-/* line 25, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 25, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner p {
   margin-top: 15px;
 }
 
-/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 28, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner .intro__arrows {
   max-width: 200px;
   display: none;
@@ -1363,36 +1300,36 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+  /* line 28, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
   .intro .intro__inner .intro__arrows {
     display: block;
   }
 }
 
-/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 37, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner .intro__arrow-instructions {
   display: none;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+  /* line 37, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
   .intro .intro__inner .intro__arrow-instructions {
     display: block;
   }
 }
 
-/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 45, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner > * {
   margin: 0 auto;
   max-width: 600px;
 }
 
-/* line 49, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 49, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
 .intro .intro__inner .button {
   margin-top: 60px;
 }
 
-/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 1, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler {
   position: absolute;
   top: 0;
@@ -1406,7 +1343,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   overflow: hidden;
 }
 
-/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 12, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .albumViewer,
 .pageHandler .playerView {
   position: absolute;
@@ -1417,39 +1354,39 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   -webkit-transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
           transition: opacity 1000ms, left 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98), transform 600ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
   z-index: 1;
-  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 5px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
-/* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 24, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .playerView {
   left: 50%;
   z-index: 0;
 }
 
-/* line 30, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 30, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-albums .playerView {
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
   left: -50%;
 }
 
-/* line 34, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 34, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-albums .albumViewer {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 41, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-player .playerView {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   left: 0;
 }
 
-/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 45, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-player .albumViewer {
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-110%, 0, 0);
+          transform: translate3d(-110%, 0, 0);
 }
 
 /* line 1, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
@@ -1463,87 +1400,138 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background: white;
 }
 
-/* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 13, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__right {
+  display: none;
+}
+
+/* line 16, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__left-scroll {
+  width: calc(100% + 15px);
+  height: calc(100vh - 50vw);
   overflow: auto;
-  height: 100vh;
   -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (min-width: 769px) {
-<<<<<<< HEAD
-  /* line 7, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-  /* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+  /* line 23, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__left-scroll {
+    height: calc(100vh - 30vw - 120px);
+    max-height: calc(100vh - 300px - 120px);
+  }
+  /* line 28, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left {
-    width: 30%;
+    width: 30vw;
     min-width: 300px;
     height: 100%;
-    border-right: 1px solid #e8e8e8;
     overflow: hidden;
     position: relative;
   }
-<<<<<<< HEAD
-  /* line 15, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-  /* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
-  .player .player__left .player__left-scroll {
-    overflow: auto;
-    height: 100%;
-    width: calc(100% + 15px);
-    -webkit-overflow-scrolling: touch;
-  }
-<<<<<<< HEAD
-  /* line 23, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-  /* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+  /* line 36, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
   .player .player__right {
-    width: 70%;
+    display: block;
+    width: 70vw;
     height: 100%;
   }
 }
 
-<<<<<<< HEAD
-/* line 29, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
-.player .player__toggleplay {
+/* line 43, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__playlist-info {
+  box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.2);
   position: relative;
-  left: calc(100% - 80px);
-  margin-top: -33px;
-  cursor: pointer;
+  z-index: 1;
+  display: table;
+  table-layout: fixed;
 }
 
-<<<<<<< HEAD
-/* line 36, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 44, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+@media only screen and (min-width: 769px) {
+  /* line 43, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__playlist-info {
+    display: block;
+  }
+}
+
+/* line 54, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__playlist-cover,
 .player .player__song-info {
-  padding: 5px 30px 30px 29px;
+  vertical-align: middle;
 }
 
-<<<<<<< HEAD
-/* line 40, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 48, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 59, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__playlist-cover {
+  display: table-cell;
+  width: 50%;
+  line-height: 0;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 59, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__playlist-cover {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* line 69, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__toggleplay {
+  position: absolute;
+  left: calc(100% - 60px);
+  margin-top: -25px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 69, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__toggleplay {
+    left: calc(100% - 80px);
+  }
+}
+
+/* line 80, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player__song-info {
+  width: 50%;
+  display: table-cell;
+  min-height: 120px;
+  padding: 15px;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 80, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__song-info {
+    padding: 30px;
+    width: 100%;
+    display: table;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 91, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  .player .player__song-info-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+/* line 98, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player_progress {
   height: 1px;
   margin: 0;
   width: 100%;
-  background-color: #e8e8e8;
+  background-color: #dadada;
 }
 
-<<<<<<< HEAD
-/* line 47, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 68, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 104, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+.player .player_progress .player_progress-indicator {
+  position: absolute;
+  background-color: #e85757;
+  height: 1px;
+  -webkit-transition: width 1000ms linear;
+          transition: width 1000ms linear;
+  width: 0%;
+}
+
+/* line 126, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist,
 .player .player__playlist-song {
   list-style: none;
@@ -1551,267 +1539,216 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   padding: 0;
 }
 
-<<<<<<< HEAD
-/* line 54, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(1) {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(2) {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(3) {
   -webkit-animation-delay: 3000ms;
           animation-delay: 3000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(4) {
   -webkit-animation-delay: 4000ms;
           animation-delay: 4000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(5) {
   -webkit-animation-delay: 5000ms;
           animation-delay: 5000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(6) {
   -webkit-animation-delay: 6000ms;
           animation-delay: 6000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(7) {
   -webkit-animation-delay: 7000ms;
           animation-delay: 7000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(8) {
   -webkit-animation-delay: 8000ms;
           animation-delay: 8000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(9) {
   -webkit-animation-delay: 9000ms;
           animation-delay: 9000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(10) {
   -webkit-animation-delay: 10000ms;
           animation-delay: 10000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(11) {
   -webkit-animation-delay: 11000ms;
           animation-delay: 11000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(12) {
   -webkit-animation-delay: 12000ms;
           animation-delay: 12000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(13) {
   -webkit-animation-delay: 13000ms;
           animation-delay: 13000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(14) {
   -webkit-animation-delay: 14000ms;
           animation-delay: 14000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(15) {
   -webkit-animation-delay: 15000ms;
           animation-delay: 15000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(16) {
   -webkit-animation-delay: 16000ms;
           animation-delay: 16000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(17) {
   -webkit-animation-delay: 17000ms;
           animation-delay: 17000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(18) {
   -webkit-animation-delay: 18000ms;
           animation-delay: 18000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(19) {
   -webkit-animation-delay: 19000ms;
           animation-delay: 19000ms;
 }
 
-/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 135, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:nth-child(20) {
   -webkit-animation-delay: 20000ms;
           animation-delay: 20000ms;
 }
 
-/* line 83, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 141, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist {
   padding-bottom: 60px;
 }
 
-<<<<<<< HEAD
-/* line 58, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 87, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 145, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song {
   padding: 10px 30px;
   color: #e85757;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-/* line 63, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 92, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 150, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:hover {
   background-color: #f8f8f8;
 }
 
-<<<<<<< HEAD
-/* line 67, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 96, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 154, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song.player__playlist-song--playing {
   color: #1b1b1b;
   background-color: #f8f8f8;
 }
 
-<<<<<<< HEAD
-/* line 72, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 101, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 159, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:first-child {
   margin-top: 0;
 }
 
-<<<<<<< HEAD
-/* line 77, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 106, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 164, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-title {
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-/* line 82, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 111, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 169, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__author {
   font-size: 14px;
   color: #e85757;
 }
 
-<<<<<<< HEAD
-/* line 96, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 125, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 183, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__controls {
   position: absolute;
   right: 50px;
   bottom: 50px;
 }
 
-<<<<<<< HEAD
-/* line 102, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-/* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
+/* line 189, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils {
   position: absolute;
   top: calc(100% - 60px);
   background-color: #FFFFFF;
   border-top: 1px solid #e8e8e8;
   width: 100%;
+  min-width: 300px;
+  box-shadow: 0 -1px 16px -4px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 769px) {
-<<<<<<< HEAD
-  /* line 102, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
-=======
-  /* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
-  .player .player__utils {
-    min-width: 300px;
-    width: calc(30% - 1px);
-  }
-}
-
-<<<<<<< HEAD
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/playerView/_playerView.scss */
-.playerView {
-  position: absolute;
-=======
-/* line 143, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 200, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils > * {
   padding: 20px 30px;
   display: inline-block;
 }
 
-/* line 147, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 205, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils > *:hover:hover {
   background-color: #f8f8f8;
 }
 
-/* line 153, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 212, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__back-btn {
   width: calc(100% - 67px);
   border-right: 1px solid #e8e8e8;
 }
 
-/* line 156, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 216, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__back-btn .player__back-btn-logo {
   margin-right: 10px;
 }
 
-/* line 160, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 221, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__share-btn {
   margin-left: -4px;
 }
 
-/* line 162, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 224, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__share-btn img {
   height: 16px;
 }
 
-/* line 167, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 229, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__recordplayer {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -1820,15 +1757,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-size: cover;
 }
 
-/* line 174, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 236, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base {
   position: relative;
   height: 100%;
->>>>>>> c02e6510b0b997f4500f5a0734d00e0d0dc9df41
   width: 100%;
 }
 
-/* line 180, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 242, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-album-img {
   position: absolute;
   top: 50%;
@@ -1841,13 +1777,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border-radius: 50%;
 }
 
-/* line 193, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 255, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player.player--playing .player__base-album-img {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 
-/* line 198, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 260, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-center-img {
   position: absolute;
   top: 50%;
@@ -1859,7 +1795,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 6.6%;
 }
 
-/* line 208, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 270, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-vinyl-img {
   position: absolute;
   top: 50%;
@@ -1871,7 +1807,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 60.6%;
 }
 
-/* line 218, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 280, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-holder-img {
   position: absolute;
   top: 50%;
@@ -1883,7 +1819,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 16.1%;
 }
 
-/* line 228, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 290, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-img {
   position: absolute;
   top: 50%;
@@ -1899,7 +1835,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
           transition: transform 2500ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-/* line 240, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 302, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-back-img {
   position: absolute;
   top: 50%;
@@ -1909,7 +1845,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100vh;
 }
 
-/* line 249, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
+/* line 311, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
 .rotate-album, .player .player__base-album-img {
   -webkit-animation: rotatingAlbum 2s linear infinite;
           animation: rotatingAlbum 2s linear infinite;
@@ -1940,37 +1876,16 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* WebGL Snow */
-/* line 2, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
-.snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 2000;
-  height: 100%;
-  width: 100%;
-  background: none;
-  pointer-events: none;
-}
-
-/* Dat GUI for tests */
-/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
-.dg.ac {
-  z-index: 2001;
-}
-
-/* WebGL Snow */
 /* line 2, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
-#snow {
+#snow, #eightbits {
   position: fixed;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   z-index: 2000;
-  height: 100%;
   width: 100%;
+  height: 100%;
   background: none;
   pointer-events: none;
 }
@@ -1979,6 +1894,46 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 /* line 15, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 .dg.ac {
   z-index: 2001;
+}
+
+/* Santa button */
+/* line 19, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+#eightbitmodebutton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2001;
+  width: 120px;
+  height: 155px;
+  background: none;
+  display: table-cell;
+  text-align: center;
+}
+
+/* line 32, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+#eightbitmodebutton a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #e85757;
+  background: transparent url("/assets/textures/santabutton-off.png") no-repeat center top;
+  width: 120px;
+  height: 155px;
+  display: block;
+}
+
+/* line 41, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+#eightbitmodebutton a:hover {
+  background: transparent url("/assets/textures/santabutton-on.gif") no-repeat center top;
+  width: 120px;
+  height: 155px;
+  display: block;
+}
+
+/* line 47, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+#activate-text {
+  padding-top: 80px;
 }
 
 /* line 1, /Users/fb/dev/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */

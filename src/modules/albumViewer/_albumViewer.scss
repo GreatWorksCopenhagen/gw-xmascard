@@ -23,6 +23,10 @@
 
     .albumViewer__album {
         padding: 25px;
+        margin-top: 115px;
+        @media #{$small}{
+            margin-top: 75px;
+         }
         cursor: pointer;
         transition: transform 600ms $easing-smooth, margin-top 600ms $easing-smooth;
         text-align: center;
@@ -51,7 +55,7 @@
     }
     .albumViewer__album-cover-img {
         max-width: 100%;
-        max-height:60vh;
+        max-height:50vh;
         -webkit-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         -moz-box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
         box-shadow: 0 0 41px 0 rgba(0,0,0,0.5);
@@ -60,7 +64,7 @@
     }
     .albumViewer__album-cover-vinyl-img {
         max-width: 100%;
-        max-height:60vh;
+        max-height:50vh;
         position: absolute;
         top:0;
         left:50%;
