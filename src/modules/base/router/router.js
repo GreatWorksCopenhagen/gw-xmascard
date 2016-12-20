@@ -33,20 +33,23 @@ export default class Router {
 			m.pageHandler.showPage('albums');
 		});
 		this.page('/albums', function(page){
+			m.emitter.emit('intro-hide');
 			m.pageHandler.showPage('albums');
 		});
 		this.page('/player', function(page){
+			m.emitter.emit('intro-hide');
 			m.pageHandler.showPage('player', 1);
-			setTimeout(function(){
-				m.intro.animateOut();
-			},700);
+			// setTimeout(function(){
+			// 	m.intro.animateOut();
+			// },700);
 
 		});
 		this.page('/player/:id', function(page){
+			m.emitter.emit('intro-hide');
 			m.pageHandler.showPage('player', page.params.id);
-			setTimeout(function(){
-				m.intro.animateOut();
-			},700);
+			// setTimeout(function(){
+			// 	m.intro.animateOut();
+			// },700);
 		});
 		// instantiate pages.
 		this.page();

@@ -3,6 +3,7 @@
     height: 100%;
     width: 100%;
     z-index: 100;
+     z-index: 2001;
     text-align: center;
     display: table;
     top: 0;
@@ -10,7 +11,10 @@
     overflow: auto;
     background-image: url('/assets/images/intro/introback.jpg');
     background-size: cover;
-
+    transition: opacity 400ms linear;
+    .pagehandler--page-loaded &{
+        opacity:1;
+    }
     // .intro__inner {
     //     display: table-cell;
     //     vertical-align: middle;

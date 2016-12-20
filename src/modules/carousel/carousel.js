@@ -26,6 +26,8 @@ export default class Carousel {
 			useCSS: true,
 			useTransform: true,
 			autoplay: false,
+			slide: '.albumViewer__album',
+			centerPadding: '0%',
 			responsive: [{
 					breakpoint: 1024,
 					settings: {

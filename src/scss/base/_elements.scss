@@ -15,9 +15,10 @@ img {
     height: 50px;
     display: block;
     background-color: $color-red;
-    border-radius: 50%;
+    border-radius: 25px;
     position: relative;
     box-shadow: 0 5px 10px -3px rgba(0,0,0,0.3);
+    line-height: 1.7em;
     i{
         position: absolute;
         top:50%;
@@ -26,6 +27,7 @@ img {
     }
     &.button-round-wide{
         width: auto;
+        padding:10px 20px;
     }
 }
 .button-round-border{

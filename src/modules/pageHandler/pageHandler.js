@@ -19,6 +19,7 @@ export default class PageHandler {
 		this.$el = $(this.config.el);
 		this.$albumsPage = $('.albumViewer');
 		this.$playerPage = $('.playerView');
+		this.$body = $('body');
 		this.init();
 
 	}
@@ -53,13 +54,17 @@ export default class PageHandler {
 					self.setShareTags(id);
 				}
 			}
+			self.pageLoaded();
 		}, 300);
 	}
 	setShareTags(id){
 		var data = m.data[id];
-		// console.log($('meta[property=og\\:image]'));
-		// console.log($('meta[property=og\\:description]'));
 		$('meta[property=og\\:image]').attr('content', window.location.host + data.cover);
 		$('meta[property=og\\:description]').attr('content', data.playlistTitle);
+	}
+	pageLoaded(){
+		if(!this.$body.hasClass('pagehandler--page-loaded')){
+			this.$body.addClass('pagehandler--page-loaded');
+		}
 	}
 }

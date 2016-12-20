@@ -27,15 +27,25 @@ export default class Intro {
 	}
 	bindEvents() {
         var self = this;
-		// m.emitter.on('scroll', function(){
-		// 	console.log('scroll');
-		// 	self.animateOut();
-		// })
+
 		this.$button.on({
             click: function(){
                 self.animateOut();
             }
         })
+		m.emitter.on('intro-hide', function(){
+			self.hide();
+		})
+		this.video.addEventListener('ended',function(){
+				self.onVideoEnd();
+			},
+			false);
+	}
+	onVideoEnd(){
+		this.animateOut();
+	}
+	hide(){
+		this.$el.css('display', 'none');
 	}
     animateOut(){
         m.TweenMax.to(this.$el, 0.3, {

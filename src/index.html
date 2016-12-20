@@ -11,11 +11,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	
-	<meta property="og:url" content="http://xmas.dk.web8.redhost.dk/" />
+	<meta property="og:url" content="http://greatworks-xmas.dk/" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="A gift even Santa can’t beat. Holiday albums created by Great Works, especially for you. Turntable included. Happy holidays." />
 	<meta property="og:description" content="Happy holidays." />
-	<meta property="og:image" content="http://xmas.dk.web8.redhost.dk/assets/images/share.jpg" />
+	<meta property="og:image" content="http://greatworks-xmas.dk/assets/images/share.jpg" />
 	
 	
 	
@@ -25,6 +25,17 @@
 	<script src="/js/vendors/modernizr.js"></script>
 	<script src="/js/vendors/jquery.min.js"></script></head>
 	<body>
+	<style>
+		.load-img{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			width: 250px;
+		}
+	</style>
+	<img class="load-img" src="/assets/images/logo.svg" alt="">
+
 		<!-- Snow shader -->
 		<script type="x-shader/x-vertex" id="snow_vs">
 			uniform float radiusX;
@@ -69,18 +80,18 @@
     <div class="intro">
         <style>
             /*hardcoding this beacuse we want it to display correct instantly*/
-    
             .intro {
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                z-index: 100;
+                z-index: 2001;
                 text-align: center;
                 display: table;
                 top: 0;
                 overflow: auto;
                 background-image: url("/assets/images/intro/introback.jpg");
                 background-size: cover;
+                opacity:0;
             }
     
             .intro .intro__inner {
@@ -177,7 +188,7 @@
             <div class="button">Enter website</div>
         </div>
     </div>    <div class="pageHandler">
-        <div class="albumViewer">
+        <div class="albumViewer" style="opacity:0;">
             <div class="albumViewer__logo">
                 <img src="/assets/images/logo.svg" alt="">
             </div>
@@ -317,8 +328,9 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="albumViewer__play-btn button-round-border button-round button-round-wide">Play</a>
             </div>
-        </div>        <div class="playerView">
+        </div>        <div class="playerView" style="opacity:0;">
             <div class="youtubeHandler">
                 <div id="player"></div>
             </div>    <div class="player">
@@ -348,7 +360,7 @@
                     </div>
                     <div class="player__utils">
                         <a href="/albums/" class="player__back-btn"><span class="player__back-btn-logo">←</span>Go back</a>
-                        <a href="https://www.facebook.com/sharer.php?u=123.abc.com&t=TEst" target="blank" class="player__share-btn"><img src="/assets/images/facebook.svg" alt=""></a>
+                        <a href="https://www.facebook.com/sharer.php?u" target="blank" class="player__share-btn"><img src="/assets/images/facebook.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="player__right">

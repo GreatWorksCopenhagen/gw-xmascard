@@ -252,4 +252,9 @@ $(window).keydown(function(e) {
         e.preventDefault();
         m.emitter.emit('keyEvent', 'left');
     }
+	//backspace
+    if (e.which === 8) {
+        e.preventDefault();
+        m.emitter.emit('keyEvent', 'backspace');
+    }
 });

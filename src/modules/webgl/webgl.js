@@ -45,8 +45,6 @@ export default class Webgl {
 
     var self = this;
 
-    console.log('Snow initated');
-
 		renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		renderer.setClearColor( 0x000000, 0 );
@@ -86,7 +84,7 @@ export default class Webgl {
   			height = particleSystemHeight,
   			depth = 100,
   			parameters = {
-  				color: 0xFF0000,
+  				color: 0xFFFFFF,
   				height: particleSystemHeight,
   				radiusX: 2.5,
   				radiusZ: 2.5,
@@ -184,8 +182,6 @@ export default class Webgl {
 		// document.addEventListener( 'DOMMouseScroll', this.onMouseWheel, false );
 
     this.animate();
-
-
   }
 	onMouseWheel( e ) {
 		e.preventDefault();

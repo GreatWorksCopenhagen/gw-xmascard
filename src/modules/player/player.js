@@ -21,6 +21,7 @@ export default class Player {
 		this.$el = $(this.config.el);
 		this.$playerLeft = this.$el.find('.player__left');
 		this.$togglePlay = this.$el.find('.player__toggleplay');
+
 		this.$cover = this.$el.find('.player__playlist-cover-img');
 		this.$persons = this.$el.find('.player__author');
 		this.$song = this.$el.find('.player__song-title');
@@ -82,6 +83,10 @@ export default class Player {
 					case 'left':
 						self.loadPreviousPlayList();
 						break;
+					case 'backspace':
+						m.emitter.emit('playerPause');
+						m.pageHandler.showPage('albums');
+						break;
 					default:
 				}
 			}
@@ -104,6 +109,9 @@ export default class Player {
 		if (state == 'paused') {
 			this.$togglePlay.find('i').removeClass('pause-icon').addClass('play-icon');
 		}
+		this.$togglePlay[0].style.display='none';
+		this.$togglePlay[0].offsetHeight; // no need to store this anywhere, the reference is enough
+		this.$togglePlay[0].style.display='';
 	}
 	playPreviousSong() {
 		m.youtubeHandler.playPreviousSong();

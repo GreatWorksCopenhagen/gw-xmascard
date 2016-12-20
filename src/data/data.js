@@ -233,7 +233,7 @@ export default class Data {
 				artist: 'Loretta Lynn'
 			}, {
 				title: 'Santa Dog',
-				artist: 'THE RESIDENTS'
+				artist: 'The residents'
 			}, {
 				title: 'Christmas At Ground Zero',
 				artist: 'Weird Al Yankovic'
@@ -325,19 +325,19 @@ export default class Data {
 				title: 'Have Yourself A Merry Little Christmas',
 				artist: 'Frank Sinatra'
 			}, {
-				title: 'ROCKIN AROUND THE CHRISTMAS TREE',
+				title: 'Rockin around the christmas tree',
 				artist: 'Brenda Lee'
 			}, {
 				title: 'It\'s the Most Wonderful Time of the Year',
 				artist: 'Andy Williams'
 			}, {
-				title: 'PLEASE COME HOME FOR CHRISTMAS',
+				title: 'Please come home for christmas',
 				artist: 'Charles Brown'
 			}, {
 				title: 'Santa Baby',
 				artist: 'Eartha Kitt'
 			}, {
-				title: 'SLEIGH RIDE',
+				title: 'Sleigh ride',
 				artist: 'The Boston pops Orchestra'
 			}, {
 				title: 'Run Rudolph Run',
@@ -349,7 +349,7 @@ export default class Data {
 				title: 'Winter Wonderland',
 				artist: 'Louis Armstrong'
 			}, {
-				title: 'jingle bell rock',
+				title: 'Jingle bell rock',
 				artist: 'Bobby Helms'
 			}, {
 				title: 'White Christmas',

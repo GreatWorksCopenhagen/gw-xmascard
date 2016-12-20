@@ -19,6 +19,7 @@ export default class AlbumViewer {
 		}, config);
 		this.$el = $(this.config.el);
 		this.$carousel = this.$el.find('.carousel');
+		this.$playBtn = this.$el.find('.albumViewer__play-btn');
 		this.isActive = false;
 		this.init();
 	}
@@ -26,14 +27,17 @@ export default class AlbumViewer {
 		this.bindEvents();
 		this.initCarousel();
 	}
+	gotoCurrentAlbum(){
+		var playlistIndex = this.$carousel.find('.slick-current').data('playlist-index');
+		m.router.gotoUrl('/player/' + playlistIndex);
+	}
 	bindEvents() {
 		var self = this;
 		m.emitter.on('keyEvent', function(key) {
 			if (self.isActive) {
 				switch (key) {
 					case 'enter':
-						var playlistIndex = self.$carousel.find('.slick-current').data('playlist-index');
-						m.router.gotoUrl('/player/' + playlistIndex);
+						self.gotoCurrentAlbum();
 						break;
 					case 'right':
 						self.$carousel.slick('slickNext');
@@ -45,6 +49,12 @@ export default class AlbumViewer {
 				}
 			}
 		});
+		this.$playBtn.on({
+			click: function(e){
+				e.preventDefault();
+				self.gotoCurrentAlbum();
+			}
+		})
 
 		this.$el.on({
 			click: function(e) {
