@@ -40,9 +40,11 @@ export default class AlbumViewer {
 						self.gotoCurrentAlbum();
 						break;
 					case 'right':
+						m.webgl.addWind();
 						self.$carousel.slick('slickNext');
 						break;
 					case 'left':
+						m.webgl.addWind();
 						self.$carousel.slick('slickPrev');
 						break;
 					default:

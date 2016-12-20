@@ -17,22 +17,6 @@
 	<script src="/js/vendors/jquery.min.js"></script></head>
 	<body>
 		<!-- Snow shader -->
-		<style media="screen">
-			.snow {
-			  position: fixed;
-			  top: 0;
-			  left: 0;
-			  margin: 0;
-			  padding: 0;
-			  z-index: 2000;
-			  height:100%;
-			  width:100%;
-			  background: none;
-			}
-			.dg.ac{
-				z-index: 2001;
-			}
-		</style>
 		<script type="x-shader/x-vertex" id="snow_vs">
 			uniform float radiusX;
 			uniform float radiusZ;
@@ -66,7 +50,8 @@
 				gl_FragColor = texColor * vec4( color, opacity );
 			}
 		</script>
-		<div id="snow"></div>
+		<div id="snow">
+		</div>
 		<!-- End Snow shader -->
 
 		<!--[if lt IE 9]>
@@ -220,10 +205,10 @@
 	            System.baseURL = "/"
 	        }
 	    } catch (err) {
-	
+
 	    }
 	</script>
 	-->
-	
+
 	<script>System.import('/js/main')</script>	</body>
 </html>
