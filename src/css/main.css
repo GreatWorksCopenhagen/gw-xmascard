@@ -6,7 +6,7 @@
  *    user zoom.
  */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
-/* line 9, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 9, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -19,7 +19,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 19, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 19, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 body {
   margin: 0;
 }
@@ -32,7 +32,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 33, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 33, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 article,
 aside,
 details,
@@ -53,7 +53,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 54, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 54, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -68,7 +68,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 67, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 67, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -78,7 +78,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 77, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 77, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 [hidden],
 template {
   display: none;
@@ -89,7 +89,7 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-/* line 89, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 89, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 a {
   background-color: transparent;
 }
@@ -97,7 +97,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 97, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 97, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -108,7 +108,7 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 109, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 109, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -116,7 +116,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 117, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 117, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -125,7 +125,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 126, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 126, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -134,7 +134,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 135, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 135, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -143,7 +143,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 144, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 144, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -152,7 +152,7 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 153, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 153, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -160,7 +160,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 161, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 161, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -169,12 +169,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 169, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 169, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 173, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 173, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -184,7 +184,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 184, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 184, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 img {
   border: 0;
 }
@@ -192,7 +192,7 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 192, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 192, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -202,7 +202,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 203, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 203, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
@@ -210,7 +210,7 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 211, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 211, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -219,7 +219,7 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 221, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 221, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 pre {
   overflow: auto;
 }
@@ -227,7 +227,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 229, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 229, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 code,
 kbd,
 pre,
@@ -248,7 +248,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 252, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 252, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button,
 input,
 optgroup,
@@ -265,7 +265,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 266, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 266, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button {
   overflow: visible;
 }
@@ -276,7 +276,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 277, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 277, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -289,7 +289,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 290, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 290, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -303,7 +303,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 302, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 302, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -312,7 +312,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 311, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 311, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -323,7 +323,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 322, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 322, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 input {
   line-height: normal;
 }
@@ -335,7 +335,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 334, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 334, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -349,7 +349,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 346, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 346, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -360,7 +360,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 357, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 357, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -373,7 +373,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 370, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 370, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -382,7 +382,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 379, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 379, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -393,7 +393,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 390, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 390, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -404,7 +404,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 399, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 399, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -413,7 +413,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 408, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 408, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
@@ -423,13 +423,13 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 419, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 419, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 424, /Users/fb/dev/gw-xmascard/src/scss/vendors/_normalize.scss */
+/* line 424, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/vendors/_normalize.scss */
 td,
 th {
   padding: 0;
@@ -438,7 +438,7 @@ th {
 /*!
  *  @author rasmuselken <re@greatworks.dk>
  */
-/* line 32, /Users/fb/dev/gw-xmascard/src/scss/base/_settings.scss */
+/* line 32, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_settings.scss */
 .gradient-1, .albumViewer, .intro {
   background: #f1f1f1;
   background: -webkit-radial-gradient(center, ellipse cover, #f1f1f1 0%, #ffffff 45%);
@@ -460,58 +460,58 @@ th {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
-/* line 1, /Users/fb/dev/gw-xmascard/src/scss/base/_grid.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_grid.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 4, /Users/fb/dev/gw-xmascard/src/scss/base/_grid.scss */
+/* line 4, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_grid.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .font-light, body, h1, .header-1, .header-2, .player .player__playlist-title {
   font-weight: 300;
 }
 
-/* line 4, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 4, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .font-regular, .button, .player .player__author {
   font-weight: 400;
 }
 
-/* line 7, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 7, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .font-semibold, .albumViewer .albumViewer__play-btn, .player .player__playlist-songtitle {
   font-weight: 600;
 }
 
-/* line 10, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .font-bold {
   font-weight: 700;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .red {
   color: #e85757;
 }
 
-/* line 16, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 16, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .white {
   color: #FFFFFF;
 }
 
-/* line 20, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* line 23, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 body {
   font-size: 16px;
   color: #1b1b1b;
 }
 
-/* line 29, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 29, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 h1, .header-1, .header-2, .player .player__playlist-title {
   font-size: 18px;
   color: #e85757;
@@ -520,43 +520,43 @@ h1, .header-1, .header-2, .player .player__playlist-title {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 29, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+  /* line 29, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
   h1, .header-1, .header-2, .player .player__playlist-title {
     font-size: 34px;
   }
 }
 
-/* line 39, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+/* line 39, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
 .header-2, .player .player__playlist-title {
   font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 39, /Users/fb/dev/gw-xmascard/src/scss/base/_typography.scss */
+  /* line 39, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_typography.scss */
   .header-2, .player .player__playlist-title {
     font-size: 20px;
   }
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 body {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-/* line 6, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 10, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 img {
   max-width: 100%;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round, .button-round-border, .albumViewer .slick-prev, .albumViewer .slick-next {
   width: 50px;
   height: 50px;
@@ -568,7 +568,7 @@ img {
   line-height: 1.7em;
 }
 
-/* line 22, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round i, .button-round-border i, .albumViewer .slick-prev i, .albumViewer .slick-next i {
   position: absolute;
   top: 50%;
@@ -577,13 +577,13 @@ img {
           transform: translate(-50%, -50%);
 }
 
-/* line 28, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round.button-round-wide, .button-round-wide.button-round-border, .albumViewer .button-round-wide.slick-prev, .albumViewer .button-round-wide.slick-next {
   width: auto;
   padding: 10px 20px;
 }
 
-/* line 33, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 33, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round-border, .albumViewer .slick-prev, .albumViewer .slick-next {
   color: #1b1b1b;
   border: 1px solid #dadada;
@@ -596,18 +596,18 @@ img {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f3f7',GradientType=0 );
 }
 
-/* line 45, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round-border:after, .albumViewer .slick-prev:after, .albumViewer .slick-next:after {
   -webkit-transition: all 200ms linear;
           transition: all 200ms linear;
 }
 
-/* line 48, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 48, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button-round-border:hover, .albumViewer .slick-prev:hover, .albumViewer .slick-next:hover {
   box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 58, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 58, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button {
   cursor: pointer;
   border: 1px solid #e85757;
@@ -618,19 +618,19 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 58, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+  /* line 58, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
   .button {
     padding: 20px 75px;
   }
 }
 
-/* line 69, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 69, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .button:hover {
   border-color: #1b1b1b;
   color: #1b1b1b;
 }
 
-/* line 76, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .play-icon {
   width: 12px;
   height: 16px;
@@ -640,7 +640,7 @@ img {
   display: block;
 }
 
-/* line 85, /Users/fb/dev/gw-xmascard/src/scss/base/_elements.scss */
+/* line 85, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_elements.scss */
 .pause-icon {
   width: 12px;
   height: 16px;
@@ -648,7 +648,7 @@ img {
   border-left: 4px solid #FFFFFF;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer {
   position: absolute;
   width: 100%;
@@ -657,7 +657,7 @@ img {
   background-size: cover;
 }
 
-/* line 11, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__logo {
   position: absolute;
   top: 20px;
@@ -669,7 +669,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 11, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  /* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
   .albumViewer .albumViewer__logo {
     top: auto;
     -webkit-transform: translateX(0);
@@ -680,7 +680,7 @@ img {
   }
 }
 
-/* line 26, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 26, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__carousel {
   width: 100%;
   top: 50%;
@@ -688,7 +688,7 @@ img {
           transform: translateY(-50%);
 }
 
-/* line 31, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__play-btn {
   position: absolute;
   top: auto;
@@ -699,7 +699,7 @@ img {
           transform: translateX(-50%);
 }
 
-/* line 41, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album {
   padding: 0 25px 25px 25px;
   margin-top: 100px;
@@ -712,13 +712,13 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 41, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  /* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
   .albumViewer .albumViewer__album {
     margin-top: 75px;
   }
 }
 
-/* line 52, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-prev, .albumViewer .slick-next {
   position: absolute;
   top: auto;
@@ -729,13 +729,13 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 52, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  /* line 52, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
   .albumViewer .slick-prev, .albumViewer .slick-next {
     opacity: 1;
   }
 }
 
-/* line 64, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 64, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-prev:after, .albumViewer .slick-next:after {
   font-size: 40px;
   content: "";
@@ -752,58 +752,58 @@ img {
   line-height: 0.3em;
 }
 
-/* line 79, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 79, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-prev {
   margin-left: -95px;
 }
 
-/* line 81, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 81, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-prev:after {
   content: "‹";
 }
 
-/* line 85, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 85, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-next {
   margin-left: 45px;
 }
 
-/* line 87, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 87, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-next:after {
   content: "›";
 }
 
-/* line 92, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 92, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-/* line 95, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 95, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .slick-current.albumViewer__album .albumViewer__album-copy {
   opacity: 1;
 }
 
-/* line 101, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 101, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner {
   display: inline-block;
 }
 
-/* line 104, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 104, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-inner:hover .albumViewer__album-cover-vinyl-img {
   margin-left: 15%;
 }
 
-/* line 111, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 111, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .touch .albumViewer .slick-current .albumViewer__album-cover-vinyl-img {
   margin-left: 15%;
 }
 
-/* line 116, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 116, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover {
   position: relative;
 }
 
-/* line 119, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 119, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-img {
   max-width: 100%;
   max-height: 35vh;
@@ -813,13 +813,13 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 119, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  /* line 119, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
   .albumViewer .albumViewer__album-cover-img {
     max-height: 40vh;
   }
 }
 
-/* line 131, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-cover-vinyl-img {
   max-width: 100%;
   max-height: 35vh;
@@ -834,13 +834,13 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 131, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+  /* line 131, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
   .albumViewer .albumViewer__album-cover-vinyl-img {
     max-height: 40vh;
   }
 }
 
-/* line 144, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 144, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-copy {
   text-align: center;
   max-width: 400px;
@@ -851,47 +851,47 @@ img {
   opacity: 0;
 }
 
-/* line 151, /Users/fb/dev/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
+/* line 151, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/albumViewer/_albumViewer.scss */
 .albumViewer .albumViewer__album-copy p {
   margin-top: 10px;
 }
 
-/* line 22, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
+/* line 22, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
 .inViewPort + .inViewPort {
   -webkit-transition-delay: 100ms;
   -khtml-transition-delay: 100ms;
   transition-delay: 100ms;
 }
 
-/* line 25, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
+/* line 25, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
 .inViewPort + .inViewPort + .inViewPort {
   -webkit-transition-delay: 200ms;
   -khtml-transition-delay: 200ms;
   transition-delay: 200ms;
 }
 
-/* line 27, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
+/* line 27, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
 .inViewPort + .inViewPort + .inViewPort + .inViewPort {
   -webkit-transition-delay: 300ms;
   -khtml-transition-delay: 300ms;
   transition-delay: 300ms;
 }
 
-/* line 29, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
+/* line 29, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
 .inViewPort + .inViewPort + .inViewPort + .inViewPort + .inViewPort {
   -webkit-transition-delay: 400ms;
   -khtml-transition-delay: 400ms;
   transition-delay: 400ms;
 }
 
-/* line 31, /Users/fb/dev/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
+/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/inViewPort/_inViewPort.scss */
 .inViewPort + .inViewPort + .inViewPort + .inViewPort + .inViewPort + .inViewPort {
   -webkit-transition-delay: 500ms;
   -khtml-transition-delay: 500ms;
   transition-delay: 500ms;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/base/picture/_picture.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/picture/_picture.scss */
 .picture {
   line-height: 0;
   -webkit-transform: translateZ(0);
@@ -900,7 +900,7 @@ img {
   min-height: calc(100vw / 1.777);
 }
 
-/* line 6, /Users/fb/dev/gw-xmascard/src/modules/base/picture/_picture.scss */
+/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/picture/_picture.scss */
 .picture .picture__image {
   min-width: 100%;
   max-width: 100%;
@@ -909,12 +909,12 @@ img {
           transition: opacity 250ms linear;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/modules/base/picture/_picture.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/picture/_picture.scss */
 .picture.picture--loaded {
   min-height: 0;
 }
 
-/* line 15, /Users/fb/dev/gw-xmascard/src/modules/base/picture/_picture.scss */
+/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/picture/_picture.scss */
 .picture.picture--loaded .picture__image {
   opacity: 1;
 }
@@ -924,7 +924,7 @@ img {
  * queried by JavaScript to know which breakpoint is active.
  * Add or remove as many breakpoints as you like.
  */
-/* line 6, /Users/fb/dev/gw-xmascard/src/modules/base/responsive/_responsive.scss */
+/* line 6, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/responsive/_responsive.scss */
 body:before {
   content: "small";
   display: none;
@@ -932,59 +932,59 @@ body:before {
 }
 
 @media (min-width: 769px) {
-  /* line 11, /Users/fb/dev/gw-xmascard/src/modules/base/responsive/_responsive.scss */
+  /* line 11, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/responsive/_responsive.scss */
   body:before {
     content: "medium";
   }
 }
 
 @media (min-width: 1280px) {
-  /* line 16, /Users/fb/dev/gw-xmascard/src/modules/base/responsive/_responsive.scss */
+  /* line 16, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/responsive/_responsive.scss */
   body:before {
     content: "large";
   }
 }
 
-/* line 10, /Users/fb/dev/gw-xmascard/src/modules/base/utils/_utils.scss */
+/* line 10, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/utils/_utils.scss */
 .float-left {
   float: left;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/modules/base/utils/_utils.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/utils/_utils.scss */
 .float-right {
   float: right;
 }
 
-/* line 17, /Users/fb/dev/gw-xmascard/src/modules/base/utils/_utils.scss */
+/* line 17, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/base/utils/_utils.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
 .carouselLightbox {
   display: inline-block;
 }
 
-/* line 4, /Users/fb/dev/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
+/* line 4, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
 .carouselLightbox .carouselLightbox__trigger {
   text-transform: uppercase;
   font-size: .8em;
 }
 
-/* line 8, /Users/fb/dev/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
+/* line 8, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_carouselLightbox.scss */
 .carouselLightbox .carouselLightbox__trigger-icon {
   margin-right: 10px;
   font-size: .75em;
   vertical-align: middle;
 }
 
-/* line 521, /Users/fb/dev/gw-xmascard/src/scss/base/_mixins.scss */
+/* line 521, /Users/rasmuselken/web-projects/gw-xmascard/src/scss/base/_mixins.scss */
 html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   margin-right: 0;
   margin-left: 10px;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox {
   position: fixed;
   top: 0;
@@ -998,26 +998,26 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-color: rgba(184, 175, 166, 0.95) !important;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox.slick-hide {
   opacity: 0;
 }
 
-/* line 16, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 16, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox.slick-hide-init {
   position: absolute;
   top: -9999px;
   opacity: 0;
 }
 
-/* line 21, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 21, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox.slick-lightbox-ie.slick-hide,
 .slick-lightbox.slick-lightbox-ie.slick-hide-init {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
 
-/* line 26, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 26, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner {
   position: fixed;
   top: 0;
@@ -1026,13 +1026,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   height: 100%;
 }
 
-/* line 33, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 33, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item {
   text-align: center;
   overflow: hidden;
 }
 
-/* line 37, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 37, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item:before {
   content: '';
   display: inline-block;
@@ -1041,7 +1041,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   margin-right: -0.25em;
 }
 
-/* line 44, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 44, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item .slick-lightbox-slick-item-inner {
   display: inline-block;
   vertical-align: middle;
@@ -1049,7 +1049,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-height: 90%;
 }
 
-/* line 50, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 50, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item .slick-lightbox-slick-item-inner .slick-lightbox-slick-img {
   margin: 0 auto;
   display: block;
@@ -1057,13 +1057,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-height: 90%;
 }
 
-/* line 56, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 56, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item .slick-lightbox-slick-item-inner .slick-lightbox-slick-caption {
   margin-top: 10px;
   color: #fff;
 }
 
-/* line 60, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 60, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick.slick-caption-bottom .slick-lightbox-slick-item .slick-lightbox-slick-caption {
   position: absolute;
   bottom: 0;
@@ -1073,13 +1073,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   margin-bottom: 20px;
 }
 
-/* line 68, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 68, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick.slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-caption {
   display: block;
   text-align: center;
 }
 
-/* line 72, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 72, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-close {
   position: absolute;
   top: 15px;
@@ -1096,12 +1096,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border: none;
 }
 
-/* line 87, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 87, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-close:focus {
   outline: none;
 }
 
-/* line 90, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 90, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-lightbox-inner .slick-lightbox-close:before {
   font-family: "slick";
   font-size: 20px;
@@ -1113,40 +1113,40 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   content: '×';
 }
 
-/* line 100, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 100, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-loading .slick-list {
   background-color: transparent;
 }
 
-/* line 103, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 103, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-prev {
   left: 15px;
 }
 
-/* line 106, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 106, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-next {
   right: 15px;
 }
 
-/* line 112, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 112, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-dots li button {
   background-color: transparent;
   border-color: #fff;
 }
 
-/* line 115, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 115, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-dots li button:hover, .slick-lightbox .slick-dots li button:focus {
   background-color: #fff;
 }
 
-/* line 120, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
+/* line 120, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick-lightbox.scss */
 .slick-lightbox .slick-dots li.slick-active button {
   background-color: #fff;
   border-color: red;
 }
 
 /* Slider */
-/* line 5, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 5, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -1162,7 +1162,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 20, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 20, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-list {
   position: relative;
   overflow: hidden;
@@ -1171,25 +1171,25 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   padding: 0;
 }
 
-/* line 27, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 27, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-list:focus {
   outline: none;
 }
 
-/* line 31, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 31, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 36, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
-/* line 45, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 45, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-track {
   position: relative;
   left: 0;
@@ -1197,83 +1197,83 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   display: block;
 }
 
-/* line 46, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 46, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-track > * {
   outline: none;
 }
 
-/* line 54, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 54, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-track:before, .slick-track:after {
   content: "";
   display: table;
 }
 
-/* line 60, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 60, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-track:after {
   clear: both;
 }
 
-/* line 64, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 64, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-/* line 68, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 68, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slide {
   float: left;
   display: none;
 }
 
-/* line 70, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 70, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 [dir="rtl"] .slick-slide {
   float: right;
 }
 
-/* line 73, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 73, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slide img {
   display: block;
 }
 
-/* line 76, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 76, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
 
-/* line 82, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 82, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-/* line 86, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 86, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
 
-/* line 90, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 90, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-/* line 94, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 94, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-/* line 100, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 100, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-arrow.slick-hidden {
   display: none;
 }
 
 /* Slider */
-/* line 126, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 126, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-loading .slick-list {
   background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
 }
 
 /* Arrows */
-/* line 133, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 133, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-prev,
 .slick-next {
   color: white;
@@ -1294,14 +1294,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   transition: transform 200ms ease-in-out;
 }
 
-/* line 150, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 150, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
   outline: none;
 }
 
-/* line 152, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 152, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-prev:hover:before, .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
@@ -1309,13 +1309,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   text-shadow: 0 1px 15px rgba(0, 0, 0, 0.8);
 }
 
-/* line 158, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 158, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-prev.slick-disabled,
 .slick-next.slick-disabled {
   opacity: 0.2;
 }
 
-/* line 161, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 161, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-prev:before,
 .slick-next:before {
   font-size: 60px;
@@ -1329,12 +1329,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* Dots */
-/* line 176, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 176, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 180, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 180, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots {
   position: absolute;
   bottom: 0;
@@ -1346,7 +1346,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100%;
 }
 
-/* line 189, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 189, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li {
   padding: 10px;
   margin: 0;
@@ -1355,7 +1355,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   cursor: pointer;
 }
 
-/* line 195, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 195, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li button {
   display: block;
   outline: none;
@@ -1373,19 +1373,19 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border-radius: 50%;
 }
 
-/* line 209, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 209, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
   background-color: red;
 }
 
-/* line 214, /Users/fb/dev/gw-xmascard/src/modules/carousel/_slick.scss */
+/* line 214, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/carousel/_slick.scss */
 .slick-dots li.slick-active button {
   background-color: red;
   border: 1px solid red;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
 .intro {
   position: absolute;
   height: 100%;
@@ -1402,12 +1402,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
           transition: opacity 400ms linear;
 }
 
-/* line 15, /Users/fb/dev/gw-xmascard/src/modules/intro/_intro.scss */
+/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/intro/_intro.scss */
 .pagehandler--page-loaded .intro {
   opacity: 1;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler {
   position: absolute;
   top: 0;
@@ -1421,7 +1421,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   overflow: hidden;
 }
 
-/* line 12, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 12, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .albumViewer,
 .pageHandler .playerView {
   position: absolute;
@@ -1435,13 +1435,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   box-shadow: 5px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
-/* line 24, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 24, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler .playerView {
   left: 50%;
   z-index: 0;
 }
 
-/* line 30, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 30, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-albums .playerView {
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
@@ -1449,14 +1449,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   opacity: 1 !important;
 }
 
-/* line 35, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 35, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-albums .albumViewer {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   opacity: 1 !important;
 }
 
-/* line 42, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 42, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-player .playerView {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -1464,14 +1464,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   opacity: 1 !important;
 }
 
-/* line 47, /Users/fb/dev/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
+/* line 47, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/pageHandler/_pageHandler.scss */
 .pageHandler.pageHandler--show-player .albumViewer {
   -webkit-transform: translate3d(-110%, 0, 0);
           transform: translate3d(-110%, 0, 0);
   opacity: 1 !important;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player {
   position: absolute;
   width: 100%;
@@ -1482,12 +1482,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background: white;
 }
 
-/* line 13, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 13, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__right {
   display: none;
 }
 
-/* line 16, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 16, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__left-scroll {
   width: calc(100% + 15px);
   height: calc(100vh - 50vw);
@@ -1496,19 +1496,19 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 23, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 23, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left-scroll {
     height: calc(100vh - 300px - 120px);
     max-height: calc(100vh - 300px - 120px);
   }
-  /* line 28, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 28, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__left {
     width: 300px;
     height: 100%;
     overflow: hidden;
     position: relative;
   }
-  /* line 36, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 36, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__right {
     display: block;
     width: calc(100vw - 300px);
@@ -1516,7 +1516,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   }
 }
 
-/* line 43, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-info {
   box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -1526,19 +1526,19 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 43, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 43, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__playlist-info {
     display: block;
   }
 }
 
-/* line 54, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 54, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-cover,
 .player .player__song-info {
   vertical-align: middle;
 }
 
-/* line 59, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 59, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-cover {
   display: table-cell;
   width: 50%;
@@ -1546,14 +1546,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 59, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 59, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__playlist-cover {
     width: 100%;
     display: block;
   }
 }
 
-/* line 69, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 69, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__toggleplay {
   position: absolute;
   left: calc(100% - 60px);
@@ -1563,13 +1563,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 69, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 69, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__toggleplay {
     left: calc(100% - 80px);
   }
 }
 
-/* line 80, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 80, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__song-info {
   width: 50%;
   display: table-cell;
@@ -1578,7 +1578,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 80, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 80, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__song-info {
     padding: 30px;
     width: 100%;
@@ -1587,14 +1587,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 91, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 91, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__song-info-inner {
     display: table-cell;
     vertical-align: middle;
   }
 }
 
-/* line 98, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 98, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player_progress {
   height: 1px;
   margin: 0;
@@ -1602,7 +1602,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-color: #dadada;
 }
 
-/* line 104, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 104, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player_progress .player_progress-indicator {
   position: absolute;
   background-color: #e85757;
@@ -1610,7 +1610,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 0%;
 }
 
-/* line 126, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 126, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist,
 .player .player__playlist-song {
   list-style: none;
@@ -1618,60 +1618,60 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   padding: 0;
 }
 
-/* line 132, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 132, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song {
   font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 132, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+  /* line 132, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
   .player .player__playlist-song {
     font-size: 14px;
   }
 }
 
-/* line 144, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 144, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist {
   padding-bottom: 76px;
   padding-top: 24px;
 }
 
-/* line 149, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 149, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song {
   padding: 10px 30px;
   color: #e85757;
   cursor: pointer;
 }
 
-/* line 154, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 154, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:hover {
   background-color: #f8f8f8;
 }
 
-/* line 158, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 158, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song.player__playlist-song--playing {
   color: #1b1b1b;
   background-color: #f8f8f8;
 }
 
-/* line 163, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 163, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__playlist-song:first-child {
   margin-top: 0;
 }
 
-/* line 172, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 172, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__author {
   font-size: 14px;
 }
 
-/* line 185, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 185, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__controls {
   position: absolute;
   right: 50px;
   bottom: 50px;
 }
 
-/* line 191, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 191, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils {
   position: absolute;
   top: calc(100% - 60px);
@@ -1682,39 +1682,39 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   box-shadow: 0 -1px 16px -4px rgba(0, 0, 0, 0.2);
 }
 
-/* line 202, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 202, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils > * {
   padding: 20px 30px;
   display: inline-block;
 }
 
-/* line 207, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 207, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__utils > *:hover:hover {
   background-color: #f8f8f8;
 }
 
-/* line 214, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 214, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__back-btn {
   width: calc(100% - 67px);
   border-right: 1px solid #e8e8e8;
 }
 
-/* line 218, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 218, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__back-btn .player__back-btn-logo {
   margin-right: 10px;
 }
 
-/* line 223, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 223, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__share-btn {
   margin-left: -4px;
 }
 
-/* line 226, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 226, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__share-btn img {
   height: 16px;
 }
 
-/* line 231, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 231, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__recordplayer {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -1723,14 +1723,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   background-size: cover;
 }
 
-/* line 238, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 238, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-/* line 244, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 244, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-album-img {
   position: absolute;
   top: 50%;
@@ -1743,13 +1743,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   border-radius: 50%;
 }
 
-/* line 257, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 257, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player.player--playing .player__base-album-img {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
 
-/* line 262, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 262, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-center-img {
   position: absolute;
   top: 50%;
@@ -1761,7 +1761,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 6.6%;
 }
 
-/* line 272, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 272, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-vinyl-img {
   position: absolute;
   top: 50%;
@@ -1773,7 +1773,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 60.6%;
 }
 
-/* line 282, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 282, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-holder-img {
   position: absolute;
   top: 50%;
@@ -1785,7 +1785,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   max-width: 16.1%;
 }
 
-/* line 292, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 292, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-pin-img {
   position: absolute;
   top: 50%;
@@ -1801,7 +1801,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
           transition: transform 2500ms cubic-bezier(0.165, 0.84, 0.26, 0.98);
 }
 
-/* line 304, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 304, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .player .player__base-back-img {
   position: absolute;
   top: 50%;
@@ -1811,7 +1811,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   width: 100vh;
 }
 
-/* line 313, /Users/fb/dev/gw-xmascard/src/modules/player/_player.scss */
+/* line 313, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/player/_player.scss */
 .rotate-album, .player .player__base-album-img {
   -webkit-animation: rotatingAlbum 2s linear infinite;
           animation: rotatingAlbum 2s linear infinite;
@@ -1842,7 +1842,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* WebGL Snow */
-/* line 2, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 2, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 #snow, #eightbits {
   position: fixed;
   top: 0;
@@ -1857,13 +1857,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* Dat GUI for tests */
-/* line 15, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 15, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 .dg.ac {
   z-index: 2001;
 }
 
 /* Santa button */
-/* line 19, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 19, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton {
   position: fixed;
   bottom: 0;
@@ -1878,7 +1878,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   text-align: center;
 }
 
-/* line 32, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 32, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton a {
   font-size: 13px;
   font-weight: bold;
@@ -1889,7 +1889,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   display: block;
 }
 
-/* line 41, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 41, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton a:hover {
   background: transparent url("/assets/textures/santabutton-on.gif") no-repeat center top;
   width: 120px;
@@ -1897,12 +1897,12 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   display: block;
 }
 
-/* line 47, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 47, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/webgl/_webgl.scss */
 #activate-text {
   padding-top: 80px;
 }
 
-/* line 1, /Users/fb/dev/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */
+/* line 1, /Users/rasmuselken/web-projects/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */
 .youtubeHandler {
   position: absolute;
   right: 0;
