@@ -19,6 +19,7 @@ export default class PageHandler {
 		this.$el = $(this.config.el);
 		this.$albumsPage = $('.albumViewer');
 		this.$playerPage = $('.playerView');
+		this.$body = $('body');
 		this.init();
 
 	}
@@ -38,17 +39,32 @@ export default class PageHandler {
 				self.$el.addClass('pageHandler--show-albums');
 				m.albumViewer.updateCarousel();
 				m.youtubeHandler.pausePlay();
+				$('meta[property=og\\:description]').attr('content', '');
 			} else if (page == 'player') {
 				m.player.setActive(true);
 				m.albumViewer.setActive(false);
 				//   this.$albumsPage.hide();
 				//   this.$playerPage.show();
-				self.$el.removeClass('pageHandler--show-albums');
-				self.$el.addClass('pageHandler--show-player');
+				m.emitter.on('playerLoadedImage', function(){
+					self.$el.removeClass('pageHandler--show-albums');
+					self.$el.addClass('pageHandler--show-player');
+				});
 				if (id) {
 					m.youtubeHandler.playPlaylistByIndex(id);
+					self.setShareTags(id);
 				}
 			}
+			self.pageLoaded();
 		}, 300);
+	}
+	setShareTags(id){
+		var data = m.data[id];
+		$('meta[property=og\\:image]').attr('content', window.location.host + data.cover);
+		$('meta[property=og\\:description]').attr('content', data.playlistTitle);
+	}
+	pageLoaded(){
+		if(!this.$body.hasClass('pagehandler--page-loaded')){
+			this.$body.addClass('pagehandler--page-loaded');
+		}
 	}
 }

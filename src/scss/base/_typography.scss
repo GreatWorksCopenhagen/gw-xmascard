@@ -26,12 +26,20 @@ body{
     color:$color-black;
 }
 
-
 h1, .header-1{
     @extend .font-light;
-    font-size: 20px;
+    font-size: 18px;
     color:$color-red;
+    margin-top: 10px;
+    margin-bottom: 5px;
     @media #{$small}{
-        font-size: 36px;
+        font-size: 34px;
+     }
+}
+.header-2{
+    @extend .header-1;
+    font-size: 16px;
+    @media #{$small}{
+        font-size: 20px;
      }
 }

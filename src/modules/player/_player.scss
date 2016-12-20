@@ -21,13 +21,13 @@
     }
     @media #{$small} {
         .player__left-scroll {
-            height: calc(100vh - 30vw - 120px);
+            height: calc(100vh - 300px - 120px);
             max-height: calc(100vh - 300px - 120px);
         }
 
         .player__left {
-            width: 30vw;
-            min-width: 300px;
+            // width: 30vw;
+            width: 300px;
             height: 100%;
             overflow: hidden;
             position: relative;
@@ -35,7 +35,7 @@
 
         .player__right {
             display: block;
-            width: 70vw;
+            width: calc(100vw - 300px);
             height: 100%;
         }
     }
@@ -105,7 +105,7 @@
             position: absolute;
             background-color: $color-red;
             height:$height;
-            transition: width 1000ms linear;
+            // transition: width 1000ms linear;
             width: 0%;
         }
     }
@@ -129,17 +129,21 @@
         margin: 0;
         padding: 0;
     }
-
     .player__playlist-song {
-        @for $i from 1 through 20 {
-            &:nth-child(#{$i}) {
-                animation-delay: 1000ms * $i;
-            }
-        }
+        font-size: 16px;
+        @media #{$small}{
+            font-size: 14px;
+         }
+    //     @for $i from 1 through 20 {
+    //         &:nth-child(#{$i}) {
+    //             animation-delay: 1000ms * $i;
+    //         }
+    //     }
     }
 
     .player__playlist {
-        padding-bottom: 60px;
+        padding-bottom: 76px;
+        padding-top: 24px;
     }
 
     .player__playlist-song {
@@ -162,14 +166,12 @@
     }
 
     .player__playlist-title {
-        @extend .font-bold;
-        text-transform: uppercase;
+        @extend .header-2;
     }
 
     .player__author {
         @extend .font-regular;
         font-size: 14px;
-        color: $color-red;
     }
     // .player__playlist-songtitle, .player__playlist-songartist{
     //     color:$color-red;

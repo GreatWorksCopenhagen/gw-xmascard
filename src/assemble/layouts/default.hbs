@@ -7,6 +7,17 @@
 	{{> head }}
 </head>
 	<body>
+	<style>
+		.load-img{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			width: 250px;
+		}
+	</style>
+	<img class="load-img" src="/assets/images/logo.svg" alt="">
+
 		<!-- Snow shader -->
 		<script type="x-shader/x-vertex" id="snow_vs">
 			uniform float radiusX;

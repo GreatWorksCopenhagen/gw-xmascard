@@ -3,7 +3,8 @@ export default class Data {
 		//defaults
 		return [{
 			names: 'Louise og Rasmus',
-			playlistTitle: 'Have a Danish top-pop X-mas',
+			playlistTitle: 'Have a Dansktop Christmas!',
+			description: 'Break out the port, maltbolcher, and start rocking with missekat to this ultimate Danish Christmas playlist.',
 			playlist: 'PLq_oRfIJoxLek4Ul4SFMXx8hPmDvbeQTk',
 			cover: '/assets/images/covers/louiserasmus.jpg',
 			tracks: [{
@@ -39,7 +40,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Pia, Christian and Christian',
-			playlistTitle: 'Merry Christmas from The Moms And Dads',
+			playlistTitle: 'Merry X-Mas from the Mom & Dads',
+			description: 'Some say Christmas is for the children, we say it’s a time for parents to kick back with a drink (or two). Happy holidays from our family to yours.',
 			playlist: 'PLq_oRfIJoxLfCFniKFJL3RRsQVwsC4IXY',
 			cover: '/assets/images/covers/partners.jpg',
 			tracks: [{
@@ -93,7 +95,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Josefine og Esben',
-			playlistTitle: 'All i want for christmas',
+			playlistTitle: 'Make X-Mas Pop',
+			description: 'Don’t stop beliebing in Santa. We’re bringing Christmas to the pop charts with this young crowd-pleaser playlist.',
 			playlist: 'PLq_oRfIJoxLcO9lr8YpBPQUhZRJaSEdQR',
 			cover: '/assets/images/covers/joseesben.jpg',
 			tracks: [{
@@ -135,7 +138,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Bo',
-			playlistTitle: 'Bos playlist',
+			playlistTitle: 'Making baby Jesus',
+			description: 'If only Santa was this smooth and funky. This one’s for the lovers feeling the rhythm under the mistletoe.',
 			playlist: 'PLq_oRfIJoxLc3UJ4q0bdfMYvOvDjaGM0p',
 			cover: '/assets/images/covers/bo.jpg',
 			tracks: [{
@@ -171,7 +175,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Frederic',
-			playlistTitle: 'Tijuana Xmas',
+			playlistTitle: 'Merry X-Mas from the Interwebs',
+			description: 'This holiday playlist delivers Internet gold. From Chinese chickens to Mr. Hanky, this is a gift that keeps on giving.',
 			playlist: 'PLq_oRfIJoxLdTLNA75vHQT9THdKd2bvO9',
 			cover: '/assets/images/covers/fred.jpg',
 			tracks: [{
@@ -207,7 +212,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Tarik',
-			playlistTitle: 'Weird Xmas',
+			playlistTitle: 'A weird & wonderful Christmas',
+			description: 'Let’s admit it, the holidays can be wild. Let your hair down and jam to this unexpected X-Mas playlist.',
 			playlist: 'PLq_oRfIJoxLdLUAGv0OfVukxLgBM3AbKj',
 			cover: '/assets/images/covers/tarik.jpg',
 			tracks: [{
@@ -227,7 +233,7 @@ export default class Data {
 				artist: 'Loretta Lynn'
 			}, {
 				title: 'Santa Dog',
-				artist: 'THE RESIDENTS'
+				artist: 'The residents'
 			}, {
 				title: 'Christmas At Ground Zero',
 				artist: 'Weird Al Yankovic'
@@ -240,7 +246,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Jonas',
-			playlistTitle: 'All I want for Christmas',
+			playlistTitle: 'Christmas rapping',
+			description:'Have yourself a funky little Christmas, and help Santa get down with this hip (hop) holiday playlist.',
 			playlist: 'PLq_oRfIJoxLe1dUku-fu3PL3uqwoXdGw0',
 			cover: '/assets/images/covers/jonas.jpg',
 			tracks: [{
@@ -276,7 +283,8 @@ export default class Data {
 			}]
 		}, {
 			names: 'Dani',
-			playlistTitle: 'Dani’s Christmas Cooking Playlist',
+			playlistTitle: 'Christmas in the Kitchen',
+			description: 'Feel the warmth of the stove, smell the roasting meat, and feast on this playlist treat.',
 			playlist: 'PLq_oRfIJoxLeuwB6nIyQTKun1_65PibL8',
 			cover: '/assets/images/covers/dani.jpg',
 			tracks: [{
@@ -305,10 +313,11 @@ export default class Data {
 				artist: 'Brandon Harris Walker'
 			}]
 		}, {
-			names: 'Ann Sofi and Paul',
-			playlistTitle: 'Christmas oldies / a very vinyl Christmas / Vintage Christmas',
+			names: 'Ann-Sofi and Paul',
+			playlistTitle: 'A Crooner\'s Christmas',
+			description: 'Gather around the fireplace, pour yourself a whiskey, and feel the warmth of this smooth holiday playlist.',
 			playlist: 'PLq_oRfIJoxLfI9043reFSM7tD2Hbc6hi5',
-			cover: '/assets/images/covers/paulAnnsofi.jpg',
+			cover: '/assets/images/covers/paulannsofi.jpg',
 			tracks: [{
 				title: 'Lonesome Christmas',
 				artist: 'Lowell Fulson'
@@ -316,19 +325,19 @@ export default class Data {
 				title: 'Have Yourself A Merry Little Christmas',
 				artist: 'Frank Sinatra'
 			}, {
-				title: 'ROCKIN AROUND THE CHRISTMAS TREE',
+				title: 'Rockin around the christmas tree',
 				artist: 'Brenda Lee'
 			}, {
 				title: 'It\'s the Most Wonderful Time of the Year',
 				artist: 'Andy Williams'
 			}, {
-				title: 'PLEASE COME HOME FOR CHRISTMAS',
+				title: 'Please come home for christmas',
 				artist: 'Charles Brown'
 			}, {
 				title: 'Santa Baby',
 				artist: 'Eartha Kitt'
 			}, {
-				title: 'SLEIGH RIDE',
+				title: 'Sleigh ride',
 				artist: 'The Boston pops Orchestra'
 			}, {
 				title: 'Run Rudolph Run',
@@ -340,7 +349,7 @@ export default class Data {
 				title: 'Winter Wonderland',
 				artist: 'Louis Armstrong'
 			}, {
-				title: 'jingle bell rock',
+				title: 'Jingle bell rock',
 				artist: 'Bobby Helms'
 			}, {
 				title: 'White Christmas',

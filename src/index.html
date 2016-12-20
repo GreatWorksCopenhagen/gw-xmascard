@@ -10,12 +10,32 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	
+	<meta property="og:url" content="http://greatworks-xmas.dk/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="A gift even Santa can’t beat. Holiday albums created by Great Works, especially for you. Turntable included. Happy holidays." />
+	<meta property="og:description" content="Happy holidays." />
+	<meta property="og:image" content="http://greatworks-xmas.dk/assets/images/share.jpg" />
+	
+	
+	
 	<!-- Place favicon.ico in the root directory -->
 	<!-- <link href="../assets/favicon.ico" rel="shortcut icon"> -->
 	<link rel="stylesheet" href="/css/main.css">
 	<script src="/js/vendors/modernizr.js"></script>
 	<script src="/js/vendors/jquery.min.js"></script></head>
 	<body>
+	<style>
+		.load-img{
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			width: 250px;
+		}
+	</style>
+	<img class="load-img" src="/assets/images/logo.svg" alt="">
+
 		<!-- Snow shader -->
 		<script type="x-shader/x-vertex" id="snow_vs">
 			uniform float radiusX;
@@ -59,59 +79,101 @@
 	<main id="mainContainer" role="main">
     <div class="intro">
         <style>
-        /*hardcoding this beacuse we want it to display correct instantly*/
-        .intro {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          z-index: 100;
-          text-align: center;
-          display: table;
-          top: 0;
-          overflow: auto;
-          background-image: url("/assets/images/intro/introback.jpg");
-          background-size: cover;
-        }
-        .intro .intro__inner {
-          display: table-cell;
-          vertical-align: middle;
-          padding: 50px;
-        }
-        .intro .intro__inner .intro__logo {
-          max-width: 100px;
-          margin-bottom: 40px;
-        }
-        .intro .intro__inner p {
-          margin-top: 15px;
-        }
-        .intro .intro__inner .intro__arrows {
-          max-width: 200px;
-          display: none;
-          margin-top: 50px;
-        }
-        @media only screen and (min-width: 769px) {
-          .intro .intro__inner .intro__arrows {
-            display: block;
-          }
-        }
-        .intro .intro__inner .intro__arrow-instructions {
-          display: none;
-        }
-        @media only screen and (min-width: 769px) {
-          .intro .intro__inner .intro__arrow-instructions {
-            display: block;
-          }
-        }
-        .intro .intro__inner > * {
-          margin: 0 auto;
-          max-width: 600px;
-        }
-        .intro .intro__inner .button {
-          margin-top: 60px;
-        }
+            /*hardcoding this beacuse we want it to display correct instantly*/
+            .intro {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: 2001;
+                text-align: center;
+                display: table;
+                top: 0;
+                overflow: auto;
+                background-image: url("/assets/images/intro/introback.jpg");
+                background-size: cover;
+                opacity:0;
+            }
+    
+            .intro .intro__inner {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 50px;
+            }
+    
+            .intro .intro__inner .intro__logo {
+                max-width: 100px;
+                margin-bottom: 40px;
+            }
+    
+            .intro .intro__inner p {
+                margin-top: 15px;
+            }
+    
+            .intro .intro__inner .intro__arrows {
+                max-width: 200px;
+                display: none;
+                margin-top: 50px;
+            }
+    
+            @media only screen and (min-width: 769px) {
+                .intro .intro__inner .intro__arrows {
+                    display: block;
+                }
+            }
+    
+            .intro .intro__inner .intro__arrow-instructions {
+                display: none;
+            }
+    
+            @media only screen and (min-width: 769px) {
+                .intro .intro__inner .intro__arrow-instructions {
+                    display: block;
+                }
+            }
+    
+            .intro .intro__inner>* {
+                /*margin: 0 auto;
+          max-width: 600px;*/
+            }
+    
+            .intro .intro__inner .button {
+                margin-top: 60px;
+                position: absolute;
+                bottom: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            .intro {
+                overflow: hidden;
+            }
+    
+            video {
+                /*position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            width:100vw;
+            object-fit: cover;
+            z-index: -1;*/
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -100;
+                transform: translateX(-50%) translateY(-50%);
+                background: url("/assets/images/intro/risalamande_light-cover.jpg") no-repeat;
+                background-size: cover;
+                max-width: 160vh;
+            }
         </style>
         <div class="intro__inner">
-            <img class="intro__logo" src="/assets/images/logo.svg" alt="">
+            <!-- <img class="intro__logo" src="/assets/images/logo.svg" alt="">
             <h1>Wishing you a merry christmas!</h1>
             <p>We created albums in the spirit of christmas, sed ultricies urna. Integer a tortor mi. Vestibulum lobortis, ante vel tincidunt mollis, risus ex ornare arcu, sed vestibulum mauris mauris eu arcu.</p>
             <div class="intro__arrows">
@@ -120,11 +182,13 @@
             <p class="intro__arrow-instructions">
                 Left/Right to navigate through albums. <br>
                 Up/Down to navigate through songs.
-            </p>
+            </p> -->
+            <video src="/assets/images/intro/risalamande_light.mp4" autoplay poster="/assets/images/intro/risalamande_light-cover.jpg">
+            </video>
             <div class="button">Enter website</div>
         </div>
     </div>    <div class="pageHandler">
-        <div class="albumViewer">
+        <div class="albumViewer" style="opacity:0;">
             <div class="albumViewer__logo">
                 <img src="/assets/images/logo.svg" alt="">
             </div>
@@ -255,7 +319,7 @@
                             <h2 class="header-1">Paul & Ann-Sofi</h2>
                         </div> -->
                         <div class="albumViewer__album-cover">
-                            <img class="albumViewer__album-cover-img" src="/assets/images/covers/paulAnnsofi.jpg" alt="">
+                            <img class="albumViewer__album-cover-img" src="/assets/images/covers/paulannsofi.jpg" alt="">
                             <img class="albumViewer__album-cover-vinyl-img" src="/assets/images/player/vinyl-shadow.png" alt="">
                         </div>
                         <div class="albumViewer__album-copy">
@@ -264,8 +328,9 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="albumViewer__play-btn button-round-border button-round button-round-wide">Play</a>
             </div>
-        </div>        <div class="playerView">
+        </div>        <div class="playerView" style="opacity:0;">
             <div class="youtubeHandler">
                 <div id="player"></div>
             </div>    <div class="player">
@@ -295,7 +360,7 @@
                     </div>
                     <div class="player__utils">
                         <a href="/albums/" class="player__back-btn"><span class="player__back-btn-logo">←</span>Go back</a>
-                        <a href="https://www.facebook.com/sharer.php?u=123.abc.com&t=TEst" target="blank" class="player__share-btn"><img src="/assets/images/facebook.svg" alt=""></a>
+                        <a href="https://www.facebook.com/sharer.php?u" target="blank" class="player__share-btn"><img src="/assets/images/facebook.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="player__right">
