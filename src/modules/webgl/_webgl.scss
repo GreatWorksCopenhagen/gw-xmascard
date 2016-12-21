@@ -1,5 +1,6 @@
 /* WebGL Snow */
-#snow,#eightbits {
+#snow,
+#eightbits {
   position: fixed;
   top: 0;
   left: 0;
@@ -46,4 +47,7 @@
 }
 #activate-text {
   padding-top:80px;
+}
+#eightbits .particle {
+  position: absolute;
 }
