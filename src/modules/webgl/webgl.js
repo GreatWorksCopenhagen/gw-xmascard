@@ -279,6 +279,11 @@ var bitmaps = [
      { type:'santa', img:'santa.gif', w:100, h:100 },
      { type:'mistletoe', img:'mistletoe1.png', w:109, h:99 },
      { type:'mistletoe', img:'mistletoe2.png', w:123, h:114 },
+     { type:'gift', img:'kdo1.png', w:64, h:67 },
+     { type:'gift', img:'kdo2.png', w:64, h:67 },
+     { type:'gift', img:'kdo3.png', w:64, h:67 },
+     { type:'mistletoe', img:'mistletoe1.png', w:109, h:99 },
+     { type:'mistletoe', img:'mistletoe2.png', w:123, h:114 },
 ];
 var emitter;
 
@@ -350,9 +355,8 @@ class EightBit_Particle {
 
       var tweenObject;
 
-      switch ( this.idx ) {
+      if( this.idx <= 1 ) { // Moose & Santa
 
-        case 1: // Santa
           part.css({
             top: ( wHeight - bitmaps[this.idx].h ) + "px",
             left: ( wWidth + 100 ) + "px",
@@ -366,9 +370,9 @@ class EightBit_Particle {
             },
             onCompleteParams:[part]
           }
-          break;
 
-        case 2: // Mistletoe 1
+      } else if ( this.idx > 1 ) { // falling stuff
+
           part.css({
             top: "-100px",
             left: Math.floor( Math.random() * ( wWidth - 100 ) + 100 ) + "px",
@@ -377,38 +381,7 @@ class EightBit_Particle {
           tweenObject = {
             top:wHeight + 100,
             // easing:Linear.easeNone,
-            onComplete:function(){
-              $(part).remove();
-            },
-            onCompleteParams:[part]
-          }
-          break;
-
-        case 3: // Mistletoe 2
-          part.css({
-            top: "-100px",
-            left: Math.floor( Math.random() * ( wWidth - 100 ) + 100 ) + "px",
-            'z-index':indexes
-          });
-          tweenObject = {
-            top:wHeight + 100,
-            // easing:Linear.easeNone,
-            onComplete:function(){
-              $(part).remove();
-            },
-            onCompleteParams:[part]
-          }
-          break;
-
-        default: // Moose
-          part.css({
-            top: ( wHeight - bitmaps[this.idx].h ) + "px",
-            left: ( wWidth ) + "px",
-            'z-index':indexes
-          });
-          tweenObject = {
-            left:-100,
-            // easing:Linear.easeNone,
+            // rotation:Math.floor( Math.random() * 90 ),
             onComplete:function(){
               $(part).remove();
             },
