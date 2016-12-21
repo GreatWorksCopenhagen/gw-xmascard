@@ -167,10 +167,8 @@ export default class Webgl {
 
 		}, false );
 
-
 		// Activat e8 bit mode button
-		document.getElementById("eightbitmodebutton").addEventListener( 'click', self.activateEightBitMode, false );
-
+		document.getElementById("eightbitmodebutton").addEventListener( 'click', this.activateEightBitMode, false );
 
 		// handle resize
 		this.handleWindowResize();
@@ -186,11 +184,11 @@ export default class Webgl {
 		if( !EightBitMode ){
 			EightBitMode = true;
 			$('#activate-text').html("DEACTIVATE</br>X-MAS MODE");
-      emitter = new EightBit_Emitter('#eightbits').init();
-		}else {
+      emitter = new EightBit_Emitter().init();
+		} else {
 			EightBitMode = false;
 			$('#activate-text').html("ACTIVATE</br>X-MAS MODE");
-      if( emitter ) emitter.killAll();
+      $('#eightbits').empty();
 		}
 
 	}
@@ -287,7 +285,7 @@ var emitter;
 class EightBit_Emitter {
 
    constructor(
-     $selector,
+     $selector = '#eightbits',
      maxParticles=10
    ) {
       this.$emitter       = document.querySelector($selector);
@@ -305,20 +303,23 @@ class EightBit_Emitter {
 
       var self = this;
       var timing = Math.floor( Math.random() * 5000 + 1000 );
-      console.log('New Particle in->'+timing);
 
       // Element caracteristics
       var pRand = Math.floor( Math.random() * bitmaps.length );
       var life = Math.floor( Math.random() * 10 + 15 );
       var particle = new EightBit_Particle( pRand, life );
 
-      // Wait if too many guys on the floor
-      if( $('#eightbits .particle').length <= this.maxParticles ) {
-        setTimeout( self.newParticle.bind( this ), timing );
+      // check if we are still on EightBit mode
+      if( EightBitMode ) {
+        // Wait if too many guys on the floor
+        if( $('#eightbits .particle').length <= this.maxParticles ) {
+          setTimeout( self.newParticle.bind( this ), timing );
+        }
       }
 
    }
    killAll() {
+     console.log('killparticles');
      $('#eightbits').empty();
    }
 }
@@ -342,13 +343,9 @@ class EightBit_Particle {
       var wHeight = window.innerHeight;
 
       var pic = '<div class="particle" id="p-' + indexes + '"><img src="' + prefix + bitmaps[this.idx].img + '"></div>';
-
-      var obj = $('#eightbits').append( pic );
-
-      console.log( obj );
+      $('#eightbits').append( pic );
 
       var part = $('#p-' + indexes);
-
 
       part.css({
         top: ( wHeight - bitmaps[this.idx].h ) + "px",
@@ -370,7 +367,7 @@ class EightBit_Particle {
           });
           tweenObject = {
             left:-100,
-            easing:Linear,
+            // easing:Linear.easeNone,
             onComplete:function(){
               $(part).remove();
             },
@@ -386,9 +383,8 @@ class EightBit_Particle {
           });
           tweenObject = {
             top:wHeight + 100,
-            easing:Linear,
+            // easing:Linear.easeNone,
             onComplete:function(){
-              console.log("complete");
               $(part).remove();
             },
             onCompleteParams:[part]
@@ -403,9 +399,8 @@ class EightBit_Particle {
           });
           tweenObject = {
             top:wHeight + 100,
-            easing:Linear,
+            // easing:Linear.easeNone,
             onComplete:function(){
-              console.log("complete");
               $(part).remove();
             },
             onCompleteParams:[part]
@@ -420,9 +415,8 @@ class EightBit_Particle {
           });
           tweenObject = {
             left:-100,
-            easing:Linear,
+            // easing:Linear.easeNone,
             onComplete:function(){
-              console.log("complete");
               $(part).remove();
             },
             onCompleteParams:[part]
@@ -439,11 +433,4 @@ class EightBit_Particle {
 
    }
 
-   destroy( particle ) {
-     console.log( particle );
-   }
-
-   get isDead() {
-      return this.dead;
-   }
 }
