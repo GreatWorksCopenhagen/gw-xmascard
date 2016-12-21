@@ -10,15 +10,15 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	
+
 	<meta property="og:url" content="http://greatworks-xmas.dk/" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="A gift even Santa can’t beat. Holiday albums created by Great Works, especially for you. Turntable included. Happy holidays." />
 	<meta property="og:description" content="Happy holidays." />
 	<meta property="og:image" content="http://greatworks-xmas.dk/assets/images/share.jpg" />
-	
-	
-	
+
+
+
 	<!-- Place favicon.ico in the root directory -->
 	<!-- <link href="../assets/favicon.ico" rel="shortcut icon"> -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -70,6 +70,12 @@
 				gl_FragColor = texColor * vec4( color, opacity );
 			}
 		</script>
+		<div id="eightbitmodebutton">
+			<a href="#">
+				<p id="activate-text">ACTIVATE</br>X-MAS MODE</p>
+			</a>
+		</div>
+		<div id="eightbits"></div>
 		<div id="snow"></div>
 		<!-- End Snow shader -->
 
@@ -93,49 +99,49 @@
                 background-size: cover;
                 opacity:0;
             }
-    
+
             .intro .intro__inner {
                 display: table-cell;
                 vertical-align: middle;
                 padding: 50px;
             }
-    
+
             .intro .intro__inner .intro__logo {
                 max-width: 100px;
                 margin-bottom: 40px;
             }
-    
+
             .intro .intro__inner p {
                 margin-top: 15px;
             }
-    
+
             .intro .intro__inner .intro__arrows {
                 max-width: 200px;
                 display: none;
                 margin-top: 50px;
             }
-    
+
             @media only screen and (min-width: 769px) {
                 .intro .intro__inner .intro__arrows {
                     display: block;
                 }
             }
-    
+
             .intro .intro__inner .intro__arrow-instructions {
                 display: none;
             }
-    
+
             @media only screen and (min-width: 769px) {
                 .intro .intro__inner .intro__arrow-instructions {
                     display: block;
                 }
             }
-    
+
             .intro .intro__inner>* {
                 /*margin: 0 auto;
           max-width: 600px;*/
             }
-    
+
             .intro .intro__inner .button {
                 margin-top: 60px;
                 position: absolute;
@@ -143,11 +149,11 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
-    
+
             .intro {
                 overflow: hidden;
             }
-    
+
             video {
                 /*position: absolute;
             top:50%;
@@ -386,10 +392,10 @@
 	            System.baseURL = "/"
 	        }
 	    } catch (err) {
-	
+
 	    }
 	</script>
 	-->
-	
+
 	<script>System.import('/js/main')</script>	</body>
 </html>

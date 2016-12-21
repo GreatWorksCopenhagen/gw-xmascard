@@ -186,7 +186,7 @@ export default class Webgl {
 		if( !EightBitMode ){
 			EightBitMode = true;
 			$('#activate-text').html("DEACTIVATE</br>X-MAS MODE");
-			this.createEightBitElements();
+      emitter = new EightBit_Emitter('#eightbits', 10).init();
 		}else {
 			EightBitMode = false;
 			$('#activate-text').html("ACTIVATE</br>X-MAS MODE");
@@ -266,41 +266,118 @@ export default class Webgl {
 		return false;
 
 	}
-	// 8 Bit Mode --------------------------------------------------------------------------
-	createEightBitElements() {
 
-console.log('hello');
+}
 
-		var part, container, numParts = 20;
-		var prefix = '/assets/textures/';
-		var bitmaps = [
-			{img:'moose.gif', w:64, h:64},
-			{img:'santa.gif', w:128, h:128}
-		]
+///////////////////////////////////////////////////////////////////////////////
+// 8 Bit Xmas Mode
+///////////////////////////////////////////////////////////////////////////////
 
-    var context = document.getElementById('eightbits').getContext('2d');
+var indexes = 2500;
+var prefix = '/assets/textures/';
+var bitmaps = [
+	   { type:'moose', img:'moose.gif', w:64, h:64 },
+     { type:'santa', img:'santa.gif', w:128, h:128 },
+     { type:'mistletoe', img:'mistletoe1.png', w:109, h:99 },
+     { type:'mistletoe', img:'mistletoe2.png', w:123, h:114 },
+];
+var emitter;
 
-		console.log(context);
-		var self = this;
+class EightBit_Emitter {
 
-    	var imageObj = new Image();
+   constructor($selector,
+               width=400,
+               height=400,
+               numParticles=10,
+               particleTypes=[{ type: 'moose' }]
+   ) {
+      this.$emitter       = document.querySelector($selector);
+      this.width          = width;
+      this.height         = height;
+      this.numParticles   = numParticles;
+      this.particleTypes  = particleTypes;
+      this.gravity 		    = 4.0;
+      this.canvas    	    = null;
+      this.c2d 	   	      = null;
+      this.particles 	    = [];
+   }
 
-	    imageObj.onload = function() {
-	      context.drawImage(imageObj, 100,100);
-	    };
-	    imageObj.src = prefix + bitmaps[0].img;
+   init() {
 
-		m.TweenMax.to(
-			imageObj,
-			20,
-			{
-				x:0
-			}
-		);
+      var self = this;
 
+       for(var p = 0; p < this.numParticles; p++) {
 
+          var pRand = Math.floor( Math.random() * bitmaps.length );
+          var particle = new EightBit_Particle( pRand );
 
+       }
 
-	}
+   }
+}
 
+class EightBit_Particle {
+
+   constructor( idx ) {
+
+      this.idx 		 = idx;
+      this._create();
+
+   }
+
+   _create() {
+      var prop = this.properties;
+      var self = this;
+
+      // Set particle life
+      var life = Math.floor( Math.random() * 10 ) + 10;
+
+      // wait before animate
+      var wait = Math.floor( Math.random() * 10 ) + 1;
+
+      var pic = '<div class="particle"><img src="' + prefix + bitmaps[this.idx].img + '"></div>';
+
+      var obj = $('#eightbits').append(pic);
+
+      obj.css({
+      //  top: ( window.innerHeight - this.bitmaps[this.idx].h ) + "px",
+       top: ( window.innerHeight - 100 ) + "px",
+       left: ( window.innerWidth ) + "px",
+       'z-index':indexes
+     });
+
+      indexes++;
+
+      m.TweenMax.to(
+      	obj,
+      	// self.life,
+      	life,
+      	{
+      		left:0,
+          onComplete:function(){
+            console.log("complete");
+            console.log(obj);
+          },
+          onCompleteParams:[obj]
+      	}
+      );
+// var tl = new TimelineMax({paused: true, onComplete: onTlComplete}),
+//      start = 0, // allow to offset the start time
+//      duration = 0.6,
+//      step = 0.08; // for staggered animations/delay between chained tweens
+// tl.to($content, duration, {y: 0, opacity: 0}, start);
+// tl.addCallback(function() {
+//  mediator.emit('header:hide');
+// }.bind(this), start + duration + step);
+// tl.reverse(); // Play backwards
+
+   }
+
+   destroy( particle ) {
+     console.log( particle );
+   }
+
+   get isDead() {
+      return this.dead;
+   }
 }

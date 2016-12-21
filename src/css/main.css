@@ -1843,7 +1843,8 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 
 /* WebGL Snow */
 /* line 2, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
-#snow, #eightbits {
+#snow,
+#eightbits {
   position: fixed;
   top: 0;
   left: 0;
@@ -1857,13 +1858,13 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
 }
 
 /* Dat GUI for tests */
-/* line 15, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 16, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 .dg.ac {
   z-index: 2001;
 }
 
 /* Santa button */
-/* line 19, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 20, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton {
   position: fixed;
   bottom: 0;
@@ -1878,7 +1879,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   text-align: center;
 }
 
-/* line 32, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 33, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton a {
   font-size: 13px;
   font-weight: bold;
@@ -1889,7 +1890,7 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   display: block;
 }
 
-/* line 41, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 42, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 #eightbitmodebutton a:hover {
   background: transparent url("/assets/textures/santabutton-on.gif") no-repeat center top;
   width: 120px;
@@ -1897,9 +1898,14 @@ html[dir="rtl"] .carouselLightbox .carouselLightbox__trigger-icon {
   display: block;
 }
 
-/* line 47, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+/* line 48, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
 #activate-text {
   padding-top: 80px;
+}
+
+/* line 51, /Users/fb/dev/gw-xmascard/src/modules/webgl/_webgl.scss */
+#eightbits .particle {
+  position: absolute;
 }
 
 /* line 1, /Users/fb/dev/gw-xmascard/src/modules/youtubeHandler/_youtubeHandler.scss */
