@@ -1,11 +1,7 @@
 <div class="intro">
     <style>
         /*hardcoding this beacuse we want it to display correct instantly*/
-        @media only screen and (min-width: 769px) {
-            .intro {
-                display: block!important;
-            }
-        }
+
         .intro {
             position: absolute;
             height: 100%;
@@ -18,6 +14,11 @@
             background-image: url("/assets/images/intro/introback.jpg");
             background-size: cover;
             opacity:0;
+        }
+        @media only screen and (min-width: 769px) {
+            .intro {
+                display: block;
+            }
         }
 
         .intro .intro__inner {
