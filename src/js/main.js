@@ -1,4 +1,4 @@
- // import * as jQuery from 'jquery'
+ import * as jQuery from 'jquery'
 import Router from 'modules/base/router/router';
 import Picture from 'modules/base/picture/picture';
 import PointerEventsPolyfill from 'js/vendors/pointer_events_polyfill';

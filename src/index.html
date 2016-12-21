@@ -6,12 +6,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Great Works Xmas</title>
+	<title>Have a Great Works Xmas</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	
-	<meta property="og:url" content="http://greatworks-xmas.dk/" />
+	<meta property="og:url" content="http://greatworks-xmas.dk" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="A gift even Santa can’t beat. Holiday albums created by Great Works, especially for you. Turntable included. Happy holidays." />
 	<meta property="og:description" content="Happy holidays." />
@@ -23,7 +23,7 @@
 	<!-- <link href="../assets/favicon.ico" rel="shortcut icon"> -->
 	<link rel="stylesheet" href="/css/main.css">
 	<script src="/js/vendors/modernizr.js"></script>
-	<script src="/js/vendors/jquery.min.js"></script></head>
+	<!-- <script src="/js/vendors/jquery.min.js"></script> --></head>
 	<body>
 	<style>
 		.load-img{
@@ -86,18 +86,24 @@
     <div class="intro">
         <style>
             /*hardcoding this beacuse we want it to display correct instantly*/
+    
             .intro {
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 z-index: 2001;
                 text-align: center;
-                display: table;
+                display: none;
                 top: 0;
                 overflow: auto;
                 background-image: url("/assets/images/intro/introback.jpg");
                 background-size: cover;
                 opacity:0;
+            }
+            @media only screen and (min-width: 769px) {
+                .intro {
+                    display: block;
+                }
             }
     
             .intro .intro__inner {
@@ -189,7 +195,7 @@
                 Left/Right to navigate through albums. <br>
                 Up/Down to navigate through songs.
             </p> -->
-            <video src="/assets/images/intro/risalamande_light.mp4" autoplay poster="/assets/images/intro/risalamande_light-cover.jpg">
+            <video src="/assets/images/intro/risalamande_light.mp4" preload="none" autoplay poster="/assets/images/intro/risalamande_light-cover.jpg">
             </video>
         </div>
     </div>    <div class="pageHandler">

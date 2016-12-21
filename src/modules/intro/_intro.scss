@@ -1,4 +1,10 @@
 .intro {
+    // .touch & {
+        display:none;
+        @media #{$small}{
+             display:block;
+         }
+    // }
     position: absolute;
     height: 100%;
     width: 100%;
