@@ -186,10 +186,11 @@ export default class Webgl {
 		if( !EightBitMode ){
 			EightBitMode = true;
 			$('#activate-text').html("DEACTIVATE</br>X-MAS MODE");
-      emitter = new EightBit_Emitter('#eightbits', 10).init();
+      emitter = new EightBit_Emitter('#eightbits').init();
 		}else {
 			EightBitMode = false;
 			$('#activate-text').html("ACTIVATE</br>X-MAS MODE");
+      if( emitter ) emitter.killAll();
 		}
 
 	}
@@ -285,91 +286,156 @@ var emitter;
 
 class EightBit_Emitter {
 
-   constructor($selector,
-               width=400,
-               height=400,
-               numParticles=10,
-               particleTypes=[{ type: 'moose' }]
+   constructor(
+     $selector,
+     maxParticles=10
    ) {
       this.$emitter       = document.querySelector($selector);
-      this.width          = width;
-      this.height         = height;
-      this.numParticles   = numParticles;
-      this.particleTypes  = particleTypes;
-      this.gravity 		    = 4.0;
-      this.canvas    	    = null;
-      this.c2d 	   	      = null;
-      this.particles 	    = [];
+      this.maxParticles   = maxParticles;
    }
 
    init() {
 
       var self = this;
 
-       for(var p = 0; p < this.numParticles; p++) {
+      this.newParticle();
 
-          var pRand = Math.floor( Math.random() * bitmaps.length );
-          var particle = new EightBit_Particle( pRand );
+   }
+   newParticle() {
 
-       }
+      var self = this;
+      var timing = Math.floor( Math.random() * 5000 + 1000 );
+      console.log('New Particle in->'+timing);
 
+      // Element caracteristics
+      var pRand = Math.floor( Math.random() * bitmaps.length );
+      var life = Math.floor( Math.random() * 10 + 15 );
+      var particle = new EightBit_Particle( pRand, life );
+
+      // Wait if too many guys on the floor
+      if( $('#eightbits .particle').length <= this.maxParticles ) {
+        setTimeout( self.newParticle.bind( this ), timing );
+      }
+
+   }
+   killAll() {
+     $('#eightbits').empty();
    }
 }
 
 class EightBit_Particle {
 
-   constructor( idx ) {
+   constructor( idx, life ) {
 
-      this.idx 		 = idx;
+      this.idx 		  = idx;
+      this.life     = life;
       this._create();
 
    }
 
    _create() {
+
       var prop = this.properties;
       var self = this;
 
-      // Set particle life
-      var life = Math.floor( Math.random() * 10 ) + 10;
+      var wWidth = window.innerWidth;
+      var wHeight = window.innerHeight;
 
-      // wait before animate
-      var wait = Math.floor( Math.random() * 10 ) + 1;
+      var pic = '<div class="particle" id="p-' + indexes + '"><img src="' + prefix + bitmaps[this.idx].img + '"></div>';
 
-      var pic = '<div class="particle"><img src="' + prefix + bitmaps[this.idx].img + '"></div>';
+      var obj = $('#eightbits').append( pic );
 
-      var obj = $('#eightbits').append(pic);
+      console.log( obj );
 
-      obj.css({
-      //  top: ( window.innerHeight - this.bitmaps[this.idx].h ) + "px",
-       top: ( window.innerHeight - 100 ) + "px",
-       left: ( window.innerWidth ) + "px",
-       'z-index':indexes
-     });
+      var part = $('#p-' + indexes);
+
+
+      part.css({
+        top: ( wHeight - bitmaps[this.idx].h ) + "px",
+        left: ( wWidth ) + "px",
+        'z-index':indexes
+      });
 
       indexes++;
 
+      var tweenObject;
+
+      switch ( this.idx ) {
+
+        case 1: // Santa
+          part.css({
+            top: ( wHeight - bitmaps[this.idx].h ) + "px",
+            left: ( wWidth + 100 ) + "px",
+            'z-index':indexes
+          });
+          tweenObject = {
+            left:-100,
+            easing:Linear,
+            onComplete:function(){
+              $(part).remove();
+            },
+            onCompleteParams:[part]
+          }
+          break;
+
+        case 2: // Mistletoe 1
+          part.css({
+            top: "-100px",
+            left: Math.floor( Math.random() * ( wWidth - 100 ) + 100 ) + "px",
+            'z-index':indexes
+          });
+          tweenObject = {
+            top:wHeight + 100,
+            easing:Linear,
+            onComplete:function(){
+              console.log("complete");
+              $(part).remove();
+            },
+            onCompleteParams:[part]
+          }
+          break;
+
+        case 3: // Mistletoe 2
+          part.css({
+            top: "-100px",
+            left: Math.floor( Math.random() * ( wWidth - 100 ) + 100 ) + "px",
+            'z-index':indexes
+          });
+          tweenObject = {
+            top:wHeight + 100,
+            easing:Linear,
+            onComplete:function(){
+              console.log("complete");
+              $(part).remove();
+            },
+            onCompleteParams:[part]
+          }
+          break;
+
+        default: // Moose
+          part.css({
+            top: ( wHeight - bitmaps[this.idx].h ) + "px",
+            left: ( wWidth ) + "px",
+            'z-index':indexes
+          });
+          tweenObject = {
+            left:-100,
+            easing:Linear,
+            onComplete:function(){
+              console.log("complete");
+              $(part).remove();
+            },
+            onCompleteParams:[part]
+          }
+
+      }
+
+
       m.TweenMax.to(
-      	obj,
-      	// self.life,
-      	life,
-      	{
-      		left:0,
-          onComplete:function(){
-            console.log("complete");
-            console.log(obj);
-          },
-          onCompleteParams:[obj]
-      	}
+      	part,
+      	self.life,
+        tweenObject
       );
-// var tl = new TimelineMax({paused: true, onComplete: onTlComplete}),
-//      start = 0, // allow to offset the start time
-//      duration = 0.6,
-//      step = 0.08; // for staggered animations/delay between chained tweens
-// tl.to($content, duration, {y: 0, opacity: 0}, start);
-// tl.addCallback(function() {
-//  mediator.emit('header:hide');
-// }.bind(this), start + duration + step);
-// tl.reverse(); // Play backwards
 
    }
 
