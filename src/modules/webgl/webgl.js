@@ -276,7 +276,7 @@ var indexes = 2500;
 var prefix = '/assets/textures/';
 var bitmaps = [
 	   { type:'moose', img:'moose.gif', w:64, h:64 },
-     { type:'santa', img:'santa.gif', w:128, h:128 },
+     { type:'santa', img:'santa.gif', w:100, h:100 },
      { type:'mistletoe', img:'mistletoe1.png', w:109, h:99 },
      { type:'mistletoe', img:'mistletoe2.png', w:123, h:114 },
 ];
@@ -318,10 +318,10 @@ class EightBit_Emitter {
       }
 
    }
-   killAll() {
-     console.log('killparticles');
-     $('#eightbits').empty();
-   }
+   handleWindowResize(){
+      var wWidth = window.innerWidth;
+      var wHeight = window.innerHeight;
+    }
 }
 
 class EightBit_Particle {
@@ -336,7 +336,6 @@ class EightBit_Particle {
 
    _create() {
 
-      var prop = this.properties;
       var self = this;
 
       var wWidth = window.innerWidth;
@@ -346,12 +345,6 @@ class EightBit_Particle {
       $('#eightbits').append( pic );
 
       var part = $('#p-' + indexes);
-
-      part.css({
-        top: ( wHeight - bitmaps[this.idx].h ) + "px",
-        left: ( wWidth ) + "px",
-        'z-index':indexes
-      });
 
       indexes++;
 
