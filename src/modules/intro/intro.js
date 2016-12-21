@@ -28,7 +28,7 @@ export default class Intro {
 	bindEvents() {
         var self = this;
 
-		this.$button.on({
+		this.$el.on({
             click: function(){
                 self.animateOut();
             }
@@ -39,7 +39,7 @@ export default class Intro {
 		this.video.addEventListener('ended',function(){
 				self.onVideoEnd();
 			},
-			false);
+		false);
 	}
 	onVideoEnd(){
 		this.animateOut();
